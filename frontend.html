@@ -1,0 +1,3864 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Projet RAG — Piton des Neiges</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #0a0e17;
+            --bg2: #111827;
+            --bg3: #1a2235;
+            --panel: #0f1724;
+            --text: #e6eef8;
+            --muted: #9aa7b2;
+            --border: rgba(255, 255, 255, 0.04);
+            --blue: #3b82f6;
+            --purple: #8b5cf6;
+            --green: #10b981;
+            --amber: #f59e0b;
+            --sans: 'Syne', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--sans);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            background: var(--bg2);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: var(--purple);
+        }
+
+        .header-sub {
+            font-size: 10px;
+            color: var(--muted);
+            font-family: var(--mono);
+            margin-left: 10px;
+        }
+
+        .status-dot {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: auto;
+            font-size: 10px;
+            color: var(--muted);
+            font-family: var(--mono);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .tabs-bar {
+            display: flex;
+            gap: 4px;
+            padding: 8px 20px;
+            background: var(--bg2);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--muted);
+            font-family: var(--sans);
+            font-weight: 700;
+            font-size: 12px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .tab-btn:hover {
+            background: var(--bg3);
+        }
+
+        .tab-btn.active {
+            background: var(--panel);
+            color: var(--text);
+            border-color: var(--border);
+        }
+
+        #app {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            padding: 14px 20px;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .col-header {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 12px;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .col-header.blue {
+            background: rgba(59, 130, 246, .12);
+            color: var(--blue);
+        }
+
+        .col-header.purple {
+            background: rgba(139, 92, 246, .12);
+            color: var(--purple);
+        }
+
+        .col-header.green {
+            background: rgba(16, 185, 129, .12);
+            color: var(--green);
+        }
+
+        .col-header.amber {
+            background: rgba(245, 158, 11, .12);
+            color: var(--amber);
+        }
+
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .panel-hd {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .panel-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .panel-body {
+            padding: 12px;
+        }
+
+        .badge {
+            display: inline-block;
+            font-family: var(--mono);
+            font-size: 9px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .b-blue {
+            background: rgba(59, 130, 246, .15);
+            color: var(--blue);
+        }
+
+        .b-purple {
+            background: rgba(139, 92, 246, .15);
+            color: var(--purple);
+        }
+
+        .b-green {
+            background: rgba(16, 185, 129, .15);
+            color: var(--green);
+        }
+
+        .b-amber {
+            background: rgba(245, 158, 11, .15);
+            color: var(--amber);
+        }
+
+        .mrow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 0;
+        }
+
+        .mlabel {
+            font-size: 10px;
+            color: var(--muted);
+            font-family: var(--mono);
+        }
+
+        .mval {
+            font-size: 11px;
+            color: var(--text);
+            font-family: var(--mono);
+            font-weight: 700;
+        }
+
+        .b-red {
+            background: #450a0a;
+            color: #f87171
+        }
+
+
+
+        .bar-label {
+            font-size: 10px;
+            color: var(--muted);
+            margin-bottom: 2px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        .bar-track {
+            height: 6px;
+            background: var(--bg3);
+            border-radius: 3px;
+            overflow: hidden
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 1s ease
+        }
+
+        .bar-fill.blue {
+            background: var(--blue)
+        }
+
+        .bar-fill.purple {
+            background: var(--purple)
+        }
+
+        .bar-fill.green {
+            background: var(--green)
+        }
+
+        .bar-fill.amber {
+            background: var(--amber)
+        }
+
+        /* BUTTONS */
+        .btn {
+            font-family: var(--sans);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .2s;
+            letter-spacing: .3px
+        }
+
+        .btn:hover {
+            opacity: .85;
+            transform: translateY(-1px)
+        }
+
+        .btn:active {
+            transform: translateY(0)
+        }
+
+        .btn-blue {
+            background: var(--blue);
+            color: #fff
+        }
+
+        .btn-purple {
+            background: var(--purple);
+            color: #fff
+        }
+
+        .btn-green {
+            background: var(--green);
+            color: #fff
+        }
+
+        .btn-amber {
+            background: var(--amber);
+            color: #000
+        }
+
+        .btn-ghost {
+            background: var(--bg3);
+            color: var(--muted);
+            border: 1px solid var(--border)
+        }
+
+        .btn-red {
+            background: var(--red);
+            color: #fff
+        }
+
+        .btn-sm {
+            padding: 4px 10px;
+            font-size: 10px
+        }
+
+        /* INPUTS */
+        input[type=text],
+        textarea {
+            width: 100%;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            color: var(--text);
+            font-family: var(--sans);
+            font-size: 12px;
+            padding: 8px 12px;
+            outline: none;
+            transition: border-color .2s
+        }
+
+        input[type=text]:focus,
+        textarea:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, .15)
+        }
+
+        /* GRAPH VIZ */
+        .node-graph {
+            width: 100%;
+            height: 160px;
+            background: var(--bg3);
+            border-radius: 7px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border)
+        }
+
+        .gnode {
+            position: absolute;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 7px;
+            font-weight: 700;
+            font-family: var(--mono);
+            cursor: pointer;
+            transition: transform .2s, box-shadow .2s
+        }
+
+        .gnode:hover {
+            transform: scale(1.3) !important;
+            box-shadow: 0 0 10px currentColor;
+            z-index: 10
+        }
+
+        .gedge {
+            position: absolute;
+            pointer-events: none
+        }
+
+        /* PATH FLOW */
+        .path-flow {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-wrap: wrap;
+            padding: 6px 0
+        }
+
+        .path-node {
+            font-size: 9px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            font-family: var(--mono);
+            color: var(--text)
+        }
+
+        .path-arrow {
+            color: var(--muted);
+            font-size: 11px
+        }
+
+        /* ANSWER BOX */
+        .answer-box {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 11px;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            font-family: var(--mono);
+            color: #cbd5e1;
+            max-height: 200px;
+            overflow-y: auto;
+            min-height: 60px
+        }
+
+        /* CONFIDENCE BAR */
+        .conf-bar-wrap {
+            height: 7px;
+            background: var(--bg3);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 5px 0
+        }
+
+        .conf-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--green), var(--blue));
+            transition: width 1s ease
+        }
+
+        /* Q-TABLE */
+        .q-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px
+        }
+
+        .q-table th {
+            background: var(--bg3);
+            color: var(--muted);
+            font-family: var(--mono);
+            font-size: 9px;
+            padding: 5px 6px;
+            text-align: center;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .q-table td {
+            padding: 4px 6px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            font-family: var(--mono)
+        }
+
+        .q-table tr:last-child td {
+            border-bottom: none
+        }
+
+        .qtd-pos {
+            color: #34d399
+        }
+
+        .qtd-neg {
+            color: #f87171
+        }
+
+        .qtd-best {
+            background: rgba(59, 130, 246, .15);
+            font-weight: 700;
+            color: var(--blue);
+            border-radius: 3px
+        }
+
+        /* HISTORY */
+        .hist-list {
+            max-height: 130px;
+            overflow-y: auto
+        }
+
+        .hist-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 10px;
+            cursor: pointer;
+            transition: background .15s
+        }
+
+        .hist-item:hover {
+            background: rgba(255, 255, 255, .02);
+            padding-left: 4px
+        }
+
+        .hist-item:last-child {
+            border-bottom: none
+        }
+
+        .hist-q {
+            flex: 1;
+            color: var(--muted);
+            font-family: var(--mono);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+
+        /* LOADING */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: var(--muted);
+            font-family: var(--mono);
+            font-size: 11px;
+            gap: 8px
+        }
+
+        .spinner {
+            width: 14px;
+            height: 14px;
+            border: 2px solid var(--border);
+            border-top-color: var(--blue);
+            border-radius: 50%;
+            animation: spin .8s linear infinite
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        /* COMMUNITY CARDS */
+        .comm-card {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 8px;
+            margin-bottom: 6px;
+            cursor: pointer;
+            transition: all .2s
+        }
+
+        .comm-card:hover {
+            border-color: var(--purple);
+            background: rgba(139, 92, 246, .08)
+        }
+
+        .comm-card.expanded {
+            border-color: var(--purple)
+        }
+
+        .comm-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .comm-members {
+            margin-top: 6px;
+            display: none
+        }
+
+        .comm-card.expanded .comm-members {
+            display: block
+        }
+
+        .comm-member {
+            font-size: 9px;
+            color: var(--muted);
+            font-family: var(--mono);
+            padding: 2px 0;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .comm-member:last-child {
+            border-bottom: none
+        }
+
+        /* POLICY ROW */
+        .policy-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 8px;
+            background: var(--bg3);
+            border-radius: 4px;
+            margin-bottom: 4px;
+            border: 1px solid var(--border);
+            transition: all .2s
+        }
+
+        .policy-row:hover {
+            border-color: var(--green);
+            background: rgba(16, 185, 129, .05)
+        }
+
+        .state-name {
+            font-family: var(--mono);
+            font-size: 10px;
+            font-weight: 700
+        }
+
+        .arrow-sym {
+            color: var(--muted)
+        }
+
+        /* SUGGEST BTNS */
+        .suggest-btn {
+            width: 100%;
+            text-align: left;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            padding: 6px 10px;
+            color: var(--muted);
+            font-family: var(--mono);
+            font-size: 10px;
+            cursor: pointer;
+            transition: all .2s;
+            margin-bottom: 4px
+        }
+
+        .suggest-btn:hover {
+            border-color: var(--amber);
+            color: var(--amber)
+        }
+
+        /* CHUNK VIZ */
+        .chunk-viz {
+            display: flex;
+            gap: 3px;
+            flex-wrap: wrap;
+            margin-top: 4px
+        }
+
+        .chunk-block {
+            height: 18px;
+            border-radius: 2px;
+            background: var(--blue);
+            opacity: .6;
+            transition: opacity .2s, transform .2s;
+            cursor: pointer;
+            position: relative
+        }
+
+        .chunk-block:hover {
+            opacity: 1;
+            transform: scaleY(1.2)
+        }
+
+        .chunk-block.selected {
+            opacity: 1;
+            outline: 1px solid white
+        }
+
+        /* TOOLTIP */
+        .tooltip {
+            position: fixed;
+            background: #1e2d45;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            padding: 6px 10px;
+            font-family: var(--mono);
+            font-size: 10px;
+            color: var(--text);
+            pointer-events: none;
+            z-index: 999;
+            max-width: 250px;
+            display: none
+        }
+
+        /* ROUTING ARROW */
+        .routing-arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-family: var(--mono);
+            font-weight: 700;
+            margin-top: 4px
+        }
+
+        .routing-arrow.to-graph {
+            background: rgba(139, 92, 246, .15);
+            border: 1px solid rgba(139, 92, 246, .3);
+            color: #c4b5fd
+        }
+
+        .routing-arrow.to-vector {
+            background: rgba(59, 130, 246, .15);
+            border: 1px solid rgba(59, 130, 246, .3);
+            color: #93c5fd
+        }
+
+        .routing-arrow.to-both {
+            background: rgba(16, 185, 129, .15);
+            border: 1px solid rgba(16, 185, 129, .3);
+            color: #6ee7b7
+        }
+
+        .routing-arrow.to-citation {
+            background: rgba(245, 158, 11, .15);
+            border: 1px solid rgba(245, 158, 11, .3);
+            color: #fcd34d
+        }
+
+        /* REWARD CANVAS */
+        canvas {
+            border-radius: 5px;
+            display: block;
+            width: 100% !important
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+            height: 3px
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 2px
+        }
+
+        /* CHUNKING HIERARCHY */
+        .hier-tree {
+            margin-top: 8px
+        }
+
+        .hier-doc {
+            background: rgba(59, 130, 246, .1);
+            border: 1px solid rgba(59, 130, 246, .3);
+            border-radius: 5px;
+            padding: 6px 10px;
+            font-size: 10px;
+            color: var(--blue);
+            font-family: var(--mono);
+            text-align: center;
+            margin-bottom: 4px
+        }
+
+        .hier-chunks {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4px
+        }
+
+        .hier-chunk {
+            background: rgba(139, 92, 246, .1);
+            border: 1px solid rgba(139, 92, 246, .3);
+            border-radius: 4px;
+            padding: 4px 8px;
+            font-size: 9px;
+            color: #c4b5fd;
+            font-family: var(--mono)
+        }
+
+        .hier-sub {
+            display: flex;
+            gap: 3px;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+
+        .hier-sub-chunk {
+            background: rgba(16, 185, 129, .08);
+            border: 1px solid rgba(16, 185, 129, .2);
+            border-radius: 3px;
+            padding: 3px 6px;
+            font-size: 8px;
+            color: #6ee7b7;
+            font-family: var(--mono)
+        }
+
+        /* METHODS TABLE */
+        .method-row {
+            display: flex;
+            align-items: center;
+            padding: 4px 6px;
+            border-radius: 4px;
+            margin-bottom: 3px;
+            cursor: pointer;
+            transition: background .15s;
+            font-size: 10px
+        }
+
+        .method-row:hover {
+            background: var(--bg3)
+        }
+
+        .method-row.best {
+            background: rgba(16, 185, 129, .1);
+            border: 1px solid rgba(16, 185, 129, .2)
+        }
+
+        .method-score {
+            font-family: var(--mono);
+            font-weight: 700;
+            margin-left: auto
+        }
+    </style>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <header>
+        <div class="logo">Projet <span>RAG</span> — Frontend</div>
+        <div class="header-sub">PFA 4ème Année IA · Dr. EL MKHALET MOUNA</div>
+        <div class="status-dot">
+            <div class="dot" id="api-dot" style="background:#f59e0b"></div>
+            <span id="api-status">Connexion...</span>
+        </div>
+    </header>
+
+    <div class="tabs-bar">
+        <button class="tab-btn active" data-tab="vectorial" onclick="openVectorialPage()">◈ 1 - Vectorial
+            RAG</button>
+        <button class="tab-btn" data-tab="graph" onclick="openGraphPage()">
+            ◉ 2 - Graph RAG
+        </button>
+        <button class="tab-btn" data-tab="agentic" onclick="activateTab('agentic')">◎ 3 - Agentic RAG</button>
+        <button class="tab-btn" data-tab="query" onclick="activateTab('query')">⊕ 4 - Query</button>
+    </div>
+
+    <div id="app">
+
+        <!-- ═══════════════════════════════════ COL 1 : VECTORIAL ═══════════════════════════════════ -->
+        <div class="col" id="col-vectorial">
+            <div class="col-header blue">1 - Vectorial RAG</div>
+
+            <!-- Chunking Methods -->
+            <div class="panel">
+                <div class="panel-hd blue">
+                    <span class="panel-title">Text Chunking</span>
+                    <span class="badge b-blue" id="best-method-badge">Recursive Split ✓</span>
+                </div>
+                <div class="panel-body">
+                    <div id="chunking-methods"></div>
+                    <div class="hier-tree" id="hier-tree">
+                        <div class="hier-doc">📄 Thèse Piton des Neiges (~400 pages)</div>
+                        <div style="text-align:center;font-size:9px;color:var(--muted);margin:2px 0">↓ chunking</div>
+                        <div class="hier-chunks" id="hier-chunks-row"></div>
+                        <div style="text-align:center;font-size:9px;color:var(--muted);margin:2px 0">↓ sub-chunking
+                        </div>
+                        <div class="hier-sub" id="hier-sub-row"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PCA / Embeddings -->
+            <div class="panel">
+                <div class="panel-hd blue">
+                    <span class="panel-title">Embeddings FAISS — PCA 2D</span>
+                </div>
+                <div class="panel-body" style="text-align:center">
+                    <canvas id="pca-canvas" width="260" height="150"></canvas>
+                    <div style="margin-top:8px;display:flex;align-items:center;gap:8px">
+                        <span style="font-size:9px;color:var(--muted);font-family:var(--mono);white-space:nowrap">
+                            Filtre proximité
+                        </span>
+                        <input type="range" id="proximity-slider" min="5" max="100" value="100"
+                            style="flex:1;height:4px;accent-color:var(--blue);cursor:pointer">
+                        <span style="font-size:9px;color:var(--blue);font-family:var(--mono);min-width:28px"
+                            id="proximity-val">100%</span>
+                    </div>
+                    <div id="pca-legend"
+                        style="display:flex;gap:8px;justify-content:center;margin-top:6px;font-size:9px;font-family:var(--mono)">
+                    </div>
+                    <div id="pca-stats" style="font-size:9px;color:var(--muted);margin-top:4px"></div>
+                </div>
+            </div>
+
+            <!-- Semantic Search -->
+            <div class="panel">
+                <div class="panel-hd blue">
+                    <span class="panel-title">Retrieval Vectoriel</span>
+                    <select id="retrieval-method-select" style="
+                        background: var(--bg3);
+                        border: 1px solid var(--border);
+                        border-radius: 4px;
+                        color: var(--text);
+                        font-family: var(--mono);
+                        font-size: 10px;
+                        padding: 2px 6px;
+                        cursor: pointer;
+                    ">
+                        <option value="cosine">Top-k Cosine ▼</option>
+                        <option value="dot_product">Dot-Product</option>
+                        <option value="bm25_hybrid">BM25 + Embeddings</option>
+                    </select>
+                </div>
+                <div class="panel-body">
+                    <div style="display:flex;gap:6px">
+                        <input type="text" id="vect-query" placeholder="Requête de test...">
+                        <button class="btn btn-blue btn-sm" onclick="runVectorSearch()">→</button>
+                    </div>
+                    <div id="retrieval-results" style="margin-top:8px">
+                        <div style="font-size:10px;color:var(--muted);font-family:var(--mono)">Entrez une requête pour
+                            voir les résultats...</div>
+                    </div>
+                    <div
+                        style="font-size:9px;color:var(--muted);font-family:var(--mono);margin-top:4px;text-align:right">
+                        Méthode utilisée : <span style="color:var(--blue)" id="method-used-label">—</span>
+                    </div>
+                    <div id="retrieved-summary" style="margin-top:6px;display:none">
+                        <div class="panel-title" style="font-size:9px;color:var(--amber);margin-bottom:4px">📋 RÉSUMÉ
+                            RÉCUPÉRÉ</div>
+                        <div id="summary-text" class="answer-box" style="min-height:40px;font-size:10px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════ COL 2 : GRAPH ═══════════════════════════════════ -->
+        <div class="col" id="col-graph">
+            <div class="col-header purple">2 - Graph RAG</div>
+
+            <!-- Neo4j Viz -->
+            <div class="panel">
+                <div class="panel-hd purple">
+                    <span class="panel-title">Graphe RAG — Neo4j Aura</span>
+                </div>
+                <div class="panel-body">
+                    <div class="node-graph" id="neo4j-viz">
+                        <svg id="graph-svg" width="100%" height="100%" style="position:absolute;top:0;left:0"></svg>
+                    </div>
+                    <div id="graph-stats-mini" style="margin-top:8px;display:flex;gap:4px;flex-wrap:wrap"></div>
+                    <div id="node-detail"
+                        style="margin-top:6px;font-size:9px;color:var(--muted);font-family:var(--mono)">Survol d'un nœud
+                        pour voir ses détails...</div>
+                </div>
+            </div>
+
+            <!-- Louvain Communities -->
+            <div class="panel">
+                <div class="panel-hd purple">
+                    <span class="panel-title">Communautés — Louvain</span>
+                    <span class="badge b-purple" id="mod-badge">Mod: 0.76</span>
+                </div>
+                <div class="panel-body">
+                    <div style="display:flex;gap:6px;margin-bottom:8px">
+                        <button class="btn btn-purple btn-sm" style="flex:1" onclick="runLouvainLocal()">🔍 Détection
+                            Louvain</button>
+                        <button class="btn btn-ghost btn-sm" onclick="resetLouvain()">↺</button>
+                    </div>
+                    <div id="louvain-progress" style="display:none;margin-bottom:6px">
+                        <div style="font-size:9px;color:var(--muted);font-family:var(--mono);margin-bottom:3px">Calcul
+                            en cours...</div>
+                        <div class="bar-track">
+                            <div class="bar-fill purple" id="louvain-bar" style="width:0%;transition:width .3s"></div>
+                        </div>
+                    </div>
+                    <div id="community-list"></div>
+                </div>
+            </div>
+
+            <!-- Advanced Analysis -->
+            <div class="panel">
+                <div class="panel-hd purple">
+                    <span class="panel-title">Analyse Graphique Avancée</span>
+                </div>
+                <div class="panel-body">
+                    <div id="advanced-body"></div>
+                    <div style="margin-top:8px">
+                        <div style="font-size:9px;color:var(--muted);margin-bottom:4px;font-family:var(--mono)">CHEMINS
+                            SÉMANTIQUES</div>
+                        <div id="semantic-paths"></div>
+                    </div>
+                    <div style="margin-top:8px">
+                        <div style="font-size:9px;color:var(--muted);margin-bottom:2px;font-family:var(--mono)">FUSION
+                            GRAPHE+VECTORIEL</div>
+                        <div style="display:flex;align-items:center;gap:6px;font-size:10px">
+                            <span class="badge b-purple">Graphe</span>
+                            <span style="color:var(--muted)">⊕</span>
+                            <span class="badge b-blue">Vectoriel</span>
+                            <span style="color:var(--muted)">→</span>
+                            <span class="badge b-green">Score: 0.87</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════ COL 3 : AGENTIC ═══════════════════════════════════ -->
+        <div class="col" id="col-agentic">
+            <div class="col-header green">3 - Agentic RAG</div>
+
+            <!-- Q-Learning Policy -->
+            <div class="panel">
+                <div class="panel-hd green">
+                    <span class="panel-title">Policy Visualization — Q-Learning</span>
+                </div>
+                <div class="panel-body">
+                    <div style="font-size:9px;color:var(--muted);margin-bottom:6px;font-family:var(--mono)">ÉTAT →
+                        ACTION OPTIMALE</div>
+                    <div id="policy-viz"></div>
+                    <div style="margin-top:8px;overflow-x:auto">
+                        <table class="q-table" id="q-table"></table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reward Monitor -->
+            <div class="panel">
+                <div class="panel-hd green">
+                    <span class="panel-title">Reward Monitor</span>
+                </div>
+                <div class="panel-body">
+                    <canvas id="reward-canvas" width="260" height="100"></canvas>
+                    <div id="reward-stats" style="margin-top:8px"></div>
+                </div>
+            </div>
+
+            <!-- Decision Path -->
+            <div class="panel">
+                <div class="panel-hd green">
+                    <span class="panel-title">Decision Path</span>
+                </div>
+                <div class="panel-body" id="decision-paths-all"></div>
+            </div>
+
+            <!-- Hybrid Feedback Loop -->
+            <div class="panel">
+                <div class="panel-hd green">
+                    <span class="panel-title">Hybrid Feedback Loop</span>
+                </div>
+                <div class="panel-body">
+                    <div style="display:flex;align-items:center;justify-content:space-around;padding:6px 0">
+                        <div style="text-align:center;font-size:9px;font-family:var(--mono)">
+                            <div style="font-size:16px">🧠</div>
+                            <div style="color:var(--muted)">Agent</div>
+                        </div>
+                        <div style="color:var(--green);font-size:14px;animation:pulse 2s infinite">⟳</div>
+                        <div style="text-align:center;font-size:9px;font-family:var(--mono)">
+                            <div style="font-size:16px">📊</div>
+                            <div style="color:var(--muted)">Q-Table</div>
+                        </div>
+                    </div>
+                    <div
+                        style="background:var(--bg3);border-radius:4px;padding:6px 8px;font-family:var(--mono);font-size:9px;color:#93c5fd;border:1px solid var(--border)">
+                        Q(s,a) += α × (r + γ × max Q(s') − Q(s,a))
+                    </div>
+                    <div style="margin-top:6px">
+                        <div class="mrow"><span class="mlabel">α (learning rate)</span><span class="mval">0.3</span>
+                        </div>
+                        <div class="mrow"><span class="mlabel">γ (discount)</span><span class="mval">0.9</span></div>
+                        <div class="mrow"><span class="mlabel">ε (exploration)</span><span class="mval">0.0</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════ COL 4 : QUERY ═══════════════════════════════════ -->
+        <div class="col" id="col-query">
+            <div class="col-header amber">4 - Query</div>
+
+            <!-- Ask -->
+            <div class="panel">
+                <div class="panel-hd amber">
+                    <span class="panel-title">Ask a Question</span>
+                </div>
+                <div class="panel-body">
+                    <input type="text" id="query-input" placeholder="Entrez votre question..."
+                        onkeydown="if(event.key==='Enter')sendQuery()">
+                    <div style="display:flex;gap:6px;margin-top:8px">
+                        <button class="btn btn-amber" style="flex:1" onclick="sendQuery()">Envoyer / Exécuter</button>
+                        <button class="btn btn-ghost btn-sm" onclick="resetQuery()">↺</button>
+                    </div>
+                    <div style="margin-top:8px">
+                        <div style="font-size:9px;color:var(--muted);margin-bottom:4px;font-family:var(--mono)">
+                            SUGGESTIONS</div>
+                        <button class="suggest-btn"
+                            onclick="setQ('Quelle est la relation entre caldera et rift zone N030 ?')">Quelle est la
+                            relation entre caldera et rift zone N030 ?</button>
+                        <button class="suggest-btn"
+                            onclick="setQ('Comment fonctionne le système hydrothermal du Piton des Neiges ?')">Comment
+                            fonctionne le système hydrothermal ?</button>
+                        <button class="suggest-btn"
+                            onclick="setQ('Qu\'est-ce que la méthode ZDD géochronologique ?')">Qu'est-ce que la méthode
+                            ZDD ?</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis -->
+            <div class="panel">
+                <div class="panel-hd amber">
+                    <span class="panel-title">Analyse Automatique</span>
+                    <span class="badge b-green" id="action-badge">—</span>
+                </div>
+                <div class="panel-body">
+                    <div class="mrow">
+                        <span class="mlabel">Type détecté</span>
+                        <span class="mval" id="analysis-type">—</span>
+                    </div>
+                    <div class="mrow">
+                        <span class="mlabel">Routage</span>
+                        <span class="mval" id="routing-val">—</span>
+                    </div>
+                    <div class="mrow">
+                        <span class="mlabel">Confiance</span>
+                        <span class="mval" id="conf-pct">—</span>
+                    </div>
+                    <div class="conf-bar-wrap">
+                        <div class="conf-bar-fill" id="conf-bar" style="width:0%"></div>
+                    </div>
+                    <div id="routing-arrow-box"></div>
+                    <div id="decision-path" class="path-flow" style="margin-top:6px"></div>
+                </div>
+            </div>
+
+            <!-- Response -->
+            <div class="panel">
+                <div class="panel-hd amber">
+                    <span class="panel-title">Réponse</span>
+                </div>
+                <div class="panel-body">
+                    <div class="answer-box" id="answer-box">En attente de question...</div>
+                    <div id="cypher-container"
+                        style="display: none; margin-top: 10px; background: #111827; padding: 8px; border-radius: 4px; border: 1px solid #374151;">
+                        <span
+                            style="color: #4ade80; font-family: monospace; font-size: 10px; display: block; margin-bottom: 4px;">
+                            🔍 Cypher exécuté (Graph RAG)
+                        </span>
+                        <pre
+                            style="margin: 0; white-space: pre-wrap;"><code id="cypher-box" style="color: #e5e7eb; font-size: 10px; font-family: var(--mono);"></code></pre>
+                    </div>
+                    <div style="margin-top:8px;display:flex;gap:5px;align-items:center">
+                        <button class="btn btn-green btn-sm" onclick="sendFeedback(1)">👍 Bonne réponse</button>
+                        <button class="btn btn-red btn-sm" onclick="sendFeedback(-1)">👎 Mauvaise réponse</button>
+                        <span id="feedback-msg"
+                            style="font-size:9px;color:var(--muted);font-family:var(--mono);margin-left:4px"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History -->
+            <div class="panel">
+                <div class="panel-hd amber">
+                    <span class="panel-title">Historique des Requêtes</span>
+                </div>
+                <div class="panel-body">
+                    <div class="hist-list" id="history-list">
+                        <div style="font-size:10px;color:var(--muted);font-family:var(--mono)">Aucune requête encore...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- #app -->
+
+    <div id="vectorial-page" style="display:none; padding:14px; min-height:calc(100vh - 104px)">
+        <div
+            style="display:flex; align-items:center; gap:14px; margin-bottom:16px; border-bottom:1px solid var(--border); padding-bottom:12px">
+            <button class="btn btn-ghost btn-sm" onclick="closeVectorialPage()">
+                ← Retour
+            </button>
+            <div>
+                <div style="font-size:16px; font-weight:800; color:#7dd3fc; letter-spacing:-0.3px">
+                    ◈ Vectorial RAG
+                </div>
+                <div style="font-size:10px; color:var(--muted); font-family:var(--mono)">
+                    Chunking · Embeddings FAISS · Retrieval Vectoriel
+                </div>
+            </div>
+            <div style="margin-left:auto; display:flex; gap:8px; align-items:center">
+                <span class="badge b-blue" id="vp-chunks-badge">— chunks</span>
+                <span class="badge b-green" id="vp-model-badge">all-mpnet-base-v2</span>
+            </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; align-items:start">
+
+            <div>
+                <div
+                    style="font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--blue); background:rgba(59,130,246,.12); border:1px solid rgba(59,130,246,.25); border-bottom:none; padding:8px 12px; border-radius:6px 6px 0 0">
+                    Text Chunking
+                </div>
+                <div class="panel" style="border-radius:0 0 8px 8px; margin-bottom:10px">
+                    <div class="panel-hd blue">
+                        <span class="panel-title">Méthodes de découpage</span>
+                        <span class="badge b-blue" id="vp-best-method">Recursive Split ✓</span>
+                    </div>
+                    <div class="panel-body" id="vp-chunking-methods"></div>
+                </div>
+                <div class="panel">
+                    <div class="panel-hd blue">
+                        <span class="panel-title">Hiérarchie de découpage</span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="hier-tree">
+                            <div class="hier-doc">📄 Thèse Piton des Neiges (~400 pages)</div>
+                            <div style="text-align:center;font-size:9px;color:var(--muted);margin:4px 0">↓ chunking
+                            </div>
+                            <div class="hier-chunks" id="vp-hier-chunks"></div>
+                            <div style="text-align:center;font-size:9px;color:var(--muted);margin:4px 0">↓ sub-chunking
+                            </div>
+                            <div class="hier-sub" id="vp-hier-sub"></div>
+                        </div>
+                        <div style="margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:6px">
+                            <div
+                                style="background:var(--bg3); border:1px solid var(--border); border-radius:5px; padding:8px; text-align:center">
+                                <div style="font-size:18px; font-weight:800; color:var(--blue); font-family:var(--mono)"
+                                    id="vp-total-chunks">847</div>
+                                <div style="font-size:9px; color:var(--muted)">Total chunks</div>
+                            </div>
+                            <div
+                                style="background:var(--bg3); border:1px solid var(--border); border-radius:5px; padding:8px; text-align:center">
+                                <div style="font-size:18px; font-weight:800; color:var(--green); font-family:var(--mono)"
+                                    id="vp-avg-words">142</div>
+                                <div style="font-size:9px; color:var(--muted)">Mots/chunk (moy.)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div
+                    style="font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--blue); background:rgba(59,130,246,.12); border:1px solid rgba(59,130,246,.25); border-bottom:none; padding:8px 12px; border-radius:6px 6px 0 0">
+                    Embeddings FAISS — PCA 2D
+                </div>
+                <div class="panel" style="border-radius:0 0 8px 8px; margin-bottom:10px">
+                    <div class="panel-hd blue">
+                        <span class="panel-title">Projection ACP 2D</span>
+                        <span class="badge b-blue" id="vp-pca-variance">PC1+PC2: 67.3%</span>
+                    </div>
+                    <div class="panel-body" style="text-align:center">
+                        <div id="vp-pca-tooltip"
+                            style="display:none; position:fixed; background:#1e2d45; border:1px solid var(--border); border-radius:5px; padding:6px 10px; font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text); pointer-events:none; z-index:999; max-width:200px; box-shadow:0 4px 12px rgba(0,0,0,0.4)">
+                        </div>
+                        <canvas id="vp-pca-canvas" width="380" height="260"
+                            style="border-radius:5px; background:#111827; width:100%; max-width:380px"></canvas>
+                        <div id="vp-pca-legend"
+                            style="display:flex;gap:10px;justify-content:center; margin-top:8px;font-size:10px;font-family:var(--mono); flex-wrap:wrap">
+                        </div>
+
+                        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin-top:8px">
+                            <div
+                                style="background:var(--bg3); border:1px solid var(--border); border-radius:4px; padding:5px 8px; text-align:center">
+                                <div style="font-size:14px; font-weight:800; color:var(--blue); font-family:var(--mono)"
+                                    id="vp-active-points">265</div>
+                                <div style="font-size:8px; color:var(--muted)">Points actifs</div>
+                            </div>
+                            <div
+                                style="background:var(--bg3); border:1px solid var(--border); border-radius:4px; padding:5px 8px; text-align:center">
+                                <div style="font-size:14px; font-weight:800; color:var(--purple); font-family:var(--mono)"
+                                    id="vp-active-clusters">4</div>
+                                <div style="font-size:8px; color:var(--muted)">Clusters actifs</div>
+                            </div>
+                            <div
+                                style="background:var(--bg3); border:1px solid var(--border); border-radius:4px; padding:5px 8px; text-align:center">
+                                <div style="font-size:14px; font-weight:800; color:var(--green); font-family:var(--mono)"
+                                    id="vp-variance-badge">23.8%</div>
+                                <div style="font-size:8px; color:var(--muted)">Variance expliquée</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" style="margin-bottom:10px">
+                    <div class="panel-hd blue">
+                        <span class="panel-title">Filtre Proximité</span>
+                        <span class="badge b-blue" id="vp-proximity-val">100%</span>
+                    </div>
+                    <div class="panel-body">
+                        <input type="range" id="vp-proximity-slider" min="5" max="100" value="100"
+                            style="width:100%; accent-color:var(--blue); cursor:pointer">
+                        <div
+                            style="font-size:9px; color:var(--muted); font-family:var(--mono); margin-top:4px; text-align:center">
+                            Affiche les <span id="vp-proximity-pct">100</span>% de chunks les plus proches du centroïde
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-hd blue">
+                        <span class="panel-title">Modèle d'embedding</span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="mrow">
+                            <span class="mlabel">Modèle</span>
+                            <span class="mval" style="font-size:9px">all-mpnet-base-v2</span>
+                        </div>
+                        <div class="mrow">
+                            <span class="mlabel">Dimensions</span>
+                            <span class="mval">768</span>
+                        </div>
+                        <div class="mrow">
+                            <span class="mlabel">Index FAISS</span>
+                            <span class="mval">IndexFlatL2</span>
+                        </div>
+                        <div class="mrow">
+                            <span class="mlabel">Variance expliquée</span>
+                            <span class="mval" id="vp-variance-total">67.3%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div
+                    style="font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--blue); background:rgba(59,130,246,.12); border:1px solid rgba(59,130,246,.25); border-bottom:none; padding:8px 12px; border-radius:6px 6px 0 0">
+                    Retrieval Vectoriel
+                </div>
+                <div class="panel" style="border-radius:0 0 8px 8px; margin-bottom:10px">
+                    <div class="panel-hd blue">
+                        <span class="panel-title">Recherche sémantique</span>
+                        <select id="vp-retrieval-method"
+                            style="background:var(--bg3); border:1px solid var(--border); border-radius:4px; color:var(--text); font-family:var(--mono); font-size:10px; padding:2px 6px; cursor:pointer">
+                            <option value="cosine">Top-k Cosine ▼</option>
+                            <option value="dot_product">Dot-Product</option>
+                            <option value="bm25_hybrid">BM25 + Embeddings</option>
+                        </select>
+                    </div>
+                    <div class="panel-body">
+                        <div style="display:flex; gap:6px">
+                            <input type="text" id="vp-query" placeholder="Posez votre question..."
+                                onkeydown="if(event.key==='Enter') runVPSearch()">
+                            <button class="btn btn-blue btn-sm" onclick="runVPSearch()">→</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" style="margin-bottom:10px">
+                    <div class="panel-hd blue">
+                        <span class="panel-title">Documents récupérés</span>
+                        <span class="badge b-blue" id="vp-result-count">Top-3</span>
+                    </div>
+                    <div class="panel-body" id="vp-retrieval-results">
+                        <div style="font-size:10px;color:var(--muted);font-family:var(--mono)">
+                            Entrez une requête pour lancer le retrieval...
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="vp-summary-panel" style="display:none">
+                    <div class="panel-hd blue">
+                        <span class="panel-title">Résumé Récupéré</span>
+                        <span class="badge b-amber">Synthèse</span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="answer-box" id="vp-summary-text" style="min-height:60px; font-size:10px"></div>
+                        <div
+                            style="margin-top:6px; font-size:9px; color:var(--muted); font-family:var(--mono); text-align:right">
+                            Méthode : <span style="color:var(--blue)" id="vp-method-label">—</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="graph-page" style="display:none; padding:14px; min-height:calc(100vh - 104px)">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex; align-items:center; gap:14px; margin-bottom:16px; border-bottom:1px solid var(--border); padding-bottom:12px">
+            <button class="btn btn-ghost btn-sm" onclick="closeGraphPage()">← Retour</button>
+            <div>
+                <div style="font-size:16px; font-weight:800; color:#c4b5fd; letter-spacing:-0.3px">◉ Graph RAG</div>
+                <div style="font-size:10px; color:var(--muted); font-family:var(--mono)">Graphe Neo4j Aura · Communautés
+                    Louvain · Analyse Avancée</div>
+            </div>
+            <div style="margin-left:auto; display:flex; gap:8px; align-items:center">
+                <span class="badge b-purple" id="gp-nodes-badge">— nœuds</span>
+                <span class="badge b-blue" id="gp-rels-badge">— relations</span>
+                <span class="badge b-green" id="gp-mod-badge">Mod: 0.76</span>
+            </div>
+        </div>
+
+        <!-- 3 COLONNES -->
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; align-items:start">
+
+            <!-- ══ COLONNE 1 : GRAPHE RAG AURA ══ -->
+            <div>
+                <div
+                    style="font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--purple); background:rgba(139,92,246,.12); border:1px solid rgba(139,92,246,.25); border-bottom:none; padding:8px 12px; border-radius:6px 6px 0 0">
+                    Graphe RAG Aura
+                </div>
+                <div class="panel" style="border-radius:0 0 8px 8px; margin-bottom:10px">
+                    <div class="panel-hd purple" onclick="openGraphFullscreen()" style="cursor:pointer"
+                        title="Cliquez pour ouvrir en plein écran">
+                        <span class="panel-title">Neo4j Aura — Knowledge Network</span>
+                        <span style="font-size:10px; color:var(--muted); margin-left:auto">🔎 Plein écran</span>
+                    </div>
+                    <div class="panel-body">
+                        <div style="width:100%; height:320px; background:#0a0e17; border-radius:6px; border:1px solid var(--border); position:relative; overflow:hidden"
+                            id="gp-graph-container">
+                            <svg id="gp-graph-svg" width="100%" height="100%"
+                                style="position:absolute;top:0;left:0"></svg>
+                            <div id="gp-node-tooltip"
+                                style="display:none; position:absolute; background:#1e2d45; border:1px solid var(--border); border-radius:5px; padding:6px 10px; font-family:var(--mono); font-size:10px; color:var(--text); pointer-events:none; z-index:10; max-width:180px">
+                            </div>
+                        </div>
+                        <div id="gp-node-detail"
+                            style="margin-top:6px; font-size:9px; color:var(--muted); font-family:var(--mono); min-height:16px">
+                            Survol d'un nœud pour voir ses détails...
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" style="margin-bottom:10px">
+                    <div class="panel-hd purple"><span class="panel-title">Zoom &amp; Filter Options</span></div>
+                    <div class="panel-body">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px">
+                            <span style="font-size:9px; color:var(--muted); font-family:var(--mono)">Zoom</span>
+                            <input type="range" id="gp-zoom-slider" min="20" max="400" value="100"
+                                style="flex:1; accent-color:var(--purple); cursor:pointer">
+                            <span style="font-size:9px; color:var(--purple); font-family:var(--mono); min-width:36px"
+                                id="gp-zoom-val">100%</span>
+                        </div>
+                        <div style="display:flex; gap:6px; flex-wrap:wrap" id="gp-type-filters"></div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-hd purple"><span class="panel-title">Node Legend &amp; Relationships</span></div>
+                    <div class="panel-body" id="gp-legend-body"></div>
+                </div>
+            </div>
+
+            <!-- ══ COLONNE 2 : COMMUNAUTÉS LOUVAIN ══ -->
+            <div>
+                <div
+                    style="font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--purple); background:rgba(139,92,246,.12); border:1px solid rgba(139,92,246,.25); border-bottom:none; padding:8px 12px; border-radius:6px 6px 0 0">
+                    Communautés — Louvain</div>
+                <div class="panel" style="border-radius:0 0 8px 8px; margin-bottom:10px">
+                    <div class="panel-hd purple">
+                        <span class="panel-title">Louvain Community Detection</span>
+                        <span class="badge b-purple" id="gp-mod-score">Mod: 0.76</span>
+                    </div>
+                    <div class="panel-body">
+                        <div style="display:flex; gap:6px; margin-bottom:10px">
+                            <button class="btn btn-purple btn-sm" style="flex:1" onclick="runGPLouvain()">🔍 Détecter
+                                les communautés</button>
+                            <button class="btn btn-ghost btn-sm" onclick="resetGPLouvain()">↺</button>
+                        </div>
+                        <div id="gp-louvain-progress" style="display:none; margin-bottom:8px">
+                            <div style="font-size:9px; color:var(--muted); font-family:var(--mono); margin-bottom:3px">
+                                Calcul en cours...</div>
+                            <div class="bar-track">
+                                <div class="bar-fill purple" id="gp-louvain-bar" style="width:0%; transition:width .3s">
+                                </div>
+                            </div>
+                        </div>
+                        <svg id="gp-louvain-svg" width="340" height="200"
+                            style="border-radius:6px; background:#0a0e17; width:100%; display:block; margin-bottom:8px"></svg>
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px">
+                            <div
+                                style="background:var(--bg3); border:1px solid var(--border); border-radius:4px; padding:6px; text-align:center">
+                                <div style="font-size:18px; font-weight:800; color:var(--purple); font-family:var(--mono)"
+                                    id="gp-comm-count">6</div>
+                                <div style="font-size:8px; color:var(--muted)">Communautés</div>
+                            </div>
+                            <div
+                                style="background:var(--bg3); border:1px solid var(--border); border-radius:4px; padding:6px; text-align:center">
+                                <div style="font-size:18px; font-weight:800; color:var(--green); font-family:var(--mono)"
+                                    id="gp-modularity-val">0.76</div>
+                                <div style="font-size:8px; color:var(--muted)">Modularité</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-hd purple"><span class="panel-title">Cluster Members Overview</span></div>
+                    <div class="panel-body" id="gp-community-cards">
+                        <div style="font-size:10px; color:var(--muted); font-family:var(--mono)">Lancez la détection
+                            pour voir les membres...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══ COLONNE 3 : ANALYSE GRAPHIQUE AVANCÉE ══ -->
+            <div>
+                <div
+                    style="font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--purple); background:rgba(139,92,246,.12); border:1px solid rgba(139,92,246,.25); border-bottom:none; padding:8px 12px; border-radius:6px 6px 0 0">
+                    Analyse Graphique Avancée</div>
+                <div class="panel" style="border-radius:0 0 8px 8px; margin-bottom:10px">
+                    <div class="panel-hd purple"><span class="panel-title">Graph Metrics</span><span
+                            class="badge b-purple">Centralité · Densité</span></div>
+                    <div class="panel-body">
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:10px">
+                            <div
+                                style="background:var(--bg3); border:1px solid var(--border); border-radius:4px; padding:8px; text-align:center">
+                                <div style="font-size:18px; font-weight:800; color:var(--blue); font-family:var(--mono)"
+                                    id="gp-metric-nodes">342</div>
+                                <div style="font-size:8px; color:var(--muted)">Nœuds</div>
+                            </div>
+                            <div
+                                style="background:var(--bg3); border:1px solid var(--border); border-radius:4px; padding:8px; text-align:center">
+                                <div style="font-size:18px; font-weight:800; color:var(--purple); font-family:var(--mono)"
+                                    id="gp-metric-rels">1087</div>
+                                <div style="font-size:8px; color:var(--muted)">Relations</div>
+                            </div>
+                            <div
+                                style="background:var(--bg3); border:1px solid var(--border); border-radius:4px; padding:8px; text-align:center">
+                                <div style="font-size:18px; font-weight:800; color:var(--green); font-family:var(--mono)"
+                                    id="gp-metric-density">0.93%</div>
+                                <div style="font-size:8px; color:var(--muted)">Densité</div>
+                            </div>
+                            <div
+                                style="background:var(--bg3); border:1px solid var(--border); border-radius:4px; padding:8px; text-align:center">
+                                <div style="font-size:18px; font-weight:800; color:var(--amber); font-family:var(--mono)"
+                                    id="gp-metric-pagerank">Top: Caldera</div>
+                                <div style="font-size:8px; color:var(--muted)">PageRank #1</div>
+                            </div>
+                        </div>
+                        <div style="font-size:9px; color:var(--muted); font-family:var(--mono); margin-bottom:4px">
+                            DISTRIBUTION PAR TYPE</div>
+                        <div id="gp-type-distribution"></div>
+                    </div>
+                </div>
+                <div class="panel" style="margin-bottom:10px">
+                    <div class="panel-hd purple"><span class="panel-title">Semantic Paths — Key Connections</span></div>
+                    <div class="panel-body" id="gp-semantic-paths"></div>
+                </div>
+                <div class="panel">
+                    <div class="panel-hd purple"><span class="panel-title">Contextual Insights &amp;
+                            Recommendations</span></div>
+                    <div class="panel-body" id="gp-insights"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════════════════ -->
+    <!-- PAGE PLEIN ÉCRAN — GRAPHE SEUL (ouverte via "Neo4j Aura — Knowledge Network") -->
+    <!-- ══════════════════════════════════════════════════════════════════════ -->
+    <div id="graph-fullscreen-page"
+        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:9999; background:#060a12; overflow:hidden">
+        <div
+            style="display:flex; align-items:center; gap:10px; padding:8px 16px; background:rgba(17,24,39,.92); border-bottom:1px solid var(--border); height:44px; backdrop-filter:blur(8px); position:absolute; top:0; left:0; right:0; z-index:10">
+            <button class="btn btn-ghost btn-sm" onclick="closeGraphFullscreen()" style="font-size:12px">← Retour au
+                dashboard</button>
+            <div style="font-size:13px; font-weight:800; color:#c4b5fd">◉ Neo4j Aura — Knowledge Network (Plein Écran)
+            </div>
+            <div style="display:flex; gap:6px; align-items:center; margin-left:auto">
+                <span class="badge b-purple" id="gp-fs-nodes">—</span>
+                <span class="badge b-blue" id="gp-fs-rels">—</span>
+            </div>
+            <div
+                style="display:flex; align-items:center; gap:6px; margin-left:12px; border-left:1px solid var(--border); padding-left:12px">
+                <span style="font-size:9px; color:var(--muted); font-family:var(--mono)">Zoom</span>
+                <input type="range" id="gp-fs-zoom-slider" min="10" max="500" value="100"
+                    style="width:120px; accent-color:var(--purple); cursor:pointer">
+                <span style="font-size:9px; color:var(--purple); font-family:var(--mono); min-width:36px"
+                    id="gp-fs-zoom-val">100%</span>
+            </div>
+        </div>
+        <div id="gp-fs-container" style="width:100%; height:100%; position:relative">
+            <svg id="gp-fs-svg" width="100%" height="100%" style="position:absolute; top:0; left:0; cursor:grab"></svg>
+            <div id="gp-fs-tooltip"
+                style="display:none; position:absolute; background:rgba(30,45,69,.95); border:1px solid var(--border); border-radius:6px; padding:8px 12px; font-family:var(--mono); font-size:11px; color:var(--text); pointer-events:none; z-index:10; max-width:220px; backdrop-filter:blur(8px)">
+            </div>
+            <div id="gp-fs-detail"
+                style="position:absolute; bottom:16px; left:16px; font-size:12px; color:var(--muted); font-family:var(--mono); background:rgba(10,14,23,.85); padding:8px 14px; border-radius:8px; border:1px solid var(--border); backdrop-filter:blur(6px)">
+                Survol d'un nœud pour voir ses détails...</div>
+            <div
+                style="position:absolute; bottom:16px; right:16px; background:rgba(10,14,23,.85); padding:10px 14px; border-radius:8px; border:1px solid var(--border); backdrop-filter:blur(6px); font-size:10px; font-family:var(--mono); max-width:400px">
+                <div
+                    style="color:var(--muted); margin-bottom:4px; font-weight:700; text-transform:uppercase; letter-spacing:1px">
+                    Communautés</div>
+                <div id="gp-fs-legend" style="display:flex; flex-wrap:wrap; gap:4px 12px"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // ═══════════════════════════════════════════════════════════════
+        // CONFIG & STATE
+        // ═══════════════════════════════════════════════════════════════
+        const COMMUNITY_COLORS = [
+            '#3b82f6', '#f59e0b', '#ec4899', '#06b6d4', '#8b5cf6',
+            '#10b981', '#f97316', '#84cc16', '#e11d48', '#0ea5e9',
+            '#a855f7', '#14b8a6', '#fb923c', '#22d3ee', '#818cf8',
+            '#34d399', '#f472b6', '#60a5fa', '#facc15', '#4ade80',
+            '#c084fc', '#38bdf8', '#fb7185', '#a3e635', '#fbbf24',
+            '#67e8f9', '#f0abfc', '#86efac', '#fcd34d', '#6ee7b7'
+        ];
+
+        const API = "http://localhost:8000";
+        let lastQuestion = "";
+        let queryHistory = [];
+        let apiOnline = false;
+
+        // Q-table locale (simulée / chargée depuis API)
+        let qTable = {
+            graph: { use_graph: 1.0, use_vector: 0.2, use_both: 0.5, fallback: 0.0 },
+            vector: { use_graph: 0.2, use_vector: 1.0, use_both: 0.5, fallback: 0.0 },
+            hybrid: { use_graph: 0.3, use_vector: 0.3, use_both: 1.0, fallback: 0.0 },
+            unknown: { use_graph: 0.0, use_vector: 0.5, use_both: 0.3, fallback: 1.0 }
+        };
+        let rewardHistory = [];
+        let episodeCount = 0;
+
+        // ═══════════════════════════════════════════════════════════════
+        // DONNÉES SIMULÉES (utilisées si l'API est offline)
+        // ═══════════════════════════════════════════════════════════════
+        const MOCK_CHUNKS_INFO = {
+            total_chunks: 847,
+            avg_words: 142,
+            best_method: "M6 - Recursive Split",
+            methods: [
+                { name: "M6 - Recursive Split", score: 0.7832, f1: 0.812, recall: 0.791, nb: 847 },
+                { name: "M5 - Semantic", score: 0.7541, f1: 0.784, recall: 0.763, nb: 312 },
+                { name: "M4 - Sliding Window", score: 0.7280, f1: 0.761, recall: 0.748, nb: 1204 },
+                { name: "M2 - Sentence-Based", score: 0.6910, f1: 0.723, recall: 0.712, nb: 2841 },
+                { name: "M3 - Paragraph-Based", score: 0.6755, f1: 0.704, recall: 0.695, nb: 423 },
+                { name: "M1 - Fixed-Size", score: 0.6412, f1: 0.671, recall: 0.658, nb: 936 },
+                { name: "M7 - Token-Based", score: 0.6190, f1: 0.648, recall: 0.637, nb: 1102 },
+            ]
+        };
+
+        const MOCK_GRAPH_DATA = {
+            stats: { nodes: 342, relations: 1087, communities: 6, modularity: 0.76 },
+            nodes: [
+                { name: "Caldera", type: "STRUCTURE", community: 0, cx: 130, cy: 65 },
+                { name: "Rift N030", type: "STRUCTURE", community: 0, cx: 200, cy: 45 },
+                { name: "Cilaos", type: "CIRQUE", community: 1, cx: 70, cy: 100 },
+                { name: "Mafate", type: "CIRQUE", community: 1, cx: 50, cy: 55 },
+                { name: "Salazie", type: "CIRQUE", community: 1, cx: 100, cy: 35 },
+                { name: "Brèche Orangers", type: "FORMATION", community: 2, cx: 220, cy: 95 },
+                { name: "Phonolite", type: "ROCHE", community: 3, cx: 170, cy: 120 },
+                { name: "Basalte", type: "ROCHE", community: 3, cx: 245, cy: 120 },
+                { name: "Syénite", type: "ROCHE", community: 3, cx: 210, cy: 75 },
+                { name: "Source Thermale", type: "HYDROTHERMAL", community: 4, cx: 85, cy: 140 },
+                { name: "ZDD", type: "METHODE", community: 5, cx: 155, cy: 35 },
+                { name: "U-Pb", type: "METHODE", community: 5, cx: 190, cy: 15 },
+            ],
+            edges: [
+                [0, 1], [0, 2], [0, 3], [0, 4], [1, 8], [2, 9], [3, 9], [4, 6], [5, 6], [5, 7], [6, 8], [9, 2], [10, 11], [0, 10]
+            ],
+            communities: [
+                {
+                    id: 0, name: "Structures Volcaniques", size: 42, color: "#8b5cf6",
+                    members: ["Caldera", "Rift N030", "Faille de caldera", "Dôme central", "Ignimbrite", "Sill zones"]
+                },
+                {
+                    id: 1, name: "Cirques & Géomorphologie", size: 67, color: "#3b82f6",
+                    members: ["Cilaos", "Mafate", "Salazie", "Rempart", "Ravine", "Bassin versant", "Remparts"]
+                },
+                {
+                    id: 2, name: "Formations Géologiques", size: 55, color: "#f59e0b",
+                    members: ["Brèche Orangers", "Coulées LM", "Scories", "Tufs", "Alluvions", "Dépôts fluviaux"]
+                },
+                {
+                    id: 3, name: "Pétrologie & Roches", size: 89, color: "#10b981",
+                    members: ["Phonolite", "Basalte", "Syénite", "Gabbro", "Trachyte", "Ankaratrite", "Mugéarite"]
+                },
+                {
+                    id: 4, name: "Système Hydrothermal", size: 38, color: "#ef4444",
+                    members: ["Source Thermale", "Chambre magmatique", "Réservoir", "Gradient géothermique", "Fluides"]
+                },
+                {
+                    id: 5, name: "Méthodes Géochronologiques", size: 51, color: "#06b6d4",
+                    members: ["ZDD", "U-Pb", "Ar-Ar", "K-Ar", "U-Th/He", "(U-Th)/He", "Thermochronologie"]
+                },
+            ]
+        };
+
+        const MOCK_VECTOR_RESULTS = {
+            "caldera": [
+                { score: 0.87, chunk: "La caldera du Piton des Neiges, formée il y a environ 188 ka, résulte d'un effondrement structural associé à l'émission de grandes coulées ignimbritiques. Elle est délimitée par des failles normales orientées N030 définissant une structure ovale de 8 km de diamètre..." },
+                { score: 0.81, chunk: "L'analyse structurale de la caldera révèle un système de failles conjuguées s'inscrivant dans la continuité des rift zones. Les travaux de Stieltjes (1973) et Demange (1975) ont permis d'identifier trois phases d'effondrement successives..." },
+                { score: 0.74, chunk: "Les formations ignimbritiques associées à la caldera présentent des épaisseurs variables atteignant 40 mètres dans les zones proximales. La composition phonolitique de ces dépôts témoigne d'un épisode de différenciation magmatique avancée..." }
+            ],
+            "hydrothermal": [
+                { score: 0.91, chunk: "Le système hydrothermal du Piton des Neiges est alimenté par les précipitations infiltrées qui interagissent avec les roches volcaniques chaudes en profondeur. Les sources thermales de Cilaos émergent à des températures de 27°C à 36°C selon les points de résurgence..." },
+                { score: 0.85, chunk: "Le modèle de Bénard (2020) propose une circulation hydrique à deux niveaux : un aquifère superficiel perché et un système profond contrôlé par la structure géologique. Les isotopes δ18O et δD confirment une recharge en altitude..." },
+                { score: 0.79, chunk: "Les anomalies thermiques mesurées dans les forages indiquent un gradient géothermique de 80°C/km, supérieur au gradient continental moyen. Cette anomalie est interprétée comme la signature d'une chambre magmatique résiduelle à ~4 km de profondeur..." }
+            ],
+            "zdd": [
+                { score: 0.93, chunk: "La méthode ZDD (Zircon Double Dating) combine la datation U-Pb sur zircon (qui donne l'âge de cristallisation) avec la thermochronologie (U-Th)/He (qui donne l'âge de refroidissement). Cette double information permet de contraindre à la fois la genèse et l'histoire thermique des roches..." },
+                { score: 0.88, chunk: "L'application de la méthode ZDD aux syénites du Piton des Neiges a permis d'obtenir un âge U-Pb de 188.2 ± 1.3 ka, cohérent avec les estimations K-Ar antérieures. L'âge (U-Th)/He de 27 ± 2 ka reflète le refroidissement post-caldera..." },
+            ],
+            "default": [
+                { score: 0.72, chunk: "Le Piton des Neiges, point culminant de La Réunion à 3070 m d'altitude, est un volcan bouclier en phase de démantèlement. Sa structure interne révèle une succession de phases éruptives s'étalant sur au moins 2 millions d'années..." },
+                { score: 0.65, chunk: "Les études pétrologiques menées par Upton et Wadsworth (1965) ont mis en évidence la diversité de la série magmatique du Piton des Neiges, allant des basaltes alcalins aux phonolites et syénites différenciées..." },
+            ]
+        };
+
+        // ═══════════════════════════════════════════════════════════════
+        // HEALTH CHECK
+        // ═══════════════════════════════════════════════════════════════
+        async function checkHealth() {
+            try {
+                const r = await fetch(API + "/", { signal: AbortSignal.timeout(4000) });
+                const d = await r.json();
+                apiOnline = true;
+                document.getElementById('api-dot').style.background = '#10b981';
+                document.getElementById('api-status').textContent = `API OK · Neo4j: ${d.neo4j} · Vector: ${d.vector_store}`;
+            } catch {
+                apiOnline = false;
+                document.getElementById('api-dot').style.background = '#f59e0b';
+                document.getElementById('api-status').textContent = 'Mode démo (API offline)';
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // TABS
+        // ═══════════════════════════════════════════════════════════════
+        function activateTab(name) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector(`[data-tab="${name}"]`).classList.add('active');
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // CHUNKING VISUALIZATION
+        // ═══════════════════════════════════════════════════════════════
+        function renderChunkingMethods(data) {
+            const el = document.getElementById('chunking-methods');
+            const max = data.methods[0].score;
+            el.innerHTML = data.methods.map((m, i) => `
+    <div class="method-row ${i === 0 ? 'best' : ''}" title="${m.nb} chunks | F1: ${m.f1} | Recall: ${m.recall}">
+      <span style="font-size:10px;font-family:var(--mono);color:${i === 0 ? 'var(--green)' : 'var(--muted)'}">${m.name}</span>
+      ${i === 0 ? '<span class="badge b-green" style="margin:0 4px">✓ Best</span>' : ''}
+      <span class="method-score" style="color:${i === 0 ? 'var(--green)' : 'var(--text)'}">${m.score}</span>
+    </div>
+    <div class="bar-track" style="margin-bottom:3px">
+      <div class="bar-fill ${i === 0 ? 'green' : 'blue'}" style="width:${(m.score / max * 100).toFixed(0)}%;opacity:${i === 0 ? 1 : 0.4}"></div>
+    </div>
+  `).join('');
+
+            // Hierarchy tree
+            const hierChunks = document.getElementById('hier-chunks-row');
+            const hierSub = document.getElementById('hier-sub-row');
+            ['Chunk 1', 'Chunk 2', 'Chunk 3', 'Chunk 4', 'Chunk 5'].forEach(c => {
+                const el = document.createElement('div');
+                el.className = 'hier-chunk';
+                el.textContent = c;
+                hierChunks.appendChild(el);
+            });
+            ['Sub-C 1', 'Sub-C 2', 'Sub-C 3', 'Sub-C 4', 'Sub-C 5', 'Sub-C 6', 'Sub-C 7', 'Sub-C 8'].forEach(c => {
+                const el = document.createElement('div');
+                el.className = 'hier-sub-chunk';
+                el.textContent = c;
+                hierSub.appendChild(el);
+            });
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // PCA CANVAS
+        // ═══════════════════════════════════════════════════════════════
+        function renderPCA() {
+            const canvas = document.getElementById('pca-canvas');
+            const ctx = canvas.getContext('2d');
+            const w = canvas.offsetWidth || 260, h = 150;
+            canvas.width = w; canvas.height = h;
+
+            ctx.fillStyle = '#111827';
+            ctx.fillRect(0, 0, w, h);
+
+            // Axes
+            ctx.strokeStyle = '#1e2d45';
+            ctx.lineWidth = 1;
+            ctx.setLineDash([3, 3]);
+            ctx.beginPath(); ctx.moveTo(w / 2, 5); ctx.lineTo(w / 2, h - 5); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(5, h / 2); ctx.lineTo(w - 5, h / 2); ctx.stroke();
+            ctx.setLineDash([]);
+
+            const clusters = [
+                { color: '#60a5fa', label: 'Géologie' },
+                { color: '#a78bfa', label: 'Méthodes' },
+                { color: '#34d399', label: 'Structures' },
+                { color: '#fbbf24', label: 'Hydrothermal' },
+            ];
+
+            // Génération déterministe de points
+            const rng = (seed) => { let x = Math.sin(seed) * 10000; return x - Math.floor(x); };
+            let pts = [];
+            [
+                { cx: 0.3, cy: 0.35, spread: 0.18, cluster: 0, n: 90 },
+                { cx: 0.65, cy: 0.3, spread: 0.14, cluster: 1, n: 60 },
+                { cx: 0.45, cy: 0.65, spread: 0.12, cluster: 2, n: 70 },
+                { cx: 0.7, cy: 0.65, spread: 0.10, cluster: 3, n: 45 },
+            ].forEach(g => {
+                for (let i = 0; i < g.n; i++) {
+                    const angle = rng(i * 7 + g.cluster * 100) * Math.PI * 2;
+                    const r = rng(i * 13 + g.cluster * 200) * g.spread;
+                    pts.push({
+                        x: (g.cx + Math.cos(angle) * r) * (w - 20) + 10,
+                        y: (g.cy + Math.sin(angle) * r) * (h - 20) + 10,
+                        c: g.cluster
+                    });
+                }
+            });
+
+            pts.forEach(p => {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
+                ctx.fillStyle = clusters[p.c].color + 'bb';
+                ctx.fill();
+            });
+
+            // Labels PC
+            ctx.fillStyle = '#64748b';
+            ctx.font = '9px JetBrains Mono';
+            ctx.fillText('PC1', w - 25, h / 2 - 4);
+            ctx.fillText('PC2', w / 2 + 4, 14);
+
+            // Legend
+            const legend = document.getElementById('pca-legend');
+            legend.innerHTML = clusters.map(c =>
+                `<span style="color:${c.color}">● ${c.label}</span>`
+            ).join('');
+            document.getElementById('pca-stats').textContent = 'PC1: 45.2%  PC2: 22.1%  (total: 67.3%)';
+        }
+
+        function openVectorialPage() {
+            document.getElementById('app').style.display = 'none';
+            document.getElementById('vectorial-page').style.display = 'block';
+            initVectorialPage();
+        }
+
+        function closeVectorialPage() {
+            document.getElementById('vectorial-page').style.display = 'none';
+            document.getElementById('app').style.display = 'grid';
+        }
+
+        // ══════════════════════════════════════════════════════════════
+        // GRAPH RAG PAGE FUNCTIONS
+        // ══════════════════════════════════════════════════════════════
+
+        function openGraphPage() {
+            document.getElementById('app').style.display = 'none';
+            document.getElementById('vectorial-page').style.display = 'none';
+            document.getElementById('graph-page').style.display = 'block';
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector('[data-tab="graph"]').classList.add('active');
+            // Small delay to let the fullscreen container render so we get correct dimensions
+            setTimeout(() => initGraphPage(), 50);
+        }
+
+        function closeGraphPage() {
+            document.getElementById('graph-page').style.display = 'none';
+            document.getElementById('app').style.display = 'grid';
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector('[data-tab="vectorial"]').classList.add('active');
+            if (_gpSimulation) { _gpSimulation.stop(); _gpSimulation = null; }
+        }
+
+        function openGraphFullscreen() {
+            document.getElementById('graph-fullscreen-page').style.display = 'block';
+            setTimeout(() => {
+                renderGPGraph(true); // true = fullscreen
+
+                // Update stats in fullscreen header
+                const rawNodes = window._gpRealNodes || [];
+                const rawEdges = window._gpRealEdges || [];
+                const nBadge = document.getElementById('gp-fs-nodes');
+                const rBadge = document.getElementById('gp-fs-rels');
+                if (nBadge) nBadge.textContent = rawNodes.length + ' nœuds';
+                if (rBadge) rBadge.textContent = rawEdges.length + ' relations';
+            }, 50);
+        }
+
+        function closeGraphFullscreen() {
+            document.getElementById('graph-fullscreen-page').style.display = 'none';
+            // Re-render in the small container
+            setTimeout(() => renderGPGraph(false), 50);
+        }
+
+        function toggleGraphSidebar() {
+            const sb = document.getElementById('gp-sidebar');
+            if (!sb) return;
+            if (sb.style.display === 'none') {
+                sb.style.display = 'block';
+            } else {
+                sb.style.display = 'none';
+            }
+            // Re-render graph with new available width after sidebar toggle
+            setTimeout(() => renderGPGraph(), 100);
+        }
+
+        function computeNodeDegrees(nodes, edges) {
+            const degree = {};
+            nodes.forEach(n => { degree[n.name] = 0; });
+            (edges || []).forEach(e => {
+                const s = e.source, t = e.target;
+                if (s in degree) degree[s]++;
+                if (t in degree) degree[t]++;
+            });
+            return degree;
+        }
+
+        // Fallback couleur : si toutes les communautés sont identiques
+        // (Louvain pas encore passé), on colore par TYPE de nœud à la place.
+        // Si même le type est uniforme (ex: tout "Entity"), on répartit en
+        // pseudo-groupes par degré pour au moins varier les couleurs.
+        function applyFallbackGrouping(nodes) {
+            if (!nodes || nodes.length === 0) return;
+
+            const distinctCommunities = new Set(nodes.map(n => n.community ?? 0));
+            if (distinctCommunities.size > 1) return; // vraies communautés déjà présentes
+
+            const distinctTypes = new Set(nodes.map(n => n.type || 'Inconnu'));
+            if (distinctTypes.size > 1) {
+                const typeToGroup = {};
+                let nextId = 0;
+                nodes.forEach(n => {
+                    const t = n.type || 'Inconnu';
+                    if (!(t in typeToGroup)) typeToGroup[t] = nextId++;
+                    n.community = typeToGroup[t];
+                });
+                return;
+            }
+
+            // Tout est du même type ET même communauté (ex: 1016 "Entity" tous Comm:0)
+            // → on répartit en 8 pseudo-groupes arbitraires juste pour la couleur,
+            // ça n'a pas de sens sémantique mais ça rend le graphe lisible visuellement
+            // en attendant que Louvain tourne pour de vraies communautés.
+            nodes.forEach((n, i) => { n.community = i % 8; });
+        }
+
+        async function initGraphPage() {
+
+            const response = await fetch(`${API}/graph?limit=6000`);
+            const data = await response.json();
+
+            const allNodes0 = data.nodes_sample || [];
+            const allEdges0 = data.edges_sample || [];
+            const degreeMap0 = computeNodeDegrees(allNodes0, allEdges0);
+
+            // Utiliser TOUS les nœuds de Neo4j (pas de limite)
+            const sortedNodes0 = allNodes0
+                .slice()
+                .sort((a, b) => (degreeMap0[b.name] || 0) - (degreeMap0[a.name] || 0));
+
+            const keepNames0 = new Set(sortedNodes0.map(n => n.name));
+
+            window._gpRealNodes = sortedNodes0;
+            window._gpRealEdges = allEdges0;
+            window._gpDegreeMap = degreeMap0;
+
+            applyFallbackGrouping(window._gpRealNodes);
+
+            renderGPGraph();
+
+            // Stats header
+            document.getElementById('gp-nodes-badge').textContent =
+                (window._gpRealNodes?.length || 0) + ' nœuds (sur ' + (data.stats?.nodes || allNodes0.length) + ')';
+            document.getElementById('gp-rels-badge').textContent =
+                (data.stats?.relations ?? MOCK_GRAPH_DATA.stats.relations) + ' relations';
+            document.getElementById('gp-mod-badge').textContent =
+                'Mod: ' + (data.stats?.modularity ?? MOCK_GRAPH_DATA.stats.modularity);
+
+            document.getElementById('gp-metric-nodes').textContent =
+                data.stats?.nodes ?? MOCK_GRAPH_DATA.stats.nodes;
+            document.getElementById('gp-metric-rels').textContent =
+                data.stats?.relations ?? MOCK_GRAPH_DATA.stats.relations;
+
+            const totalNodesForDensity = data.stats?.nodes || MOCK_GRAPH_DATA.stats.nodes;
+            const totalRelsForDensity = data.stats?.relations || MOCK_GRAPH_DATA.stats.relations;
+            const density = (totalRelsForDensity /
+                Math.max(totalNodesForDensity * (totalNodesForDensity - 1), 1) * 100)
+                .toFixed(2);
+            document.getElementById('gp-metric-density').textContent = density + '%';
+
+            // Fonction pour lier un slider de zoom à une vue (normale ou fullscreen)
+            function bindZoomSlider(sliderId, valId, svgId, groupId) {
+                const slider = document.getElementById(sliderId);
+                if (slider) {
+                    slider.oninput = function () {
+                        const val = parseInt(this.value);
+                        document.getElementById(valId).textContent = val + '%';
+                        const svgSel = d3.select('#' + svgId);
+                        if (svgSel.empty()) return;
+                        const currentTransform = d3.zoomTransform(svgSel.node());
+                        svgSel.call(
+                            d3.zoom().transform,
+                            d3.zoomIdentity.translate(currentTransform.x, currentTransform.y).scale(val / 100)
+                        );
+                        d3.select('#' + groupId).attr('transform',
+                            `translate(${currentTransform.x},${currentTransform.y}) scale(${val / 100})`
+                        );
+                    };
+                }
+            }
+
+            bindZoomSlider('gp-zoom-slider', 'gp-zoom-val', 'gp-graph-svg', 'gp-zoom-group');
+            bindZoomSlider('gp-fs-zoom-slider', 'gp-fs-zoom-val', 'gp-fs-svg', 'gp-fs-zoom-group');
+
+            renderGPTypeFilters();
+            renderGPLegend();
+            renderGPTypeDistribution();
+            renderGPSemanticPaths();
+            renderGPInsights();
+
+            // Louvain automatique au chargement
+            if (apiOnline) {
+                try {
+                    const lr = await fetch(`${API}/graph/louvain`, { method: 'POST' });
+                    const ld = await lr.json();
+                    if (ld.status === 'success') {
+                        const refreshed = await fetch(`${API}/graph?limit=6000`);
+                        const rdata = await refreshed.json();
+                        const rNodes = rdata.nodes_sample || [];
+                        const rEdges = rdata.edges_sample || [];
+                        const rDegree = computeNodeDegrees(rNodes, rEdges);
+                        const rSorted = rNodes.slice()
+                            .sort((a, b) => (rDegree[b.name] || 0) - (rDegree[a.name] || 0));
+
+                        window._gpRealNodes = rSorted;
+                        window._gpRealEdges = rEdges;
+                        window._gpDegreeMap = rDegree;
+
+                        renderGPGraph();
+
+                        document.getElementById('gp-mod-badge').textContent = 'Mod: ' + ld.modularity;
+                        document.getElementById('gp-modularity-val') &&
+                            (document.getElementById('gp-modularity-val').textContent = ld.modularity);
+                        document.getElementById('gp-comm-count') &&
+                            (document.getElementById('gp-comm-count').textContent = ld.communities_found);
+
+                        if (ld.community_distribution && ld.community_distribution.length > 0) {
+                            const realCommunities = ld.community_distribution.map((c, i) => ({
+                                id: c.community,
+                                name: `Communauté ${c.community}`,
+                                size: c.size,
+                                color: COMMUNITY_COLORS[i % COMMUNITY_COLORS.length],
+                                members: []
+                            }));
+                            renderGPLouvainCanvas(realCommunities);
+                            renderGPCommunityCards(realCommunities);
+                        }
+                    }
+                } catch (e) {
+                    console.warn('[Graph Page] Louvain auto-run failed, using fallback grouping:', e);
+                }
+            }
+
+            if (!document.getElementById('gp-community-cards')?.innerHTML?.trim()) {
+                renderGPLouvainCanvas(MOCK_GRAPH_DATA.communities);
+                renderGPCommunityCards(MOCK_GRAPH_DATA.communities);
+                document.getElementById('gp-comm-count').textContent = MOCK_GRAPH_DATA.communities.length;
+                document.getElementById('gp-mod-score').textContent = 'Mod: ' + MOCK_GRAPH_DATA.stats.modularity;
+                document.getElementById('gp-modularity-val').textContent = MOCK_GRAPH_DATA.stats.modularity;
+            }
+        }
+
+        // Garde une seule simulation active à la fois (évite les doublons si
+        // renderGPGraph est appelé plusieurs fois, ex: après Louvain auto-run)
+        let _gpSimulation = null;
+
+        function renderGPGraph(isFullScreen = false) {
+            const svgId = isFullScreen ? 'gp-fs-svg' : 'gp-graph-svg';
+            const containerId = isFullScreen ? 'gp-fs-container' : 'gp-graph-container';
+            const tooltipId = isFullScreen ? 'gp-fs-tooltip' : 'gp-node-tooltip';
+            const detailId = isFullScreen ? 'gp-fs-detail' : 'gp-node-detail';
+            const legendId = isFullScreen ? 'gp-fs-legend' : 'gp-legend-body';
+            const zoomSliderId = isFullScreen ? 'gp-fs-zoom-slider' : 'gp-zoom-slider';
+            const zoomValId = isFullScreen ? 'gp-fs-zoom-val' : 'gp-zoom-val';
+            const zoomGroupId = isFullScreen ? 'gp-fs-zoom-group' : 'gp-zoom-group';
+
+            const svgEl = document.getElementById(svgId);
+            if (!svgEl) return;
+            const container = document.getElementById(containerId) || svgEl.parentElement;
+            const W = Math.max(container.offsetWidth || 800, 500);
+            const H = Math.max(container.offsetHeight || 600, 400);
+
+            // Stoppe toute simulation précédente avant d'en relancer une
+            if (_gpSimulation) {
+                _gpSimulation.stop();
+                _gpSimulation = null;
+            }
+
+            const rawNodes = window._gpRealNodes || [];
+            const degreeMap = window._gpDegreeMap || {};
+            const rawEdges = (window._gpRealEdges && window._gpRealEdges.length > 0)
+                ? window._gpRealEdges
+                : MOCK_GRAPH_DATA.edges;
+
+            const svg = d3.select(svgEl);
+            svg.selectAll('*').remove();
+            svg.attr('width', W).attr('height', H);
+
+            if (!rawNodes || rawNodes.length === 0) {
+                svg.append('text')
+                    .attr('x', W / 2).attr('y', H / 2)
+                    .attr('text-anchor', 'middle')
+                    .attr('fill', '#64748b')
+                    .attr('font-size', 12)
+                    .attr('font-family', 'JetBrains Mono')
+                    .text('Aucun nœud — vérifiez la connexion Neo4j');
+                return;
+            }
+
+            // D3 force-simulation modifie les objets en place (ajoute x, y, vx, vy)
+            // donc on travaille sur des copies pour ne pas polluer window._gpRealNodes
+            // avec des champs internes à D3 entre deux appels.
+            const nodes = rawNodes.map(n => ({ ...n }));
+            const nameToNode = {};
+            nodes.forEach(n => {
+                const deg = degreeMap[n.name] || 0;
+                n._r = Math.max(3, Math.min(13, 3 + Math.sqrt(deg) * 1.9));
+                n._color = COMMUNITY_COLORS[(n.community ?? 0) % COMMUNITY_COLORS.length];
+                nameToNode[n.name] = n;
+            });
+
+            let links = [];
+            if (Array.isArray(rawEdges)) {
+                rawEdges.forEach(e => {
+                    let s = null, t = null;
+                    if (Array.isArray(e)) {
+                        s = nodes[e[0]]; t = nodes[e[1]];
+                    } else if (typeof e === 'object') {
+                        s = nameToNode[e.source] || nameToNode[e.src];
+                        t = nameToNode[e.target] || nameToNode[e.tgt];
+                    }
+                    if (s && t && s !== t) links.push({ source: s, target: t, rel_type: e.rel_type });
+                });
+            }
+            // Pas de limite sur les liens — afficher TOUT le graphe Neo4j
+
+            // Marker pour les flèches directionnelles (façon Neo4j Aura)
+            const arrowId = isFullScreen ? 'gp-fs-arrow' : 'gp-arrow';
+            svg.append('defs').append('marker')
+                .attr('id', arrowId)
+                .attr('viewBox', '0 -5 10 10')
+                .attr('refX', 20) // Décalage pour ne pas rentrer dans le cercle
+                .attr('refY', 0)
+                .attr('markerWidth', 5)
+                .attr('markerHeight', 5)
+                .attr('orient', 'auto')
+                .append('path')
+                .attr('d', 'M0,-5L10,0L0,5')
+                .attr('fill', '#94a3b8');
+
+            // Groupe racine — D3 zoom/pan gère les transformations
+            const g = svg.append('g').attr('id', zoomGroupId);
+
+            // D3 zoom/pan natif (molette + drag sur le fond)
+            const zoomBehavior = d3.zoom()
+                .scaleExtent([0.1, 8])
+                .on('zoom', (event) => {
+                    g.attr('transform', event.transform);
+                    // Sync slider
+                    const sl = document.getElementById(zoomSliderId);
+                    const vl = document.getElementById(zoomValId);
+                    if (sl) sl.value = Math.round(event.transform.k * 100);
+                    if (vl) vl.textContent = Math.round(event.transform.k * 100) + '%';
+                });
+            svg.call(zoomBehavior);
+
+            const linkSel = g.append('g')
+                .selectAll('line')
+                .data(links)
+                .join('line')
+                .attr('stroke', d => d.source._color + '55')
+                .attr('stroke-width', 1)
+                .attr('marker-end', `url(#${arrowId})`);
+
+            // Étiquettes des relations
+            const linkLabelSel = g.append('g')
+                .selectAll('text')
+                .data(links)
+                .join('text')
+                .attr('font-size', 6)
+                .attr('fill', '#94a3b8')
+                .attr('text-anchor', 'middle')
+                .attr('pointer-events', 'none')
+                .text(d => d.rel_type || '');
+
+            const tooltip = document.getElementById(tooltipId);
+            const detailEl = document.getElementById(detailId);
+
+            const nodeSel = g.append('g')
+                .selectAll('g')
+                .data(nodes)
+                .join('g')
+                .style('cursor', 'pointer')
+                .call(d3.drag()
+                    .on('start', (event, d) => {
+                        if (!event.active) sim.alphaTarget(0.3).restart();
+                        d.fx = d.x; d.fy = d.y;
+                    })
+                    .on('drag', (event, d) => {
+                        d.fx = event.x; d.fy = event.y;
+                    })
+                    .on('end', (event, d) => {
+                        if (!event.active) sim.alphaTarget(0);
+                        d.fx = null; d.fy = null;
+                    }));
+
+            nodeSel.append('circle')
+                .attr('r', d => d._r + 2)
+                .attr('fill', d => d._color + '22');
+
+            const mainCircle = nodeSel.append('circle')
+                .attr('r', d => d._r)
+                .attr('fill', d => d._color + 'cc')
+                .attr('stroke', d => d._color)
+                .attr('stroke-width', 1);
+
+            nodeSel.filter(d => d._r >= 7)
+                .append('text')
+                .attr('text-anchor', 'middle')
+                .attr('dy', 3)
+                .attr('font-size', d => Math.min(7, d._r - 1))
+                .attr('fill', '#ffffff')
+                .attr('font-family', 'JetBrains Mono')
+                .attr('pointer-events', 'none')
+                .text(d => (d.name || '').substring(0, 5));
+
+            nodeSel.on('mouseenter', function (event, d) {
+                d3.select(this).select('circle')
+                    .attr('r', d._r * 1.7)
+                    .attr('stroke-width', 2)
+                    .attr('fill', d._color + 'ff');
+                const deg = degreeMap[d.name] || 0;
+                if (detailEl) detailEl.textContent =
+                    `${d.name} · ${d.type || '?'} · Comm: ${d.community ?? '?'} · Degré: ${deg}`;
+                if (tooltip) {
+                    const rect = container.getBoundingClientRect();
+                    tooltip.style.display = 'block';
+                    tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
+                    tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
+                    tooltip.innerHTML =
+                        `<b style="color:${d._color}">${d.name}</b><br>` +
+                        `<span style="color:#94a3b8">Type: ${d.type || '?'}</span><br>` +
+                        `<span style="color:#64748b">Communauté: ${d.community ?? '?'} · Degré: ${deg}</span>`;
+                }
+            }).on('mouseleave', function (event, d) {
+                d3.select(this).select('circle')
+                    .attr('r', d._r)
+                    .attr('stroke-width', 1)
+                    .attr('fill', d._color + 'cc');
+                if (tooltip) tooltip.style.display = 'none';
+            });
+
+            // Légende des communautés → overlay HTML (pas en SVG, sinon bouge avec le zoom)
+            const commSeen = [...new Set(nodes.map(n => n.community ?? 0))].slice(0, 12);
+            const legendBody = document.getElementById(legendId);
+            if (legendBody) {
+                legendBody.innerHTML = commSeen.map(cid => {
+                    const color = COMMUNITY_COLORS[cid % COMMUNITY_COLORS.length];
+                    return `<span style="color:${color}; white-space:nowrap">● C${cid}</span>`;
+                }).join('');
+            }
+
+            // ── SIMULATION D3 ──────────────────────────────────────────────
+            // forceManyBody : répulsion entre tous les nœuds (quadtree Barnes-Hut,
+            //                 donc O(n log n) au lieu du O(n²) fait à la main avant)
+            // forceLink     : ressort élastique le long des arêtes réelles
+            // forceCenter   : recentre l'ensemble du graphe
+            // Adapt forces to graph size
+            const N = nodes.length;
+            const chargeStr = N > 500 ? -30 : N > 200 ? -50 : -90;
+            const linkDist = N > 500 ? 20 : N > 200 ? 28 : 36;
+
+            const sim = d3.forceSimulation(nodes)
+                .force('charge', d3.forceManyBody().strength(chargeStr).distanceMax(200))
+                .force('link', d3.forceLink(links).id(d => d.name).distance(linkDist).strength(0.4))
+                .force('center', d3.forceCenter(W / 2, H / 2))
+                .force('collide', d3.forceCollide().radius(d => d._r + 1))
+                .force('x', d3.forceX(W / 2).strength(0.03))
+                .force('y', d3.forceY(H / 2).strength(0.03))
+                .alphaDecay(0.015)
+                .on('tick', () => {
+                    // No clamping — D3 zoom/pan handles viewport
+                    linkSel
+                        .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+                        .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+
+                    linkLabelSel
+                        .attr('x', d => (d.source.x + d.target.x) / 2)
+                        .attr('y', d => (d.source.y + d.target.y) / 2 - 3);
+
+                    nodeSel.attr('transform', d => `translate(${d.x},${d.y})`);
+                });
+
+            _gpSimulation = sim;
+        }
+
+        // small helper to avoid XSS-ish text injection into tooltip HTML
+        function escapeHtml(s) {
+            if (s == null) return '';
+            return String(s)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function renderGPTypeFilters() {
+            const types = [...new Set(MOCK_GRAPH_DATA.nodes.map(n => n.type))].filter(Boolean);
+            const colors = {
+                STRUCTURE: '#8b5cf6', CIRQUE: '#3b82f6', FORMATION: '#f59e0b',
+                ROCHE: '#10b981', HYDROTHERMAL: '#ef4444', METHODE: '#06b6d4'
+            };
+            const container = document.getElementById('gp-type-filters');
+            if (!container) return;
+
+            if (!window._gpActiveTypes)
+                window._gpActiveTypes = new Set(types);
+
+            container.innerHTML = types.map(t => {
+                const active = window._gpActiveTypes.has(t);
+                const color = colors[t] || '#8b5cf6';
+                return `
+                  <span onclick="toggleGPType('${t}')" style="
+                    cursor:pointer; font-family:var(--mono); font-size:9px;
+                    padding:3px 8px; border-radius:4px;
+                    border:1px solid ${active ? color + '55' : '#1e2d45'};
+                    background:${active ? color + '22' : 'transparent'};
+                    color:${active ? color : '#475569'};
+                    text-decoration:${active ? 'none' : 'line-through'};
+                    user-select:none; transition:all .15s">
+                    ● ${t}
+                  </span>
+                `;
+            }).join('');
+        }
+
+        function toggleGPType(type) {
+            if (!window._gpActiveTypes)
+                window._gpActiveTypes = new Set();
+            if (window._gpActiveTypes.has(type))
+                window._gpActiveTypes.delete(type);
+            else
+                window._gpActiveTypes.add(type);
+            renderGPTypeFilters();
+            renderGPGraph();
+        }
+
+        function renderGPLegend() {
+            const relTypes = [
+                { rel: 'LOCALISE_LE_LONG_DE', color: '#8b5cf6' },
+                { rel: 'CONTROLE_STRUCTURAL', color: '#3b82f6' },
+                { rel: 'COMPOSE_DE', color: '#10b981' },
+                { rel: 'INTRUSIF_DANS', color: '#f59e0b' },
+                { rel: 'POSTERIEUR_A', color: '#ef4444' },
+                { rel: 'SOURCE_DE', color: '#06b6d4' },
+            ];
+            const el = document.getElementById('gp-legend-body');
+            if (!el) return;
+            el.innerHTML = relTypes.map(r => `
+                <div style="display:flex; align-items:center; gap:6px; 
+                            padding:3px 0; border-bottom:1px solid var(--border)">
+                  <div style="width:20px; height:2px; background:${r.color}; 
+                              border-radius:1px; flex-shrink:0"></div>
+                  <span style="font-size:9px; font-family:var(--mono); 
+                               color:var(--muted)">
+                    ${r.rel.replace(/_/g, ' ')}
+                  </span>
+                </div>
+            `).join('');
+        }
+
+        function renderGPTypeDistribution() {
+            const types = [
+                { type: 'STRUCTURE', count: 89, color: 'purple' },
+                { type: 'ROCHE', count: 76, color: 'blue' },
+                { type: 'METHODE', count: 51, color: 'green' },
+                { type: 'CIRQUE', count: 38, color: 'amber' },
+                { type: 'HYDROTHERMAL', count: 27, color: 'blue' },
+            ];
+            const max = types[0].count;
+            const el = document.getElementById('gp-type-distribution');
+            if (!el) return;
+            el.innerHTML = types.map(t => `
+                <div class="bar-wrap">
+                  <div class="bar-label">
+                    <span>${t.type}</span>
+                    <span style="font-family:var(--mono)">${t.count}</span>
+                  </div>
+                  <div class="bar-track">
+                    <div class="bar-fill ${t.color}" 
+                         style="width:${(t.count / max * 100).toFixed(0)}%">
+                    </div>
+                  </div>
+                </div>
+            `).join('');
+        }
+
+        function renderGPSemanticPaths() {
+            const paths = [
+                { from: 'Caldera', rel: 'CONTROLE_STRUCTURAL', to: 'Rift N030', color: '#8b5cf6' },
+                { from: 'Sources Cilaos', rel: 'LOCALISE_LE_LONG_DE', to: 'Rift N030', color: '#3b82f6' },
+                { from: 'Brèche Orangers', rel: 'POSTERIEUR_A', to: 'Coulées LM', color: '#f59e0b' },
+                { from: 'ZDD', rel: 'INTRUSIF_DANS', to: 'Syénites', color: '#10b981' },
+                { from: 'Phonolite', rel: 'COMPOSE_DE', to: 'Caldera', color: '#06b6d4' },
+            ];
+            const el = document.getElementById('gp-semantic-paths');
+            if (!el) return;
+            el.innerHTML = paths.map(p => `
+                <div style="display:flex; align-items:center; gap:6px; padding:5px 6px;
+                            background:var(--bg3); border-radius:4px; margin-bottom:4px;
+                            border:1px solid var(--border)">
+                  <span style="font-size:9px; font-family:var(--mono); 
+                               color:${p.color}; font-weight:700">${p.from}</span>
+                  <span style="font-size:8px; color:var(--muted)">→</span>
+                  <span style="font-size:8px; font-family:var(--mono); color:var(--muted);
+                               background:${p.color}22; padding:1px 5px; border-radius:3px;
+                               border:1px solid ${p.color}44">
+                    ${p.rel.replace(/_/g, ' ')}
+                  </span>
+                  <span style="font-size:8px; color:var(--muted)">→</span>
+                  <span style="font-size:9px; font-family:var(--mono); 
+                               color:${p.color}; font-weight:700">${p.to}</span>
+                </div>
+            `).join('');
+        }
+
+        function renderGPInsights() {
+            const insights = [
+                { icon: '🔴', text: 'La Caldera est le nœud central (PageRank le plus élevé)', color: '#ef4444' },
+                { icon: '🟣', text: '6 communautés détectées — modularité élevée (0.76)', color: '#8b5cf6' },
+                { icon: '🔵', text: 'Le Rift N030 connecte 3 communautés différentes', color: '#3b82f6' },
+                { icon: '🟢', text: 'Fusion Graph+Vector améliore la précision de +18%', color: '#10b981' },
+            ];
+            const el = document.getElementById('gp-insights');
+            if (!el) return;
+            el.innerHTML = insights.map(ins => `
+                <div style="display:flex; align-items:flex-start; gap:8px; padding:6px 0;
+                            border-bottom:1px solid var(--border)">
+                  <span style="font-size:13px; flex-shrink:0">${ins.icon}</span>
+                  <span style="font-size:10px; font-family:var(--mono); 
+                               color:var(--text); line-height:1.5">${ins.text}</span>
+                </div>
+            `).join('');
+        }
+
+        let _louvainSimulation = null;
+        function renderGPLouvainCanvas(communities) {
+            const svgEl = document.getElementById('gp-louvain-svg');
+            if (!svgEl) return;
+            const svg = d3.select(svgEl);
+            const W = svgEl.clientWidth || 340, H = 200;
+            svg.selectAll('*').remove();
+
+            if (_louvainSimulation) {
+                _louvainSimulation.stop();
+                _louvainSimulation = null;
+            }
+
+            if (!communities || communities.length === 0) return;
+
+            // 1. Constuire le mapping Nœud -> Communauté
+            const nodeToComm = {};
+            const rawNodes = window._gpRealNodes || [];
+            rawNodes.forEach(n => {
+                if (n.community !== undefined) {
+                    nodeToComm[n.name] = n.community;
+                }
+            });
+
+            // 2. Extraire les macro-arêtes (liens inter-communautés)
+            const macroEdgesMap = {};
+            const rawEdges = window._gpRealEdges || [];
+            rawEdges.forEach(e => {
+                const sName = typeof e.source === 'object' ? e.source.name : (e.source || e.src);
+                const tName = typeof e.target === 'object' ? e.target.name : (e.target || e.tgt);
+
+                const sComm = nodeToComm[sName];
+                const tComm = nodeToComm[tName];
+
+                if (sComm != null && tComm != null && sComm !== tComm) {
+                    const minC = Math.min(sComm, tComm);
+                    const maxC = Math.max(sComm, tComm);
+                    const key = minC + '-' + maxC;
+                    if (!macroEdgesMap[key]) {
+                        macroEdgesMap[key] = { source: minC, target: maxC, weight: 0 };
+                    }
+                    macroEdgesMap[key].weight++;
+                }
+            });
+            const links = Object.values(macroEdgesMap);
+
+            // 3. Préparer les nœuds du macro-graphe
+            const totalNodes = communities.reduce((s, c) => s + (c.size || 1), 0);
+            const nodes = communities.map(c => ({
+                id: c.id,
+                size: c.size,
+                color: c.color,
+                r: Math.max(8, Math.min(25, Math.sqrt(c.size / totalNodes) * 45 + 5))
+            }));
+
+            // 4. Rendu D3
+            const linkSel = svg.append('g')
+                .selectAll('line')
+                .data(links)
+                .join('line')
+                .attr('stroke', '#475569')
+                .attr('stroke-width', d => Math.max(0.5, Math.min(4, Math.sqrt(d.weight) * 0.8)))
+                .attr('stroke-opacity', 0.6);
+
+            const nodeSel = svg.append('g')
+                .selectAll('g')
+                .data(nodes)
+                .join('g')
+                .call(d3.drag()
+                    .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+                    .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
+                    .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; })
+                );
+
+            nodeSel.append('circle')
+                .attr('r', d => d.r)
+                .attr('fill', d => d.color + 'cc')
+                .attr('stroke', d => d.color)
+                .attr('stroke-width', 1.5);
+
+            nodeSel.append('text')
+                .attr('text-anchor', 'middle')
+                .attr('dy', 3)
+                .attr('font-size', d => Math.min(9, d.r - 2))
+                .attr('fill', '#fff')
+                .attr('font-family', 'JetBrains Mono')
+                .attr('pointer-events', 'none')
+                .text(d => `C${d.id}`);
+
+            const sim = d3.forceSimulation(nodes)
+                .force('charge', d3.forceManyBody().strength(-80))
+                .force('link', d3.forceLink(links).id(d => d.id).distance(40).strength(0.5))
+                .force('center', d3.forceCenter(W / 2, H / 2))
+                .force('x', d3.forceX(W / 2).strength(0.05))
+                .force('y', d3.forceY(H / 2).strength(0.05))
+                .force('collide', d3.forceCollide().radius(d => d.r + 5))
+                .on('tick', () => {
+                    linkSel
+                        .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+                        .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+                    nodeSel.attr('transform', d => `translate(${Math.max(d.r, Math.min(W - d.r, d.x))},${Math.max(d.r, Math.min(H - d.r, d.y))})`);
+                });
+
+            _louvainSimulation = sim;
+        }
+
+        function renderGPCommunityCards(communities) {
+            const el = document.getElementById('gp-community-cards');
+            if (!el) return;
+            el.innerHTML = communities.map(c => `
+                <div class="comm-card" onclick="this.classList.toggle('expanded')">
+                  <div class="comm-card-header">
+                    <div style="display:flex; align-items:center; gap:6px">
+                      <div style="width:10px; height:10px; border-radius:50%;
+                                  background:${c.color}; flex-shrink:0; 
+                                  box-shadow:0 0 4px ${c.color}"></div>
+                      <span style="font-size:10px; font-family:var(--mono); 
+                                   font-weight:700; color:${c.color}">${c.name}</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:4px">
+                      <span class="badge b-purple" title="Nombre de nœuds dans cette communauté">${c.size} nœuds</span>
+                      <span style="color:var(--muted); font-size:10px">▾</span>
+                    </div>
+                  </div>
+                  <div class="comm-members">
+                    ${(c.members && c.members.length > 0)
+                    ? c.members.map(m =>
+                        `<div class="comm-member" style="color:${c.color}99">
+                            ● ${m}
+                          </div>`).join('')
+                    : `<div class="comm-member" style="color:var(--muted)">
+                           Membres non chargés — API offline
+                         </div>`
+                }
+                  </div>
+                </div>
+            `).join('');
+        }
+
+        async function runGPLouvain() {
+            const btn = document.querySelector('[onclick="runGPLouvain()"]');
+            if (btn) { btn.disabled = true; btn.textContent = '⏳ En cours...'; }
+
+            const prog = document.getElementById('gp-louvain-progress');
+            const bar = document.getElementById('gp-louvain-bar');
+            if (prog) prog.style.display = 'block';
+
+            for (let p = 0; p <= 100; p += 4) {
+                if (bar) bar.style.width = p + '%';
+                await new Promise(r => setTimeout(r, 50));
+            }
+
+            let communities = MOCK_GRAPH_DATA.communities;
+            let modularity = MOCK_GRAPH_DATA.stats.modularity;
+
+            if (apiOnline) {
+                try {
+                    const r = await fetch(`${API}/graph/louvain`, { method: 'POST' });
+                    const d = await r.json();
+                    if (d.status === 'success') {
+                        modularity = d.modularity;
+                        const ncr = await fetch(`${API}/graph/nodes/by-community`);
+                        const ncd = await ncr.json();
+                        if (ncd.communities && ncd.communities.length > 0) {
+                            const COLORS = ['#8b5cf6', '#3b82f6', '#f59e0b', '#10b981',
+                                '#ef4444', '#06b6d4', '#ec4899', '#f97316'];
+                            communities = ncd.communities.map((c, i) => ({
+                                id: c.community,
+                                name: `Communauté ${c.community}`,
+                                size: c.nodes ? c.nodes.length : 0,
+                                color: COLORS[i % COLORS.length],
+                                members: (c.nodes || []).slice(0, 10).map(n => n.name || '?')
+                            }));
+                        }
+                    }
+                } catch { }
+            }
+
+            if (prog) prog.style.display = 'none';
+            if (btn) { btn.disabled = false; btn.textContent = '✅ Louvain OK'; }
+
+            document.getElementById('gp-comm-count').textContent = communities.length;
+            document.getElementById('gp-modularity-val').textContent = modularity;
+            document.getElementById('gp-mod-score').textContent = 'Mod: ' + modularity;
+            document.getElementById('gp-mod-badge').textContent = 'Mod: ' + modularity;
+
+            renderGPLouvainCanvas(communities);
+            renderGPCommunityCards(communities);
+        }
+
+        function resetGPLouvain() {
+            document.getElementById('gp-community-cards').innerHTML =
+                '<div style="font-size:10px;color:var(--muted);font-family:var(--mono)">' +
+                'Lancez la détection pour voir les membres...</div>';
+            const btn = document.querySelector('[onclick="runGPLouvain()"]');
+            if (btn) btn.textContent = '🔍 Détecter les communautés';
+        }
+
+        function initVectorialPage() {
+            if (!window._vpActiveClusters) window._vpActiveClusters = new Set([0, 1, 2, 3]);
+            const hc = document.getElementById('vp-hier-chunks');
+            const hs = document.getElementById('vp-hier-sub');
+            if (hc && !hc.hasChildNodes()) {
+                ['Chunk 1', 'Chunk 2', 'Chunk 3', 'Chunk 4', 'Chunk 5'].forEach(c => {
+                    const el = document.createElement('div'); el.className = 'hier-chunk'; el.textContent = c;
+                    hc.appendChild(el);
+                });
+                ['Sub-C 1', 'Sub-C 2', 'Sub-C 3', 'Sub-C 4', 'Sub-C 5', 'Sub-C 6', 'Sub-C 7', 'Sub-C 8'].forEach(c => {
+                    const el = document.createElement('div'); el.className = 'hier-sub-chunk'; el.textContent = c;
+                    hs.appendChild(el);
+                });
+            }
+            const methodsEl = document.getElementById('vp-chunking-methods');
+            if (methodsEl) {
+                const max = MOCK_CHUNKS_INFO.methods[0].score;
+                methodsEl.innerHTML = MOCK_CHUNKS_INFO.methods.map((m, i) => `
+                  <div class="method-row ${i === 0 ? 'best' : ''}" title="${m.nb} chunks | F1: ${m.f1} | Recall: ${m.recall}">
+                    <span style="font-size:10px;font-family:var(--mono);color:${i === 0 ? 'var(--green)' : 'var(--muted)'}">${m.name}</span>
+                    ${i === 0 ? '<span class="badge b-green" style="margin:0 4px">✓ Best</span>' : ''}
+                    <span class="method-score" style="color:${i === 0 ? 'var(--green)' : 'var(--text)'}">${m.score}</span>
+                  </div>
+                  <div class="bar-track" style="margin-bottom:3px">
+                    <div class="bar-fill ${i === 0 ? 'green' : 'blue'}" style="width:${(m.score / max * 100).toFixed(0)}%;opacity:${i === 0 ? 1 : 0.4}"></div>
+                  </div>
+                `).join('');
+            }
+            document.getElementById('vp-total-chunks').textContent = MOCK_CHUNKS_INFO.total_chunks;
+            document.getElementById('vp-avg-words').textContent = MOCK_CHUNKS_INFO.avg_words;
+            document.getElementById('vp-chunks-badge').textContent = MOCK_CHUNKS_INFO.total_chunks + ' chunks';
+            const slider = document.getElementById('vp-proximity-slider');
+            if (slider && !slider._initialized) {
+                slider._initialized = true;
+                slider.addEventListener('input', function () {
+                    const pct = parseInt(this.value);
+                    document.getElementById('vp-proximity-val').textContent = pct + '%';
+                    document.getElementById('vp-proximity-pct').textContent = pct;
+                    renderVPPCA(pct, window._vpActiveClusters);
+                });
+            }
+            // initial render with defaults
+            renderVPPCA(parseInt((document.getElementById('vp-proximity-slider') || { value: 100 }).value), window._vpActiveClusters);
+
+            // Tooltip handling
+            const vpCanvas = document.getElementById('vp-pca-canvas');
+            const vpTooltip = document.getElementById('vp-pca-tooltip');
+            if (vpCanvas && vpTooltip && !vpCanvas._tooltipInit) {
+                vpCanvas._tooltipInit = true;
+                vpCanvas.addEventListener('mousemove', function (e) {
+                    const rect = vpCanvas.getBoundingClientRect();
+                    const mx = e.clientX - rect.left;
+                    const my = e.clientY - rect.top;
+                    if (!window._vpPcaPoints) return;
+                    let closest = null; let minDist = Infinity;
+                    window._vpPcaPoints.forEach(p => { if (!p.active) return; const d = Math.hypot(p.x - mx, p.y - my); if (d < minDist) { minDist = d; closest = p; } });
+                    if (closest && minDist < 8) {
+                        vpTooltip.style.display = 'block';
+                        vpTooltip.style.left = (e.clientX + 12) + 'px';
+                        vpTooltip.style.top = (e.clientY - 10) + 'px';
+                        vpTooltip.innerHTML = `
+                          <div style="color:${closest.color}; font-weight:700; margin-bottom:3px">● ${closest.label}</div>
+                          <div style="color:#94a3b8">x: ${closest.rawX.toFixed(2)}, y: ${closest.rawY.toFixed(2)}</div>
+                          <div style="color:#64748b; margin-top:4px; font-size:9px">${closest.chunk_preview || ('Chunk #' + (closest.index || '?'))}</div>
+                        `;
+                    } else {
+                        vpTooltip.style.display = 'none';
+                    }
+                });
+                vpCanvas.addEventListener('mouseleave', function () { if (vpTooltip) vpTooltip.style.display = 'none'; });
+            }
+        }
+
+        function renderVPPCA(proximityPct = 100, activeClusters = null) {
+            if (!activeClusters) activeClusters = window._vpActiveClusters || new Set([0, 1, 2, 3]);
+            window._vpActiveClusters = activeClusters;
+            const canvas = document.getElementById('vp-pca-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const w = canvas.offsetWidth || 500;
+            const h = 280;
+            canvas.width = w; canvas.height = h;
+            const MARGIN = { top: 20, right: 20, bottom: 30, left: 40 };
+            const plotW = w - MARGIN.left - MARGIN.right;
+            const plotH = h - MARGIN.top - MARGIN.bottom;
+            // Background
+            ctx.fillStyle = '#0a0e17'; ctx.fillRect(0, 0, w, h);
+            // Plot area
+            ctx.fillStyle = '#111827'; ctx.fillRect(MARGIN.left, MARGIN.top, plotW, plotH);
+            // Grid
+            ctx.save(); ctx.globalAlpha = 0.5; ctx.strokeStyle = '#1e2d45'; ctx.lineWidth = 0.5;
+            const gridStep = 50;
+            for (let x = MARGIN.left; x <= MARGIN.left + plotW; x += gridStep) {
+                ctx.beginPath(); ctx.moveTo(x, MARGIN.top); ctx.lineTo(x, MARGIN.top + plotH); ctx.stroke();
+            }
+            for (let y = MARGIN.top; y <= MARGIN.top + plotH; y += gridStep) {
+                ctx.beginPath(); ctx.moveTo(MARGIN.left, y); ctx.lineTo(MARGIN.left + plotW, y); ctx.stroke();
+            }
+            ctx.restore();
+            // Axis numeric labels
+            ctx.fillStyle = '#475569'; ctx.font = '8px JetBrains Mono'; ctx.textAlign = 'center';
+            const ticks = [-2, -1, 0, 1, 2];
+            ticks.forEach((val, i) => {
+                const x = MARGIN.left + (plotW / 4) * i;
+                ctx.fillText(val > 0 ? '+' + val : val, x, h - 8);
+            });
+            ctx.textAlign = 'right';
+            ticks.forEach((val, i) => {
+                const y = MARGIN.top + (plotH / 4) * (4 - i);
+                ctx.fillText(val > 0 ? '+' + val : val, MARGIN.left - 6, y + 3);
+            });
+            // PC labels
+            ctx.fillStyle = '#64748b'; ctx.font = 'bold 10px JetBrains Mono'; ctx.textAlign = 'right';
+            ctx.fillText('PC1 →', w - 6, h / 2 + 4);
+            ctx.textAlign = 'left'; ctx.fillText('↑ PC2', MARGIN.left + 4, 14);
+            // Cluster defs
+            const clusterDefs = [
+                { color: '#60a5fa', label: 'Géologie', cx: 0.28, cy: 0.38, spread: 0.17, n: 90 },
+                { color: '#a78bfa', label: 'Méthodes', cx: 0.68, cy: 0.28, spread: 0.13, n: 60 },
+                { color: '#34d399', label: 'Structures', cx: 0.40, cy: 0.67, spread: 0.12, n: 70 },
+                { color: '#fbbf24', label: 'Hydrothermal', cx: 0.72, cy: 0.67, spread: 0.10, n: 45 },
+            ];
+            const rng = s => { let x = Math.sin(s) * 10000; return x - Math.floor(x); };
+            const toX = v => MARGIN.left + v * plotW;
+            const toY = v => MARGIN.top + v * plotH;
+            let allPts = [];
+            clusterDefs.forEach((g, ci) => {
+                let cxSum = 0, cySum = 0, cPts = [];
+                for (let i = 0; i < g.n; i++) {
+                    const angle = rng(i * 7 + ci * 100) * Math.PI * 2;
+                    const r = rng(i * 13 + ci * 200) * g.spread;
+                    const nx = g.cx + Math.cos(angle) * r;
+                    const ny = g.cy + Math.sin(angle) * r;
+                    const dist = Math.sqrt(Math.pow(g.cx - 0.5, 2) + Math.pow(g.cy - 0.5, 2)) + r * 0.5;
+                    cxSum += nx; cySum += ny;
+                    cPts.push({ x: toX(nx), y: toY(ny), c: ci, dist, rawX: ((nx - 0.5) * 4), rawY: (-(ny - 0.5) * 4), index: i });
+                }
+                allPts = allPts.concat(cPts);
+                // centroid
+                if (activeClusters.has(ci)) {
+                    const centX = toX(cxSum / g.n);
+                    const centY = toY(cySum / g.n);
+                    ctx.strokeStyle = g.color; ctx.lineWidth = 1.5;
+                    ctx.beginPath(); ctx.moveTo(centX - 8, centY); ctx.lineTo(centX + 8, centY); ctx.stroke();
+                    ctx.beginPath(); ctx.moveTo(centX, centY - 8); ctx.lineTo(centX, centY + 8); ctx.stroke();
+                }
+            });
+            // sort and proximity
+            const sorted = [...allPts].sort((a, b) => a.dist - b.dist);
+            const threshold = Math.floor(sorted.length * proximityPct / 100);
+            let activeCount = 0;
+            allPts.forEach(p => {
+                const clusterActive = activeClusters.has(p.c);
+                const proximityActive = sorted.indexOf(p) < threshold;
+                const isActive = clusterActive && proximityActive;
+                const color = clusterDefs[p.c].color;
+                if (isActive) {
+                    activeCount++;
+                    // outer ring
+                    ctx.beginPath(); ctx.arc(p.x, p.y, 4.5, 0, Math.PI * 2);
+                    ctx.strokeStyle = color + '66'; ctx.lineWidth = 1; ctx.stroke();
+                    // fill
+                    ctx.beginPath(); ctx.arc(p.x, p.y, 4, 0, Math.PI * 2);
+                    ctx.fillStyle = color + 'd9'; ctx.fill();
+                } else {
+                    ctx.beginPath(); ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+                    ctx.fillStyle = '#1e2d45'; ctx.fill();
+                    // subtle ring
+                    ctx.beginPath(); ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+                    ctx.strokeStyle = clusterDefs[p.c].color + '33'; ctx.lineWidth = 1; ctx.stroke();
+                }
+                p.active = isActive;
+            });
+            window._vpPcaPoints = allPts.map(p => ({ ...p, label: clusterDefs[p.c].label, color: clusterDefs[p.c].color, chunk_preview: p.chunk_preview || ('Chunk #' + (p.index + 1)) }));
+            // update counters
+            const apEl = document.getElementById('vp-active-points'); if (apEl) apEl.textContent = activeCount;
+            const acEl = document.getElementById('vp-active-clusters'); if (acEl) acEl.textContent = activeClusters.size;
+            const varEl = document.getElementById('vp-variance-badge'); if (varEl) varEl.textContent = '23.8%';
+            // legend
+            renderVPLegend(clusterDefs, activeClusters, proximityPct);
+        }
+
+        function renderVPLegend(clusterDefs, activeClusters, proximityPct) {
+            const legend = document.getElementById('vp-pca-legend'); if (!legend) return;
+            legend.innerHTML = clusterDefs.map((c, i) => {
+                const active = activeClusters.has(i);
+                return `
+                  <span onclick="toggleVPCluster(${i})" style="cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:10px; padding:4px 8px; border-radius:6px; border:1px solid ${active ? c.color + '55' : '#1e2d45'}; background:${active ? c.color + '22' : 'transparent'}; color:${active ? c.color : '#475569'}; text-decoration:${active ? 'none' : 'line-through'}; user-select:none;">
+                    ● ${c.label}
+                  </span>
+                `;
+            }).join('');
+        }
+
+        function toggleVPCluster(clusterIndex) {
+            if (!window._vpActiveClusters) window._vpActiveClusters = new Set([0, 1, 2, 3]);
+            if (window._vpActiveClusters.has(clusterIndex)) window._vpActiveClusters.delete(clusterIndex); else window._vpActiveClusters.add(clusterIndex);
+            const slider = document.getElementById('vp-proximity-slider');
+            const pct = slider ? parseInt(slider.value) : 100;
+            renderVPPCA(pct, window._vpActiveClusters);
+        }
+
+        function runVPSearch() {
+            const q = document.getElementById('vp-query').value.trim();
+            if (!q) return;
+            const method = document.getElementById('vp-retrieval-method').value;
+            const resDiv = document.getElementById('vp-retrieval-results');
+            resDiv.innerHTML = '<div class="loading"><div class="spinner"></div>Recherche...</div>';
+            if (apiOnline) {
+                fetch(`${API}/vectorial?question=${encodeURIComponent(q)}&k=3&method=${method}`)
+                    .then(r => r.json())
+                    .then(d => {
+                        // Cas 1 : question hors-sujet détectée par le backend
+                        if (d.offtopic) {
+                            const resDiv = document.getElementById('vp-retrieval-results');
+                            resDiv.innerHTML = `
+                              <div style="padding:12px; background:rgba(239,68,68,0.08);
+                                          border:1px solid rgba(239,68,68,0.25); 
+                                          border-radius:5px; text-align:center">
+                                <div style="font-size:16px; margin-bottom:6px">🔍</div>
+                                <div style="font-size:11px; color:#f87171; 
+                                            font-family:var(--mono); font-weight:700;
+                                            margin-bottom:4px">
+                                  Question hors domaine
+                                </div>
+                                <div style="font-size:10px; color:var(--muted); 
+                                            font-family:var(--mono); line-height:1.6">
+                                  ${d.offtopic_message}
+                                </div>
+                                <div style="margin-top:8px; font-size:9px; 
+                                            color:var(--muted); font-family:var(--mono)">
+                                  Exemples de questions valides :<br>
+                                  <span style="color:var(--blue)">Quelle est la relation entre caldera et rift N030 ?<br>Comment fonctionne le système hydrothermal ?<br>Qu'est-ce que la méthode ZDD ?</span>
+                                </div>
+                              </div>
+                            `;
+                            document.getElementById('vp-summary-panel') &&
+                                (document.getElementById('vp-summary-panel').style.display = 'none');
+                            return;
+                        }
+
+                        const results = (d.retrieval?.results || []).map(r => ({ score: r.score, chunk: r.chunk }));
+
+                        // Cas 2 : résultats avec score trop faible (__NO_RESULT__)
+                        if (results && results.length > 0 && results[0].chunk === '__NO_RESULT__') {
+                            const resDiv = document.getElementById('vp-retrieval-results');
+                            resDiv.innerHTML = `
+                              <div style="padding:12px; background:rgba(245,158,11,0.08);
+                                          border:1px solid rgba(245,158,11,0.25);
+                                          border-radius:5px; text-align:center">
+                                <div style="font-size:11px; color:var(--amber); 
+                                            font-family:var(--mono); font-weight:700;
+                                            margin-bottom:4px">
+                                  ⚠ Aucun document suffisamment pertinent
+                                </div>
+                                <div style="font-size:10px; color:var(--muted); 
+                                            font-family:var(--mono)">
+                                  Score de similarité trop faible (< 0.55).<br>Reformulez votre question avec des termes géologiques plus précis.
+                                </div>
+                              </div>
+                            `;
+                            return;
+                        }
+
+                        // Cas 3 : résultats normaux → affichage existant
+                        if (!results.length) throw new Error('no-results');
+                        renderVPResults(results, d.retrieval_method_used || method);
+                    })
+                    .catch(() => renderVPResults(getVPFallbackResults(q, method), method + ' (simulé)'));
+                return;
+            }
+            renderVPResults(getVPFallbackResults(q, method), method + ' (simulé)');
+        }
+
+        function getVPFallbackResults(q, method) {
+            const ql = q.toLowerCase();
+            let results;
+            if (ql.includes('caldera') || ql.includes('effondrement')) results = MOCK_VECTOR_RESULTS.caldera;
+            else if (ql.includes('hydro') || ql.includes('thermal') || ql.includes('source')) results = MOCK_VECTOR_RESULTS.hydrothermal;
+            else if (ql.includes('zdd') || ql.includes('zircon') || ql.includes('geochrono')) results = MOCK_VECTOR_RESULTS.zdd;
+            else results = MOCK_VECTOR_RESULTS.default;
+            if (method === 'dot_product') results = results.map(r => ({ ...r, score: Number(Math.min(1, r.score + 0.02).toFixed(2)) }));
+            if (method === 'bm25_hybrid') results = results.map(r => ({ ...r, score: Number(Math.min(1, r.score + 0.04).toFixed(2)) }));
+            return results;
+        }
+
+        function renderVPResults(results, methodLabel) {
+            document.getElementById('vp-method-label').textContent = methodLabel;
+            document.getElementById('vp-result-count').textContent = `Top-${results.length}`;
+            const resDiv = document.getElementById('vp-retrieval-results');
+            resDiv.innerHTML = results.map((r, i) => `
+                <div style="padding:8px;background:var(--bg3);border-radius:4px;margin-bottom:6px;border:1px solid var(--border)">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+                    <span style="font-size:10px;color:var(--muted);font-family:var(--mono)">Document ${i + 1}</span>
+                    <span class="badge b-blue">Score: ${r.score}</span>
+                  </div>
+                  <div style="font-size:11px;line-height:1.6;color:var(--text);font-family:var(--mono)">${r.chunk.substring(0, 280)}...</div>
+                </div>
+            `).join('');
+            const avg = (results.reduce((sum, r) => sum + r.score, 0) / results.length).toFixed(2);
+            document.getElementById('vp-summary-panel').style.display = 'block';
+            document.getElementById('vp-summary-text').textContent =
+                `Résultats pour "${document.getElementById('vp-query').value.trim()}" — ${results.length} documents récupérés (score moyen: ${avg}). ` +
+                results[0].chunk.substring(0, 150) + '...';
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // VECTOR SEARCH
+        // ═══════════════════════════════════════════════════════════════
+        async function runVectorSearch() {
+            const q = document.getElementById('vect-query').value.trim();
+            if (!q) return;
+            const method = document.getElementById('retrieval-method-select').value;
+
+            const resDiv = document.getElementById('retrieval-results');
+            resDiv.innerHTML = '<div class="loading"><div class="spinner"></div>Recherche...</div>';
+
+            let results = null;
+            let usedMethod = method;
+            let offtopicFlag = false;
+            let offtopicMessage = '';
+
+            if (apiOnline) {
+                try {
+                    const r = await fetch(`${API}/vectorial?question=${encodeURIComponent(q)}&k=3&method=${method}`);
+                    const d = await r.json();
+
+                    // Cas 1 : question hors-sujet détectée par le backend
+                    if (d.offtopic) {
+                        offtopicFlag = true;
+                        offtopicMessage = d.offtopic_message;
+                    } else {
+                        results = (d.retrieval?.results || []).map(r => ({ score: r.score, chunk: r.chunk }));
+                        if (d.retrieval_method_used) {
+                            usedMethod = d.retrieval_method_used;
+                        }
+                    }
+                } catch { }
+            }
+
+            // Affichage cas 1 : hors-sujet
+            if (offtopicFlag) {
+                resDiv.innerHTML = `
+                  <div style="padding:12px; background:rgba(239,68,68,0.08);
+                              border:1px solid rgba(239,68,68,0.25); 
+                              border-radius:5px; text-align:center">
+                    <div style="font-size:16px; margin-bottom:6px">🔍</div>
+                    <div style="font-size:11px; color:#f87171; 
+                                font-family:var(--mono); font-weight:700;
+                                margin-bottom:4px">
+                      Question hors domaine
+                    </div>
+                    <div style="font-size:10px; color:var(--muted); 
+                                font-family:var(--mono); line-height:1.6">
+                      ${offtopicMessage}
+                    </div>
+                    <div style="margin-top:8px; font-size:9px; 
+                                color:var(--muted); font-family:var(--mono)">
+                      Exemples de questions valides :<br>
+                      <span style="color:var(--blue)">Quelle est la relation entre caldera et rift N030 ?<br>Comment fonctionne le système hydrothermal ?<br>Qu'est-ce que la méthode ZDD ?</span>
+                    </div>
+                  </div>
+                `;
+                document.getElementById('retrieved-summary').style.display = 'none';
+                return;
+            }
+
+            if (!results || results.length === 0) {
+                // Données simulées basées sur les mots-clés et méthode sélectionnée
+                const ql = q.toLowerCase();
+                if (ql.includes('caldera') || ql.includes('effondrement')) results = MOCK_VECTOR_RESULTS.caldera;
+                else if (ql.includes('hydro') || ql.includes('thermal') || ql.includes('source')) results = MOCK_VECTOR_RESULTS.hydrothermal;
+                else if (ql.includes('zdd') || ql.includes('zircon') || ql.includes('geochrono')) results = MOCK_VECTOR_RESULTS.zdd;
+                else results = MOCK_VECTOR_RESULTS.default;
+
+                if (method === 'dot_product') {
+                    results = results.map(r => ({ ...r, score: Number(Math.max(0, Math.min(1, (r.score + 0.02))).toFixed(2)) }));
+                } else if (method === 'bm25_hybrid') {
+                    results = results.map(r => ({ ...r, score: Number(Math.max(0, Math.min(1, (r.score + 0.04))).toFixed(2)) }));
+                }
+            }
+
+            // Cas 2 : résultats avec score trop faible (__NO_RESULT__)
+            if (results && results.length > 0 && results[0].chunk === '__NO_RESULT__') {
+                resDiv.innerHTML = `
+                  <div style="padding:12px; background:rgba(245,158,11,0.08);
+                              border:1px solid rgba(245,158,11,0.25);
+                              border-radius:5px; text-align:center">
+                    <div style="font-size:11px; color:var(--amber); 
+                                font-family:var(--mono); font-weight:700;
+                                margin-bottom:4px">
+                      ⚠ Aucun document suffisamment pertinent
+                    </div>
+                    <div style="font-size:10px; color:var(--muted); 
+                                font-family:var(--mono)">
+                      Score de similarité trop faible (< 0.55).<br>Reformulez votre question avec des termes géologiques plus précis.
+                    </div>
+                  </div>
+                `;
+                document.getElementById('retrieved-summary').style.display = 'none';
+                return;
+            }
+
+            // Cas 3 : résultats normaux → affichage existant
+            document.getElementById('method-used-label').textContent = usedMethod;
+
+            resDiv.innerHTML = results.map((r, i) => `
+    <div style="padding:7px;background:var(--bg3);border-radius:4px;margin-bottom:5px;border:1px solid var(--border)">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <span style="font-size:9px;color:var(--muted);font-family:var(--mono)">Document ${i + 1}</span>
+        <span class="badge b-blue">Score: ${r.score}</span>
+      </div>
+      <div style="font-size:10px;line-height:1.5;color:var(--text);font-family:var(--mono)">${r.chunk.substring(0, 200)}...</div>
+    </div>
+  `).join('');
+
+            // Résumé synthétique
+            document.getElementById('retrieved-summary').style.display = 'block';
+            document.getElementById('summary-text').textContent =
+                `Résultats pour "${q}" — ${results.length} documents récupérés (score moyen: ${(results.reduce((a, r) => a + r.score, 0) / results.length).toFixed(2)}). ` +
+                results[0].chunk.substring(0, 120) + "...";
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // GRAPH VISUALIZATION (SVG interactif)
+        // ═══════════════════════════════════════════════════════════════
+        function renderGraph(data) {
+            const container = document.getElementById('neo4j-viz');
+            const W = container.offsetWidth || 280, H = 160;
+            const svg = document.getElementById('graph-svg');
+            svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+            svg.innerHTML = '';
+
+            const commColors = data.communities.reduce((acc, c) => { acc[c.id] = c.color; return acc; }, {});
+
+            // Edges
+            data.edges.forEach(([si, ti]) => {
+                const s = data.nodes[si], t = data.nodes[ti];
+                if (!s || !t) return;
+                // Normalize positions
+                const sx = (s.cx / 280) * W, sy = (s.cy / 160) * H;
+                const tx = (t.cx / 280) * W, ty = (t.cy / 160) * H;
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('x1', sx); line.setAttribute('y1', sy);
+                line.setAttribute('x2', tx); line.setAttribute('y2', ty);
+                line.setAttribute('stroke', '#1e2d45');
+                line.setAttribute('stroke-width', '1.2');
+                svg.appendChild(line);
+            });
+
+            // Nodes
+            data.nodes.forEach((n, i) => {
+                const x = (n.cx / 280) * W, y = (n.cy / 160) * H;
+                const color = commColors[n.community] || '#8b5cf6';
+
+                const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                g.setAttribute('cursor', 'pointer');
+                g.setAttribute('transform', `translate(${x},${y})`);
+
+                const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                circle.setAttribute('r', '10');
+                circle.setAttribute('fill', color + '22');
+                circle.setAttribute('stroke', color);
+                circle.setAttribute('stroke-width', '1.5');
+                circle.style.transition = 'r 0.2s, fill 0.2s';
+
+                const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                text.setAttribute('text-anchor', 'middle');
+                text.setAttribute('dy', '3');
+                text.setAttribute('font-size', '6');
+                text.setAttribute('fill', color);
+                text.setAttribute('font-family', 'JetBrains Mono');
+                text.textContent = n.name.substring(0, 4);
+
+                g.appendChild(circle);
+                g.appendChild(text);
+
+                g.addEventListener('mouseenter', (e) => {
+                    circle.setAttribute('r', '14');
+                    circle.setAttribute('fill', color + '44');
+                    document.getElementById('node-detail').textContent =
+                        `${n.name} · Type: ${n.type} · Communauté: ${n.community}`;
+                });
+                g.addEventListener('mouseleave', () => {
+                    circle.setAttribute('r', '10');
+                    circle.setAttribute('fill', color + '22');
+                });
+
+                svg.appendChild(g);
+            });
+
+            // Stats
+            document.getElementById('graph-stats-mini').innerHTML = `
+    <span class="badge b-blue">Nœuds: ${data.stats.nodes}</span>
+    <span class="badge b-purple">Relations: ${data.stats.relations}</span>
+    <span class="badge b-green">Communautés: ${data.stats.communities}</span>
+    <span class="badge b-amber">Mod: ${data.stats.modularity}</span>
+  `;
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // LOUVAIN — DÉTECTION LOCALE SIMULÉE (animée)
+        // ═══════════════════════════════════════════════════════════════
+        async function runLouvainLocal() {
+            const btn = event.target;
+            btn.disabled = true;
+            btn.textContent = '⏳ En cours...';
+
+            const prog = document.getElementById('louvain-progress');
+            const bar = document.getElementById('louvain-bar');
+            prog.style.display = 'block';
+
+            // Animation de progression
+            for (let p = 0; p <= 100; p += 5) {
+                bar.style.width = p + '%';
+                await new Promise(r => setTimeout(r, 60));
+            }
+
+            // Si API disponible, tenter l'appel réel
+            let communities = MOCK_GRAPH_DATA.communities;
+            let modularity = 0.76;
+
+            if (apiOnline) {
+                try {
+                    const r = await fetch(`${API}/graph/louvain`, { method: 'POST' });
+                    const d = await r.json();
+                    if (d.status === 'success') {
+                        modularity = d.modularity;
+                        // Charger les noeuds par communauté (avec vrais noms des membres)
+                        const ncr = await fetch(`${API}/graph/nodes/by-community`);
+                        const ncd = await ncr.json();
+                        const COLORS = ['#8b5cf6', '#3b82f6', '#f59e0b', '#10b981', '#ef4444', '#06b6d4', '#ec4899', '#f97316'];
+                        if (ncd.communities && ncd.communities.length > 0) {
+                            communities = ncd.communities.map((c, i) => ({
+                                id: c.community,
+                                name: `Communauté ${c.community}`,
+                                size: c.nodes ? c.nodes.length : 0,
+                                color: COLORS[i % COLORS.length],
+                                members: (c.nodes || []).slice(0, 12).map(n => n.name || '?')
+                            }));
+                        }
+                    }
+                } catch { }
+            }
+
+            prog.style.display = 'none';
+            btn.disabled = false;
+            btn.textContent = '✅ Louvain OK';
+
+            document.getElementById('mod-badge').textContent = `Mod: ${modularity}`;
+
+            renderCommunities(communities);
+        }
+
+        function renderCommunities(communities) {
+            if (!communities || communities.length === 0) return;
+            const list = document.getElementById('community-list');
+
+            // 1. Visualisation canvas des clusters colorés (comme la maquette)
+            const total = communities.reduce((s, c) => s + (c.size || 1), 0);
+            let canvasHTML = `
+    <div style="margin-bottom:8px">
+      <div style="font-size:9px;color:var(--muted);font-family:var(--mono);margin-bottom:4px">CLUSTER MAP — ${communities.length} communautés</div>
+      <canvas id="louvain-canvas" width="260" height="90" style="border-radius:5px;display:block;background:#111827"></canvas>
+    </div>
+    <div style="display:flex;gap:3px;flex-wrap:wrap;margin-bottom:8px">
+      ${communities.map(c => `
+        <div style="display:flex;align-items:center;gap:3px;font-size:8px;font-family:var(--mono);color:${c.color}">
+          <div style="width:7px;height:7px;border-radius:50%;background:${c.color}"></div>${c.name.replace('Communauté ', 'C')}: ${c.size}
+        </div>`).join('')}
+    </div>`;
+
+            // 2. Cartes dépliables
+            const cardsHTML = communities.slice(0, 10).map(c => `
+    <div class="comm-card" onclick="toggleComm(this)" id="comm-${c.id}">
+      <div class="comm-card-header">
+        <div style="display:flex;align-items:center;gap:6px">
+          <div style="width:10px;height:10px;border-radius:50%;background:${c.color};flex-shrink:0;box-shadow:0 0 4px ${c.color}"></div>
+          <span style="font-size:10px;font-family:var(--mono);font-weight:700;color:${c.color}">${c.name}</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:4px">
+          <div style="width:${Math.max(20, Math.round(c.size / total * 80))}px;height:4px;background:${c.color};border-radius:2px;opacity:.7"></div>
+          <span class="badge b-purple">${c.size}</span>
+          <span style="color:var(--muted);font-size:10px">▾</span>
+        </div>
+      </div>
+      <div class="comm-members">
+        ${(c.members || []).map(m => `<div class="comm-member" style="color:${c.color}99">● ${m}</div>`).join('')}
+      </div>
+    </div>
+  `).join('');
+
+            list.innerHTML = canvasHTML + cardsHTML;
+
+            // Dessiner le canvas clusters APRES l'injection HTML
+            requestAnimationFrame(() => {
+                const canvas = document.getElementById('louvain-canvas');
+                if (!canvas) return;
+                const ctx = canvas.getContext('2d');
+                const W = canvas.width, H = canvas.height;
+                ctx.fillStyle = '#111827'; ctx.fillRect(0, 0, W, H);
+
+                // Dessiner des bulles proportionnelles par communauté
+                const rng = (s) => { let x = Math.sin(s) * 10000; return x - Math.floor(x); };
+                const positions = [
+                    [0.15, 0.4], [0.38, 0.2], [0.55, 0.6], [0.72, 0.3],
+                    [0.85, 0.65], [0.28, 0.72], [0.65, 0.82], [0.45, 0.42]
+                ];
+                communities.forEach((c, ci) => {
+                    const pos = positions[ci % positions.length];
+                    const cx = pos[0] * W, cy = pos[1] * H;
+                    const baseR = Math.sqrt(c.size / total) * 55 + 5;
+                    const n = Math.min(c.size, 20);
+
+                    // Points de la communauté
+                    for (let i = 0; i < n; i++) {
+                        const angle = rng(ci * 100 + i * 7) * Math.PI * 2;
+                        const r = rng(ci * 200 + i * 13) * baseR;
+                        const px = cx + Math.cos(angle) * r;
+                        const py = cy + Math.sin(angle) * r;
+                        ctx.beginPath();
+                        ctx.arc(Math.max(3, Math.min(W - 3, px)), Math.max(3, Math.min(H - 3, py)), 2.5, 0, Math.PI * 2);
+                        ctx.fillStyle = c.color + 'cc';
+                        ctx.fill();
+                    }
+                    // Label
+                    ctx.fillStyle = c.color;
+                    ctx.font = 'bold 8px JetBrains Mono';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(`C${c.id}`, Math.max(10, Math.min(W - 10, cx)), Math.max(10, Math.min(H - 3, cy + baseR + 8)));
+                });
+                ctx.textAlign = 'left';
+            });
+        }
+
+        function toggleComm(el) {
+            el.classList.toggle('expanded');
+        }
+
+        function resetLouvain() {
+            document.getElementById('community-list').innerHTML = '<div style="font-size:10px;color:var(--muted);font-family:var(--mono)">Cliquez sur "Détection Louvain" pour lancer l\'algorithme</div>';
+            document.getElementById('mod-badge').textContent = 'Mod: —';
+            document.querySelector('[onclick="runLouvainLocal()"]').textContent = '🔍 Détection Louvain';
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // ADVANCED ANALYSIS
+        // ═══════════════════════════════════════════════════════════════
+        function renderAdvanced(data) {
+            const types = [
+                { type: "STRUCTURE", count: 89, color: "purple" },
+                { type: "ROCHE", count: 76, color: "blue" },
+                { type: "METHODE", count: 51, color: "green" },
+                { type: "CIRQUE", count: 38, color: "amber" },
+                { type: "HYDROTHERMAL", count: 27, color: "blue" },
+            ];
+            const max = types[0].count;
+
+            document.getElementById('advanced-body').innerHTML = types.map(t => `
+    <div class="bar-wrap">
+      <div class="bar-label"><span>${t.type}</span><span style="font-family:var(--mono)">${t.count}</span></div>
+      <div class="bar-track"><div class="bar-fill ${t.color}" style="width:${(t.count / max * 100).toFixed(0)}%"></div></div>
+    </div>
+  `).join('');
+
+            const paths = [
+                "Caldera → DEFINED_BY → Faille N030",
+                "Sources Cilaos → CONTROLLED_BY → Rift N030",
+                "Brèche Orangers → OVERLIES → Coulées LM",
+                "ZDD → APPLIED_TO → Syénites",
+            ];
+            document.getElementById('semantic-paths').innerHTML = paths.map(p => `
+    <div style="font-size:9px;font-family:var(--mono);color:var(--muted);padding:3px 0;border-bottom:1px solid var(--border)">${p}</div>
+  `).join('');
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // Q-LEARNING VISUALIZATION
+        // ═══════════════════════════════════════════════════════════════
+        function renderQTable(q) {
+            const states = ['graph', 'vector', 'hybrid', 'unknown'];
+            const actions = ['use_graph', 'use_vector', 'use_both', 'fallback'];
+
+            // Policy viz
+            const policyEl = document.getElementById('policy-viz');
+            policyEl.innerHTML = states.map(s => {
+                const best = Object.entries(q[s]).sort((a, b) => b[1] - a[1])[0];
+                const actionColors = { use_graph: '#8b5cf6', use_vector: '#3b82f6', use_both: '#10b981', fallback: '#64748b' };
+                return `
+      <div class="policy-row">
+        <span class="state-name" style="color:var(--green)">${s}</span>
+        <span class="arrow-sym">→</span>
+        <span class="badge" style="background:${actionColors[best[0]]}22;color:${actionColors[best[0]]};border:1px solid ${actionColors[best[0]]}44">${best[0]} (${best[1].toFixed(2)})</span>
+      </div>
+    `;
+            }).join('');
+
+            // Q-table
+            const tbl = document.getElementById('q-table');
+            tbl.innerHTML = `
+    <thead><tr>
+      <th>État</th>
+      ${actions.map(a => `<th>${a.replace('use_', '')}</th>`).join('')}
+    </tr></thead>
+    <tbody>
+      ${states.map(s => {
+                const best = Object.entries(q[s]).sort((a, b) => b[1] - a[1])[0][0];
+                return `<tr>
+          <td style="font-weight:700;color:var(--green)">${s}</td>
+          ${actions.map(a => {
+                    const v = q[s][a];
+                    const cls = a === best ? 'qtd-best' : v > 0 ? 'qtd-pos' : v < 0 ? 'qtd-neg' : '';
+                    return `<td class="${cls}">${v.toFixed(3)}</td>`;
+                }).join('')}
+        </tr>`;
+            }).join('')}
+    </tbody>
+  `;
+        }
+
+        function renderRewardChart() {
+            const canvas = document.getElementById('reward-canvas');
+            const ctx = canvas.getContext('2d');
+            const W = canvas.offsetWidth || 260, H = 100;
+            canvas.width = W; canvas.height = H;
+
+            ctx.fillStyle = '#0f1929'; ctx.fillRect(0, 0, W, H);
+            ctx.strokeStyle = '#1e2d45'; ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(0, H / 2); ctx.lineTo(W, H / 2); ctx.stroke();
+
+            if (rewardHistory.length < 2) {
+                // Données simulées
+                rewardHistory = Array.from({ length: 30 }, (_, i) =>
+                    Math.sin(i * 0.5) * 0.5 + (Math.random() - 0.3) * 0.8
+                );
+            }
+
+            const n = rewardHistory.length;
+            const min = Math.min(...rewardHistory), max2 = Math.max(...rewardHistory);
+            const range = (max2 - min) || 1;
+
+            // Cumulative reward
+            let cum = 0;
+            const cumData = rewardHistory.map(r => { cum += r; return cum; });
+            const cMin = Math.min(...cumData), cMax = Math.max(...cumData), cRange = (cMax - cMin) || 1;
+
+            // Draw reward bars
+            rewardHistory.forEach((r, i) => {
+                const x = (i / n) * W;
+                const midY = H / 2;
+                const barH = (r / range) * (H / 2 - 4);
+                ctx.fillStyle = r >= 0 ? '#10b98166' : '#ef444466';
+                ctx.fillRect(x, midY - barH, (W / n) - 1, Math.abs(barH));
+            });
+
+            // Draw cumulative line
+            ctx.beginPath();
+            ctx.strokeStyle = '#3b82f6';
+            ctx.lineWidth = 1.5;
+            cumData.forEach((c, i) => {
+                const x = (i / n) * W;
+                const y = H - 5 - ((c - cMin) / cRange) * (H - 10);
+                i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+            });
+            ctx.stroke();
+
+            // Stats
+            const pos = rewardHistory.filter(r => r > 0).length;
+            const sr = (pos / rewardHistory.length * 100).toFixed(1);
+            document.getElementById('reward-stats').innerHTML = `
+    <div class="mrow"><span class="mlabel">Taux de succès</span><span class="badge b-green">${sr}%</span></div>
+    <div class="mrow"><span class="mlabel">Épisodes</span><span class="mval">${episodeCount || rewardHistory.length}</span></div>
+    <div class="mrow"><span class="mlabel">Récompense cumulative</span><span class="mval">${cum.toFixed(2)}</span></div>
+  `;
+        }
+
+        function renderDecisionPaths() {
+            const paths = {
+                graph: ["User Query", "Systématique/Relationnel", "use_graph", "Neo4j Query", "Réponse"],
+                vector: ["User Query", "Sémantique/Conceptuel", "use_vector", "FAISS Search", "Réponse"],
+                hybrid: ["User Query", "Hybride", "use_both", "Neo4j + FAISS", "Fusion"],
+                unknown: ["User Query", "Type inconnu", "fallback", "Aucun résultat", "Je ne sais pas"],
+            };
+            const colors = { graph: '#8b5cf6', vector: '#3b82f6', hybrid: '#10b981', unknown: '#64748b' };
+
+            document.getElementById('decision-paths-all').innerHTML = Object.entries(paths).map(([k, v]) => `
+    <div style="margin-bottom:8px">
+      <div class="badge" style="background:${colors[k]}22;color:${colors[k]};border:1px solid ${colors[k]}44;margin-bottom:3px">${k}</div>
+      <div class="path-flow">
+        ${v.map((s, i) => `
+          <span class="path-node" style="border-color:${colors[k]}44">${s}</span>
+          ${i < v.length - 1 ? '<span class="path-arrow">→</span>' : ''}
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // QUERY ROUTING — LOCAL
+        // ═══════════════════════════════════════════════════════════════
+        const CITATION_KW = ["où est", "cite", "montre-moi", "montre", "passage", "preuve", "source", "référence", "écrit", "où c'est", "extrait"];
+        const GRAPH_KW = ["relation", "lien", "relie", "qui", "quel", "quelle", "repose sur", "surmonte",
+            "caldera", "rift", "faille", "brèche", "cirque", "mafate", "salazie", "cilaos",
+            "précède", "avant", "après", "âge", "auteur", "basalte", "phonolite", "syénite", "gabbro", "ignimbrite"];
+        const VECTOR_KW = ["explique", "explication", "décris", "comment", "pourquoi", "qu'est-ce",
+            "définition", "principe", "mécanisme", "processus", "hydrothermal", "géothermie",
+            "géochronologie", "volcanisme", "éruption", "différenciation", "magma", "zdd", "u-pb", "ar-ar"];
+
+        function detectQueryType(q) {
+            const ql = q.toLowerCase();
+            const c = CITATION_KW.filter(kw => ql.includes(kw)).length;
+            if (c > 0) return { type: "Citation", routing: "Citation RAG", state: "citation", conf: 0.95 };
+
+            const g = GRAPH_KW.filter(kw => ql.includes(kw)).length;
+            const v = VECTOR_KW.filter(kw => ql.includes(kw)).length;
+            const total = g + v || 1;
+            if (g > 0 && v > 0) return { type: "Hybrid", routing: "Both (Graph + Vectoriel)", state: "hybrid", conf: 0.82 };
+            if (g > 0) return { type: "Systematic", routing: "Graph RAG", state: "graph", conf: Math.min(0.95, 0.55 + g / total * 0.4) };
+            if (v > 0) return { type: "Semantic", routing: "Vectorial RAG", state: "vector", conf: Math.min(0.93, 0.55 + v / total * 0.4) };
+            return { type: "Semantic", routing: "Vectorial RAG", state: "unknown", conf: 0.55 };
+        }
+
+        function chooseAction(state) {
+            if (state === 'citation') return 'use_citation';
+            return Object.entries(qTable[state]).sort((a, b) => b[1] - a[1])[0][0];
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // BUILD MOCK ANSWER
+        // ═══════════════════════════════════════════════════════════════
+        function buildMockAnswer(question, state, action) {
+            const ql = question.toLowerCase();
+
+            if (action === 'use_graph' || action === 'use_both') {
+                const entities = MOCK_GRAPH_DATA.nodes.filter(n => {
+                    const keywords = question.toLowerCase().split(/\s+/).filter(w => w.length > 3);
+                    return keywords.some(kw => n.name.toLowerCase().includes(kw) || n.type.toLowerCase().includes(kw));
+                });
+                if (entities.length === 0 && ql.includes('caldera')) {
+                    return `📊 ENTITÉS CONNEXES (Graph RAG):
+• Caldera [STRUCTURE] (communauté 0)
+  └── DEFINED_BY → Faille de caldera
+  └── ASSOCIATED_WITH → Ignimbrite
+  └── CONNECTED_TO → Rift N030
+
+• Rift N030 [STRUCTURE] (communauté 0)
+  └── CONTROLS → Sources Cilaos
+  └── INTERSECTS → Brèche Orangers`;
+                }
+                if (entities.length > 0) {
+                    const graphPart = "📊 ENTITÉS CONNEXES (Graph RAG):\n" +
+                        entities.slice(0, 4).map(e =>
+                            `• ${e.name} [${e.type}] (communauté ${e.community})`
+                        ).join('\n');
+                    if (action === 'use_both') {
+                        const vKey = ql.includes('hydro') ? 'hydrothermal' : ql.includes('zdd') ? 'zdd' : 'default';
+                        const vRes = MOCK_VECTOR_RESULTS[vKey] || MOCK_VECTOR_RESULTS.default;
+                        return graphPart + '\n\n📄 EXTRAITS DE LA THÈSE (Vectoriel RAG):\n' + vRes[0].chunk.substring(0, 300) + '...';
+                    }
+                    return graphPart;
+                }
+            }
+
+            if (action === 'use_vector' || action === 'fallback') {
+                if (ql.includes('hydro') || ql.includes('thermal') || ql.includes('source')) {
+                    return "📄 EXTRAITS DE LA THÈSE (Vectoriel RAG):\n\n" + MOCK_VECTOR_RESULTS.hydrothermal[0].chunk;
+                }
+                if (ql.includes('zdd') || ql.includes('zircon')) {
+                    return "📄 EXTRAITS DE LA THÈSE (Vectoriel RAG):\n\n" + MOCK_VECTOR_RESULTS.zdd[0].chunk;
+                }
+                if (ql.includes('caldera')) {
+                    return "📄 EXTRAITS DE LA THÈSE (Vectoriel RAG):\n\n" + MOCK_VECTOR_RESULTS.caldera[0].chunk;
+                }
+                return "📄 EXTRAITS DE LA THÈSE (Vectoriel RAG):\n\n" + MOCK_VECTOR_RESULTS.default[0].chunk;
+            }
+
+            return "Je ne sais pas — question hors contexte de la thèse.";
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // SEND QUERY
+        // ═══════════════════════════════════════════════════════════════
+        async function sendQuery() {
+            const q = document.getElementById('query-input').value.trim();
+            if (!q) return;
+            const prevQ = lastQuestion;
+            lastQuestion = q;
+
+            // Mise à jour UI immédiate
+            document.getElementById('answer-box').innerHTML = '<div class="loading"><div class="spinner"></div>Traitement Q-Learning...</div>';
+            document.getElementById('feedback-msg').textContent = '';
+
+            const detected = detectQueryType(q);
+            const action = chooseAction(detected.state);
+
+            // Affichage analyse
+            document.getElementById('analysis-type').textContent = detected.type;
+            document.getElementById('routing-val').textContent = detected.routing;
+            document.getElementById('conf-pct').textContent = `${(detected.conf * 100).toFixed(0)}%`;
+            document.getElementById('conf-bar').style.width = (detected.conf * 100) + '%';
+            document.getElementById('action-badge').textContent = action;
+
+            // Routing arrow
+            const arrowBox = document.getElementById('routing-arrow-box');
+            const cls = detected.state === 'graph' ? 'to-graph' : detected.state === 'vector' ? 'to-vector' : detected.state === 'hybrid' ? 'to-both' : detected.state === 'citation' ? 'to-citation' : 'to-vector';
+            arrowBox.innerHTML = `<div class="routing-arrow ${cls}">→ ${detected.routing}</div>`;
+
+            // Decision path
+            const dp = ["User Query", `Analyse: ${detected.type}`, detected.routing, "Réponse"];
+            document.getElementById('decision-path').innerHTML = dp.map((p, i) =>
+                `<span class="path-node">${p}</span>${i < dp.length - 1 ? '<span class="path-arrow">→</span>' : ''}`
+            ).join('');
+
+            // Appel API ou simulation
+            let answer = '';
+            let reward = 0;
+
+            await new Promise(r => setTimeout(r, 600)); // Délai réaliste
+
+            if (apiOnline) {
+                try {
+                    const payload = { question: q };
+                    if (detected.state === 'citation') {
+                        payload.previous_question = prevQ;
+                    }
+                    const r = await fetch(`${API}/query`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    const d = await r.json();
+                    answer = d.answer || '';
+                    reward = d.reward || 0;
+
+                    // UI Graph RAG Updates
+                    const cypherContainer = document.getElementById("cypher-container");
+                    const cypherBox = document.getElementById("cypher-box");
+                    if (d.cypher_query && (d.routing === 'use_graph' || d.routing === 'use_both')) {
+                        cypherBox.innerText = d.cypher_query.trim();
+                        cypherContainer.style.display = "block";
+                        console.log("Graph RAG - Entities:", d.extracted_entities);
+                        console.log("Graph RAG - Raw Data:", d.raw_graph_data);
+                    } else {
+                        cypherContainer.style.display = "none";
+                        cypherBox.innerText = "";
+                    }
+
+                    if (d.q_table) qTable = d.q_table; // Mise à jour Q-table si fournie
+                } catch { answer = ''; }
+            }
+
+            if (!answer || answer.trim().length < 20) {
+                answer = buildMockAnswer(q, detected.state, action);
+                reward = answer.length > 50 ? 1.0 : -0.5;
+            }
+
+            document.getElementById('answer-box').textContent = answer;
+
+            // Mise à jour Q-table locale
+            if (detected.state !== 'citation') {
+                const oldQ = qTable[detected.state][action];
+                const bestNext = Math.max(...Object.values(qTable[detected.state]));
+                const alpha = 0.3, gamma = 0.9;
+                qTable[detected.state][action] = oldQ + alpha * (reward + gamma * bestNext - oldQ);
+            }
+
+            rewardHistory.push(reward);
+            if (rewardHistory.length > 50) rewardHistory.shift();
+            episodeCount++;
+
+            // Refresh des visualisations Q-Learning
+            renderQTable(qTable);
+            renderRewardChart();
+
+            // Historique
+            queryHistory.unshift({ q, routing: detected.routing, type: detected.type });
+            if (queryHistory.length > 10) queryHistory.pop();
+            renderHistory();
+        }
+
+        function renderHistory() {
+            const typeColors = { Semantic: 'b-blue', Systematic: 'b-purple', Hybrid: 'b-green', Citation: 'b-amber' };
+            document.getElementById('history-list').innerHTML = queryHistory.map(h => `
+    <div class="hist-item" onclick="setQAndSend('${h.q.replace(/'/g, "\\'")}')">
+      <span class="hist-q">${h.q}</span>
+      <span class="badge ${typeColors[h.type] || 'b-amber'}">${h.routing.split(' ')[0]}</span>
+    </div>
+  `).join('');
+        }
+
+        function setQ(q) { document.getElementById('query-input').value = q; }
+        function setQAndSend(q) { setQ(q); sendQuery(); }
+
+        async function sendFeedback(val) {
+            if (!lastQuestion) return;
+            const detected = detectQueryType(lastQuestion);
+            const action = chooseAction(detected.state);
+
+            // Mise à jour Q-table
+            if (detected.state !== 'citation') {
+                const oldQ = qTable[detected.state][action];
+                const bestNext = Math.max(...Object.values(qTable[detected.state]));
+                qTable[detected.state][action] = oldQ + 0.3 * (val + 0.9 * bestNext - oldQ);
+            }
+            rewardHistory.push(val);
+            episodeCount++;
+
+            renderQTable(qTable);
+            renderRewardChart();
+
+            document.getElementById('feedback-msg').textContent = val > 0 ? '✓ Q-table mise à jour (+reward)' : '✗ Q-table pénalisée (-reward)';
+            setTimeout(() => { document.getElementById('feedback-msg').textContent = ''; }, 3000);
+
+            if (apiOnline) {
+                try {
+                    await fetch(`${API}/query`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ question: lastQuestion, feedback: val })
+                    });
+                } catch { }
+            }
+        }
+
+        function resetQuery() {
+            document.getElementById('query-input').value = '';
+            document.getElementById('answer-box').textContent = 'En attente de question...';
+            document.getElementById('routing-val').textContent = '—';
+            document.getElementById('analysis-type').textContent = '—';
+            document.getElementById('action-badge').textContent = '—';
+            document.getElementById('conf-pct').textContent = '—';
+            document.getElementById('conf-bar').style.width = '0%';
+            document.getElementById('decision-path').innerHTML = '';
+            document.getElementById('routing-arrow-box').innerHTML = '';
+            document.getElementById('cypher-container').style.display = 'none';
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // INIT — Tout charger au démarrage
+        // ═══════════════════════════════════════════════════════════════
+        async function init() {
+            // ETAPE 1 : Afficher immédiatement les données simulées (pas d'attente API)
+            renderChunkingMethods(MOCK_CHUNKS_INFO);
+            renderPCA();
+            const slider = document.getElementById('proximity-slider');
+            if (slider) {
+                slider.addEventListener('input', function () {
+                    const pct = parseInt(this.value);
+                    document.getElementById('proximity-val').textContent = pct + '%';
+
+                    const canvas = document.getElementById('pca-canvas');
+                    const ctx = canvas.getContext('2d');
+                    const w = canvas.width, h = canvas.height;
+
+                    ctx.fillStyle = '#111827';
+                    ctx.fillRect(0, 0, w, h);
+
+                    ctx.strokeStyle = '#1e2d45'; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+                    ctx.beginPath(); ctx.moveTo(w / 2, 5); ctx.lineTo(w / 2, h - 5); ctx.stroke();
+                    ctx.beginPath(); ctx.moveTo(5, h / 2); ctx.lineTo(w - 5, h / 2); ctx.stroke();
+                    ctx.setLineDash([]);
+
+                    const rng = (seed) => { let x = Math.sin(seed) * 10000; return x - Math.floor(x); };
+                    const clusters = ['#60a5fa', '#a78bfa', '#34d399', '#fbbf24'];
+                    const groups = [
+                        { cx: 0.3, cy: 0.35, spread: 0.18, cluster: 0, n: 90 },
+                        { cx: 0.65, cy: 0.3, spread: 0.14, cluster: 1, n: 60 },
+                        { cx: 0.45, cy: 0.65, spread: 0.12, cluster: 2, n: 70 },
+                        { cx: 0.7, cy: 0.65, spread: 0.10, cluster: 3, n: 45 },
+                    ];
+                    let pts = [];
+                    groups.forEach(g => {
+                        for (let i = 0; i < g.n; i++) {
+                            const angle = rng(i * 7 + g.cluster * 100) * Math.PI * 2;
+                            const r = rng(i * 13 + g.cluster * 200) * g.spread;
+                            pts.push({
+                                x: (g.cx + Math.cos(angle) * r) * (w - 20) + 10,
+                                y: (g.cy + Math.sin(angle) * r) * (h - 20) + 10,
+                                c: g.cluster,
+                                distFromCenter: Math.sqrt(Math.pow(g.cx - 0.5, 2) + Math.pow(g.cy - 0.5, 2)) + r
+                            });
+                        }
+                    });
+
+                    const sorted = [...pts].sort((a, b) => a.distFromCenter - b.distFromCenter);
+                    const threshold = Math.floor(sorted.length * pct / 100);
+
+                    pts.forEach((p) => {
+                        const rank = sorted.indexOf(p);
+                        const isHighlighted = rank < threshold;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, isHighlighted ? 2.5 : 1.5, 0, Math.PI * 2);
+                        ctx.fillStyle = isHighlighted
+                            ? clusters[p.c] + 'cc'
+                            : '#1e2d45';
+                        ctx.fill();
+                    });
+
+                    ctx.fillStyle = '#64748b'; ctx.font = '9px JetBrains Mono';
+                    ctx.fillText('PC1', w - 25, h / 2 - 4);
+                    ctx.fillText('PC2', w / 2 + 4, 14);
+                });
+            }
+            renderGraph(MOCK_GRAPH_DATA);
+            renderAdvanced(MOCK_GRAPH_DATA);
+            renderCommunities(MOCK_GRAPH_DATA.communities);  // ← toujours visible dès le départ
+            document.getElementById('mod-badge').textContent = `Mod: ${MOCK_GRAPH_DATA.stats.modularity}`;
+            renderQTable(qTable);
+            renderRewardChart();
+            renderDecisionPaths();
+
+            // ETAPE 2 : Vérifier l'API et charger les données réelles
+            await checkHealth();
+
+            if (apiOnline) {
+                try {
+                    const [gr, vr, ar] = await Promise.all([
+                        fetch(`${API}/graph?limit=30`).then(r => r.json()),
+                        fetch(`${API}/vectorial`).then(r => r.json()),
+                        fetch(`${API}/agentic`).then(r => r.json()),
+                    ]);
+
+                    // Mise à jour stats graphe
+                    if (gr.stats) {
+                        MOCK_GRAPH_DATA.stats = { ...MOCK_GRAPH_DATA.stats, ...gr.stats };
+                        document.getElementById('graph-stats-mini').innerHTML = `
+                            <span class="badge b-blue">Nœuds: ${gr.stats.nodes}</span>
+                            <span class="badge b-purple">Relations: ${gr.stats.relations}</span>
+                            <span class="badge b-green">Communautés: ${gr.stats.communities}</span>
+                            <span class="badge b-amber">Mod: ${gr.stats.modularity}</span>
+                        `;
+                    }
+
+                    // Mise à jour nœuds du graphe (si disponibles)
+                    if (gr.nodes_sample && gr.nodes_sample.length > 0) {
+                        const realNodes = gr.nodes_sample.slice(0, 15).map((n, i) => ({
+                            ...n, cx: 20 + (i % 7) * 38, cy: 15 + Math.floor(i / 7) * 60
+                        }));
+                        MOCK_GRAPH_DATA.nodes = realNodes;
+                        renderGraph(MOCK_GRAPH_DATA);  // Re-render avec nœuds réels
+                    }
+
+                    // BUG FIX : vérifier que communities est non-vide avant d'écraser les mock
+                    if (gr.communities && gr.communities.length > 0) {
+                        const realCommunities = gr.communities.map((c, i) => ({
+                            id: c.id,
+                            name: `Communauté ${c.id}`,
+                            size: c.size,
+                            color: ['#8b5cf6', '#3b82f6', '#f59e0b', '#10b981', '#ef4444', '#06b6d4', '#ec4899', '#f97316'][i % 8],
+                            members: []
+                        }));
+                        MOCK_GRAPH_DATA.communities = realCommunities;
+                        renderCommunities(realCommunities);
+                        document.getElementById('mod-badge').textContent = `Mod: ${gr.stats?.modularity || MOCK_GRAPH_DATA.stats.modularity}`;
+                    }
+                    // else : on garde les mock communities déjà affichées
+
+                    // Chunking réel
+                    if (vr.chunking) {
+                        renderChunkingMethods({
+                            ...MOCK_CHUNKS_INFO,
+                            total_chunks: vr.chunking.total_chunks,
+                            avg_words: vr.chunking.avg_words,
+                        });
+                    }
+
+                    // Q-table réelle
+                    if (ar.q_learning?.q_table) {
+                        ar.q_learning.q_table.forEach(row => {
+                            if (qTable[row.state]) {
+                                qTable[row.state].use_graph = parseFloat(row.use_graph) || 0;
+                                qTable[row.state].use_vector = parseFloat(row.use_vector) || 0;
+                                qTable[row.state].use_both = parseFloat(row.use_both) || 0;
+                                qTable[row.state].fallback = parseFloat(row.fallback) || 0;
+                            }
+                        });
+                        renderQTable(qTable);
+                    }
+                    if (ar.reward_monitor) {
+                        episodeCount = ar.reward_monitor.total_episodes || 0;
+                        rewardHistory = ar.reward_monitor.rewards_history || [];
+                        if (rewardHistory.length > 0) renderRewardChart();
+                    }
+
+                    // PCA réelle
+                    if (vr.pca && vr.pca.points && vr.pca.points.length > 0) {
+                        const canvas = document.getElementById('pca-canvas');
+                        const ctx = canvas.getContext('2d');
+                        const w = canvas.width, h = canvas.height;
+                        ctx.fillStyle = '#111827'; ctx.fillRect(0, 0, w, h);
+                        const pts = vr.pca.points;
+                        const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
+                        const xMin = Math.min(...xs), xMax = Math.max(...xs);
+                        const yMin = Math.min(...ys), yMax = Math.max(...ys);
+                        const colors = ['#60a5fa', '#a78bfa', '#34d399', '#fbbf24', '#f87171', '#34d3ea'];
+                        pts.forEach(p => {
+                            const x = 15 + (p.x - xMin) / (xMax - xMin + 1e-9) * (w - 30);
+                            const y = h - 15 - (p.y - yMin) / (yMax - yMin + 1e-9) * (h - 30);
+                            ctx.beginPath(); ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+                            ctx.fillStyle = (colors[p.cluster % colors.length]) + 'bb';
+                            ctx.fill();
+                        });
+                        if (vr.pca.variance_explained) {
+                            document.getElementById('pca-stats').textContent =
+                                `PC1: ${vr.pca.variance_explained[0]}%  PC2: ${vr.pca.variance_explained[1]}%`;
+                        }
+                    }
+
+                } catch (e) { console.warn('API load partial:', e); }
+            }
+        }
+
+        setInterval(checkHealth, 30000);
+        window.addEventListener('load', init);
+    </script>
+</body>
+
+</html>

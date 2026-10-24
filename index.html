@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Volcan — Analyse Structurelle & Sémantique</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0f172a;
+            --bg-alt: #1e293b;
+            --fg: #e2e8f0;
+            --fg-dim: #94a3b8;
+            --border: #334155;
+            --accent: #8b5cf6;
+            --accent-alt: #3b82f6;
+            --mono: 'Courier New', monospace;
+            --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.5;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        button, input, textarea, select {
+            font-family: inherit;
+            color: inherit;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover { background: #334155; }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.1);
+        }
+
+        /* Layout principal */
+        #app {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            min-height: 100vh;
+        }
+        nav {
+            background: var(--bg-alt);
+            border-right: 1px solid var(--border);
+            padding: 16px;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+        nav h3 {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--fg-dim);
+            margin-top: 16px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        nav h3:first-child { margin-top: 0; }
+        nav button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 8px 10px;
+            margin-bottom: 4px;
+            font-size: 13px;
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            transition: all 0.15s;
+        }
+        nav button:hover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: var(--accent);
+        }
+        nav button.active {
+            background: rgba(139, 92, 246, 0.2);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .page {
+            display: none;
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .page.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header commun */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .page-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .page-header .badges {
+            display: flex;
+            gap: 12px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 4px;
+            font-size: 11px;
+            font-family: var(--mono);
+            color: var(--accent);
+        }
+
+        /* ═════════════════════════════════════════════════════════════════
+           VECTORIAL PAGE
+           ═════════════════════════════════════════════════════════════════ */
+        #vectorial-page {
+            grid-template-columns: 1fr 280px;
+            gap: 16px;
+        }
+        #vectorial-page > div:first-child {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .search-box {
+            display: flex;
+            gap: 8px;
+        }
+        .search-box input {
+            flex: 1;
+            padding: 10px 12px;
+            font-size: 13px;
+        }
+        .search-box button {
+            padding: 10px 16px;
+        }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 12px;
+        }
+        .result-card {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 12px;
+            transition: all 0.15s;
+        }
+        .result-card:hover {
+            background: #1e3a5f;
+            border-color: var(--accent-alt);
+        }
+        .result-card .title {
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 6px;
+            word-break: break-word;
+        }
+        .result-card .type-tag {
+            display: inline-block;
+            padding: 2px 6px;
+            background: rgba(59, 130, 246, 0.2);
+            border-radius: 3px;
+            font-size: 10px;
+            color: var(--accent-alt);
+            margin-bottom: 8px;
+        }
+        .result-card .snippet {
+            font-size: 11px;
+            color: var(--fg-dim);
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .result-card .score {
+            font-family: var(--mono);
+            font-size: 10px;
+            color: var(--fg-dim);
+        }
+        .sidebar-stats {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 16px;
+        }
+        .stat-item {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .stat-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .stat-label {
+            font-size: 11px;
+            color: var(--fg-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .stat-value {
+            font-size: 18px;
+            font-weight: 700;
+            font-family: var(--mono);
+            color: var(--accent);
+        }
+
+        /* ═════════════════════════════════════════════════════════════════
+           GRAPH PAGE
+           ═════════════════════════════════════════════════════════════════ */
+        #graph-page {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 16px;
+        }
+        #graph-page > div:first-child {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .graph-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+        .graph-header h2 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .graph-controls {
+            display: flex;
+            gap: 8px;
+        }
+        .graph-controls button {
+            font-size: 11px;
+            padding: 6px 12px;
+        }
+        .graph-svg-container {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+            flex: 1;
+            min-height: 300px;
+        }
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .louvain-canvas-wrap {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+            padding: 16px;
+            aspect-ratio: 1;
+        }
+        canvas {
+            display: block;
+            max-width: 100%;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-height: 100%;
+            overflow-y: auto;
+        }
+        .sidebar-panel {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 16px;
+        }
+        .sidebar-panel h3 {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--fg-dim);
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .metric {
+            background: rgba(139, 92, 246, 0.05);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 4px;
+            padding: 10px;
+        }
+        .metric-label {
+            font-size: 10px;
+            color: var(--fg-dim);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+        .metric-value {
+            font-size: 14px;
+            font-weight: 600;
+            font-family: var(--mono);
+            color: var(--accent);
+        }
+        .community-cards {
+            display: grid;
+            gap: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .community-card {
+            background: var(--bg);
+            border: 2px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .community-card:hover {
+            border-color: var(--accent);
+            background: rgba(139, 92, 246, 0.05);
+        }
+        .community-card.custom-color {
+            border-left-color: inherit;
+        }
+        .comm-name {
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .comm-members {
+            font-size: 9px;
+            color: var(--fg-dim);
+            line-height: 1.3;
+        }
+        .type-distribution {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .bar-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .bar-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--mono);
+            font-size: 9px;
+            color: var(--fg-dim);
+        }
+        .bar-track {
+            height: 6px;
+            background: rgba(94, 109, 127, 0.3);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.3s;
+        }
+        .bar-fill.purple { background: #8b5cf6; }
+        .bar-fill.blue { background: #3b82f6; }
+        .bar-fill.green { background: #10b981; }
+        .bar-fill.amber { background: #f59e0b; }
+        .bar-fill.red { background: #ef4444; }
+        .bar-fill.cyan { background: #06b6d4; }
+
+        .type-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .type-filters span {
+            cursor: pointer;
+            font-family: var(--mono);
+            font-size: 9px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid;
+            background: transparent;
+            text-decoration: none;
+            user-select: none;
+            transition: all 0.15s;
+        }
+
+        .advanced-section {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+        .advanced-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            margin-bottom: 6px;
+        }
+        .advanced-row:last-child { margin-bottom: 0; }
+        .advanced-row .label { color: var(--fg-dim); }
+        .advanced-row .value { font-family: var(--mono); font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <h3>Navigation</h3>
+            <button class="nav-btn active" data-page="graph-page">◉ Graph RAG</button>
+        </nav>
+
+        <script>
+        // ════════════════════════════════════════════════════════════════════
+        // PAGE NAVIGATION
+        // ════════════════════════════════════════════════════════════════════
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const pageId = btn.dataset.page;
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+                document.getElementById(pageId).classList.add('active');
+                btn.classList.add('active');
+                if (pageId === 'graph-page') {
+                    initGraphPage();
+                }
+            });
+        });
+
+        // ════════════════════════════════════════════════════════════════════
+        // API STATUS CHECK
+        // ════════════════════════════════════════════════════════════════════
+            const API = "http://localhost:8001";
+        async function checkAPIStatus() {
+            try {
+                const res = await fetch(`${API}/`, { 
+                    method: 'GET',
+                    signal: AbortSignal.timeout(2000)
+                });
+                if (res.ok) {
+                    apiOnline = true;
+                    document.getElementById('api-status').textContent = '● Online';
+                    document.getElementById('api-status').style.color = '#10b981';
+                } else {
+                    apiOnline = false;
+                    document.getElementById('api-status').textContent = '● Offline';
+                    document.getElementById('api-status').style.color = '#ef4444';
+                }
+            } catch (e) {
+                apiOnline = false;
+                document.getElementById('api-status').textContent = '● Offline';
+                document.getElementById('api-status').style.color = '#ef4444';
+            }
+        }
+        setInterval(checkAPIStatus, 5000);
+        checkAPIStatus();
+
+        // ════════════════════════════════════════════════════════════════════
+        // VECTORIAL SEARCH
+        // ════════════════════════════════════════════════════════════════════
+        async function runVectorSearch() {
+            const query = document.getElementById('search-query').value.trim();
+            if (!query) return;
+
+            const container = document.getElementById('results-container');
+            container.innerHTML = '<div style="color: var(--fg-dim); font-size: 12px;">⏳ Recherche…</div>';
+
+            try {
+                const t0 = performance.now();
+                const res = await fetch(`${API}/search`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query, limit: 20 })
+                });
+                const t1 = performance.now();
+                const data = await res.json();
+
+                if (!data.results || data.results.length === 0) {
+                    container.innerHTML = '<div style="color: var(--fg-dim); font-size: 12px;">Aucun résultat.</div>';
+                    return;
+                }
+
+                document.getElementById('vec-result-count').textContent = data.results.length;
+                document.getElementById('vec-latency').textContent = Math.round(t1 - t0);
+
+                const avgScore = data.results.reduce((sum, r) => sum + (r.score || 0), 0) / data.results.length;
+                document.getElementById('vec-avg-score').textContent = avgScore.toFixed(2);
+
+                container.innerHTML = data.results.map(r => `
+                    <div class="result-card">
+                        <div class="title">${r.text || r.name || 'N/A'}</div>
+                        <div class="type-tag">${r.source || 'unknown'}</div>
+                        <div class="snippet">${r.text ? r.text.substring(0, 80) + '…' : '—'}</div>
+                        <div class="score">Score: ${(r.score || 0).toFixed(3)}</div>
+                    </div>
+                `).join('');
+            } catch (e) {
+                console.error('Search error:', e);
+                container.innerHTML = '<div style="color: var(--fg-dim); font-size: 12px;">Erreur lors de la recherche.</div>';
+            }
+        }
+
+        // ════════════════════════════════════════════════════════════════════
+        // GRAPH PAGE - HELPERS
+        // ════════════════════════════════════════════════════════════════════
+        function injectGraphData(nodesSample, edgesSample, stats) {
+            // Normalize and inject into MOCK_GRAPH_DATA for renderer
+            MOCK_GRAPH_DATA.nodes = (nodesSample || []).map(n => ({
+                name:      n.name || n.id || '?',
+                type:      n.type || '',
+                community: n.community ?? null,
+                pagerank:  n.pagerank || 0,
+                cx:        n.cx || null,
+                cy:        n.cy || null,
+                _communityColor: n._communityColor || null
+            }));
+            MOCK_GRAPH_DATA.edges = (edgesSample || []).map(e => ({
+                source: e.source,
+                target: e.target,
+                rel:    e.rel_type || e.relation || 'RELATED'
+            }));
+            // update basic stats object used by UI panels
+            MOCK_GRAPH_DATA.stats = stats || MOCK_GRAPH_DATA.stats || {};
+            updateGraphPageMetrics();
+        }
+
+        // ════════════════════════════════════════════════════════════════════
+        // GRAPH PAGE - INITIALIZATION
+        // ════════════════════════════════════════════════════════════════════
+        async function initGraphPage() {
+    // Stats header with loading placeholders
+    document.getElementById('gp-nodes-badge').textContent = 'Chargement...';
+    document.getElementById('gp-rels-badge').textContent = 'Chargement...';
+
+    // Show spinner text in SVG while loading
+    const svg = document.getElementById('gp-graph-svg');
+    if (svg) {
+        const container = svg.parentElement;
+        const W = container.offsetWidth || 500;
+        const H = 280;
+        svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+        svg.innerHTML = `
+            <text x="${W/2}" y="${H/2 - 10}" 
+                  text-anchor="middle" 
+                  font-family="JetBrains Mono" 
+                  font-size="12" fill="#8b5cf6">
+                ⏳ Chargement du graphe Neo4j...
+            </text>
+            <text x="${W/2}" y="${H/2 + 15}" 
+                  text-anchor="middle" 
+                  font-family="JetBrains Mono" 
+                  font-size="10" fill="#475569">
+                Connexion à Aura en cours...
+            </text>
+        `;
+    }
+
+    // Zoom slider init (once)
+    const zoomSlider = document.getElementById('gp-zoom-slider');
+    if (zoomSlider && !zoomSlider._init) {
+        zoomSlider._init = true;
+        zoomSlider.addEventListener('input', function() {
+            const val = parseInt(this.value);
+            document.getElementById('gp-zoom-val').textContent = val + '%';
+            const svg = document.getElementById('gp-graph-svg');
+            if (svg) {
+                svg.style.transform = `scale(${val/100})`;
+                svg.style.transformOrigin = 'center center';
+            }
+        });
+    }
+
+    // Render side panels from mock immediately (they don't depend on nodes)
+    renderGPTypeFilters();
+    renderGPLegend();
+    renderGPTypeDistribution();
+    renderGPSemanticPaths();
+    renderGPInsights();
+    renderGPLouvainCanvas(MOCK_GRAPH_DATA.communities);
+    renderGPCommunityCards(MOCK_GRAPH_DATA.communities);
+    document.getElementById('gp-comm-count').textContent = MOCK_GRAPH_DATA.communities.length;
+    document.getElementById('gp-mod-score').textContent = 'Mod: ' + MOCK_GRAPH_DATA.stats.modularity;
+    document.getElementById('gp-modularity-val').textContent = MOCK_GRAPH_DATA.stats.modularity;
+
+    // ═══ LOAD REAL NEO4J DATA — Preferred flow: nodes by community first ═══
+    if (apiOnline) {
+        try {
+            // 1) Try to retrieve full node listing grouped by community
+            let allNodes = [];
+            try {
+                const ncr = await fetch(`${API}/graph/nodes/by-community`);
+                const membersData = ncr.ok ? await ncr.json() : null;
+                if (membersData && Array.isArray(membersData.communities)) {
+                    membersData.communities.forEach(c => {
+                        (c.nodes || []).forEach(m => {
+                            allNodes.push({
+                                name: m.name || m.id || '?',
+                                type: m.type || '',
+                                community: c.community ?? null,
+                                pagerank: m.pagerank || m.score || 0,
+                                cx: m.cx || null,
+                                cy: m.cy || null,
+                                _communityColor: m._communityColor || null
+                            });
+                        });
+                    });
+                    console.log('[Graph] Total nœuds depuis Louvain:', allNodes.length);
+                }
+            } catch (e) {
+                console.warn('[Graph] /graph/nodes/by-community failed:', e);
+            }
+
+            // 2) Fetch edges and stats (fallback to /graph for edges/stats)
+            const gres = await fetch(`${API}/graph?limit=1000`);
+            const gData = gres.ok ? await gres.json() : null;
+
+            // If we have nodes collected from Louvain, use them; otherwise use nodes_sample
+            const nodesToUse = allNodes.length > 0 ? allNodes : (gData?.nodes_sample || []);
+
+            // Expose real graph data for debugging/rendering and log counts
+            window._gpRealNodes = nodesToUse;
+            window._gpRealEdges = gData?.edges_sample || [];
+            console.log('[Graph] nodes reçus:', window._gpRealNodes.length);
+            console.log('[Graph] edges reçus:', window._gpRealEdges.length);
+
+            // Inject normalized data and render
+            injectGraphData(window._gpRealNodes, window._gpRealEdges, gData?.stats || {});
+            renderGPGraph();
+
+            // Update communities panel if we got community list
+            if (gData?.communities && gData.communities.length > 0) {
+                renderGPLouvainCanvas(gData.communities);
+                renderGPCommunityCards(gData.communities);
+                document.getElementById('gp-comm-count').textContent = gData.communities.length;
+            }
+        
+
+                // 3. Advanced analysis réelle si disponible
+                if (gData.advanced) {
+                    if (gData.advanced.type_distribution && gData.advanced.type_distribution.length > 0) {
+                        renderGPTypeDistributionReal(gData.advanced.type_distribution);
+                    }
+                    if (gData.advanced.fusion_score) {
+                        document.getElementById('gp-fusion-score').textContent = gData.advanced.fusion_score;
+                    }
+                }
+
+                // 4. Filtres par type avec vrais types
+                const realTypes = [...new Set(
+                    (gData.nodes_sample || []).map(n => n.type).filter(Boolean)
+                )];
+                if (realTypes.length > 0) {
+                    window._gpActiveTypes = new Set(realTypes);
+                    renderGPTypeFiltersReal(realTypes);
+                }
+
+            } catch (e) {
+                console.warn('[Graph Page] API load error:', e);
+            }
+        }
+
+        function updateGraphPageMetrics() {
+            const nodes = MOCK_GRAPH_DATA.nodes.length;
+            const edges = MOCK_GRAPH_DATA.edges.length;
+            const density = (edges / Math.max(1, nodes * (nodes - 1)) * 100).toFixed(2);
+
+            document.getElementById('gp-nodes-badge').textContent = nodes + ' nœuds';
+            document.getElementById('gp-rels-badge').textContent = edges + ' relations';
+            document.getElementById('gp-metric-nodes').textContent = nodes;
+            document.getElementById('gp-metric-rels').textContent = edges;
+            document.getElementById('gp-metric-density').textContent = density + '%';
+        }
+
+        // ════════════════════════════════════════════════════════════════════
+        // RENDER: SVG GRAPH
+        // ════════════════════════════════════════════════════════════════════
+        function renderGPGraph() {
+    const svg = document.getElementById('gp-graph-svg');
+    if (!svg) return;
+    const container = svg.parentElement;
+    const W = Math.max(container.offsetWidth || 500, 500);
+    const H = 400;
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    svg.setAttribute('width', W);
+    svg.setAttribute('height', H);
+    svg.innerHTML = '';
+
+    const nodes = (window._gpRealNodes && window._gpRealNodes.length > 0)
+        ? window._gpRealNodes
+        : MOCK_GRAPH_DATA.nodes;
+
+    const edges = (window._gpRealEdges && window._gpRealEdges.length > 0)
+        ? window._gpRealEdges
+        : MOCK_GRAPH_DATA.edges;
+
+    if (!nodes || nodes.length === 0) {
+        const text = document.createElementNS('http://www.w3.org/2000/svg','text');
+        text.setAttribute('x', W/2); text.setAttribute('y', H/2);
+        text.setAttribute('text-anchor','middle');
+        text.setAttribute('fill','#64748b');
+        text.setAttribute('font-size','13');
+        text.setAttribute('font-family','JetBrains Mono');
+        text.textContent = 'Aucun nœud — vérifiez Neo4j';
+        svg.appendChild(text);
+        return;
+    }
+
+    // ── Index nom→nœud + couleur + taille FIXE petite ──
+    const nameMap = {};
+    nodes.forEach((n, i) => {
+        n._color = COMMUNITY_COLORS[(n.community ?? i) % COMMUNITY_COLORS.length];
+        // Taille fixe : forcer un rayon constant pour éviter donuts gigantesques
+        n._r = 4;
+        nameMap[n.name] = n;
+    });
+
+    // ── Arêtes résolues (max 300) ──
+    let resolvedEdges = [];
+    (Array.isArray(edges) ? edges : []).forEach(e => {
+        let src = null, tgt = null;
+        if (Array.isArray(e)) {
+            src = nodes[e[0]]; tgt = nodes[e[1]];
+        } else if (e && typeof e === 'object') {
+            src = nameMap[e.source] || nameMap[e.src];
+            tgt = nameMap[e.target] || nameMap[e.tgt];
+        }
+        if (src && tgt && src !== tgt) {
+            resolvedEdges.push({ src, tgt });
+        }
+    });
+    if (resolvedEdges.length > 300) {
+        resolvedEdges = resolvedEdges.sort(() => Math.random() - 0.5).slice(0, 300);
+    }
+
+    // ── Layout : positionner par communauté en cercles ──
+    const needsLayout = nodes.some(n => !n.cx || !n.cy || n.cx === 0);
+    if (needsLayout) {
+        // Grouper par communauté
+        const commGroups = {};
+        nodes.forEach(n => {
+            const c = String(n.community ?? 0);
+            if (!commGroups[c]) commGroups[c] = [];
+            commGroups[c].push(n);
+        });
+        const commKeys = Object.keys(commGroups);
+        const numComm = commKeys.length;
+        const margin = 30;
+        const availW = W - margin * 2;
+        const availH = H - margin * 2;
+
+        commKeys.forEach((cid, ci) => {
+            // Centre de chaque groupe dans une grille
+            const cols = Math.ceil(Math.sqrt(numComm));
+            const rows = Math.ceil(numComm / cols);
+            const col = ci % cols;
+            const row = Math.floor(ci / cols);
+            const cx = margin + (col + 0.5) * (availW / cols);
+            const cy = margin + (row + 0.5) * (availH / rows);
+
+            // Disposer les nœuds du groupe en spirale serrée
+            const group = commGroups[cid];
+            group.forEach((n, ni) => {
+                if (ni === 0) {
+                    n.cx = cx; n.cy = cy;
+                } else {
+                    const angle = (ni / group.length) * Math.PI * 2;
+                    const spiral = 6 + Math.floor(ni / 8) * 7;
+                    n.cx = cx + Math.cos(angle) * spiral;
+                    n.cy = cy + Math.sin(angle) * spiral;
+                }
+                // Clamper dans le SVG
+                n.cx = Math.max(margin, Math.min(W - margin, n.cx));
+                n.cy = Math.max(margin, Math.min(H - margin, n.cy));
+            });
+        });
+    }
+
+    // ── Dessiner arêtes ──
+    const edgeGroup = document.createElementNS('http://www.w3.org/2000/svg','g');
+    resolvedEdges.forEach(e => {
+        const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+        line.setAttribute('x1', e.src.cx.toFixed(1));
+        line.setAttribute('y1', e.src.cy.toFixed(1));
+        line.setAttribute('x2', e.tgt.cx.toFixed(1));
+        line.setAttribute('y2', e.tgt.cy.toFixed(1));
+        line.setAttribute('stroke', e.src._color + '55');
+        line.setAttribute('stroke-width', '0.6');
+        edgeGroup.appendChild(line);
+    });
+    svg.appendChild(edgeGroup);
+
+    // ── Dessiner nœuds ──
+    const nodeGroup = document.createElementNS('http://www.w3.org/2000/svg','g');
+    nodes.forEach(n => {
+        const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+        g.setAttribute('transform', `translate(${n.cx.toFixed(1)},${n.cy.toFixed(1)})`);
+        g.style.cursor = 'pointer';
+
+        const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        circle.setAttribute('r', n._r.toString());
+        circle.setAttribute('fill', n._color + 'cc');
+        circle.setAttribute('stroke', n._color);
+        circle.setAttribute('stroke-width', '0.5');
+
+        const title = document.createElementNS('http://www.w3.org/2000/svg','title');
+        title.textContent = `${n.name || '?'} | ${n.type || '?'} | Comm: ${n.community ?? '?'}`;
+        g.appendChild(circle);
+        g.appendChild(title);
+
+        const tooltip = document.getElementById('gp-node-tooltip');
+        g.addEventListener('mouseenter', function(evt) {
+            circle.setAttribute('r', (n._r * 2).toString());
+            circle.setAttribute('stroke-width', '1.5');
+            circle.setAttribute('fill', n._color);
+            const det = document.getElementById('gp-node-detail');
+            if (det) det.textContent =
+                `${n.name || '?'} · ${n.type || '?'} · Comm: ${n.community ?? '?'}` +
+                (n.pagerank ? ` · PR: ${parseFloat(n.pagerank).toFixed(4)}` : '');
+            if (tooltip) {
+                tooltip.style.display = 'block';
+                tooltip.style.left = (evt.offsetX + 14) + 'px';
+                tooltip.style.top = Math.max(0, evt.offsetY - 20) + 'px';
+                tooltip.innerHTML =
+                    `<b style="color:${n._color}">${n.name || '?'}</b><br>` +
+                    `<span style="color:#94a3b8">${n.type || '?'}</span><br>` +
+                    `<span style="color:#64748b">C${n.community ?? '?'}</span>`;
+            }
+        });
+        g.addEventListener('mouseleave', function() {
+            circle.setAttribute('r', n._r.toString());
+            circle.setAttribute('stroke-width', '0.5');
+            circle.setAttribute('fill', n._color + 'cc');
+            if (tooltip) tooltip.style.display = 'none';
+        });
+        nodeGroup.appendChild(g);
+    });
+    svg.appendChild(nodeGroup);
+
+    // ── Légende communautés ──
+    const commSeen = [...new Set(nodes.map(n => n.community ?? 0))].slice(0, 10);
+    const legendG = document.createElementNS('http://www.w3.org/2000/svg','g');
+    commSeen.forEach((cid, i) => {
+        const color = COMMUNITY_COLORS[cid % COMMUNITY_COLORS.length];
+        const x = 8 + i * 45;
+        const y = H - 8;
+        const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        dot.setAttribute('cx', x); dot.setAttribute('cy', y);
+        dot.setAttribute('r', '4'); dot.setAttribute('fill', color);
+        const lbl = document.createElementNS('http://www.w3.org/2000/svg','text');
+        lbl.setAttribute('x', x + 6); lbl.setAttribute('y', y + 3);
+        lbl.setAttribute('font-size', '8'); lbl.setAttribute('fill', color);
+        lbl.setAttribute('font-family', 'JetBrains Mono');
+        lbl.textContent = `C${cid}`;
+        legendG.appendChild(dot); legendG.appendChild(lbl);
+    });
+    svg.appendChild(legendG);
+}
+
+        // ════════════════════════════════════════════════════════════════════
+        // RENDER: LOUVAIN CANVAS
+        // ════════════════════════════════════════════════════════════════════
+        function renderGPLouvainCanvas(communities) {
+            const canvas = document.getElementById('gp-louvain-canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const W = canvas.width, H = canvas.height;
+            const cx = W / 2, cy = H / 2;
+            const count = communities.length;
+
+            communities.forEach((comm, i) => {
+                const angle = (i / count) * Math.PI * 2;
+                const r = Math.min(W, H) * 0.35;
+                const x = cx + Math.cos(angle) * r;
+                const y = cy + Math.sin(angle) * r;
+                const size = Math.max(8, Math.min(30, comm.size));
+
+                ctx.fillStyle = comm.color || '#8b5cf6';
+                ctx.beginPath();
+                ctx.arc(x, y, size, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.strokeStyle = 'rgba(226, 232, 240, 0.5)';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+
+                // Label
+                ctx.fillStyle = '#e2e8f0';
+                ctx.font = 'bold 10px monospace';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(comm.id, x, y);
+            });
+        }
+
+        // ════════════════════════════════════════════════════════════════════
+        // RENDER: COMMUNITY CARDS
+        // ════════════════════════════════════════════════════════════════════
+        function renderGPCommunityCards(communities) {
+            const container = document.getElementById('gp-community-cards');
+            container.innerHTML = communities.map(c => `
+                <div class="community-card custom-color" style="border-left-color: ${c.color};">
+                    <div class="comm-name" style="color: ${c.color};">● ${c.name}</div>
+                    <div class="comm-members">
+                        <strong>${c.size}</strong> nœuds<br>
+                        ${c.members.slice(0, 4).join(', ')}${c.members.length > 4 ? '…' : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ════════════════════════════════════════════════════════════════════
+        // NEW FUNCTION: Type Distribution (Real Data)
+        // ════════════════════════════════════════════════════════════════════
+        function renderGPTypeDistributionReal(typeData) {
+            const el = document.getElementById('gp-type-distribution');
+            if (!el || !typeData.length) return;
+            const max = Math.max(...typeData.map(t => t.count));
+            const colorMap = {
+                STRUCTURE: 'purple', ROCHE: 'blue', METHODE: 'green',
+                CIRQUE: 'amber', HYDROTHERMAL: 'blue', FORMATION: 'purple'
+            };
+            el.innerHTML = typeData.slice(0, 6).map(t => `
+                <div class="bar-wrap">
+                    <div class="bar-label">
+                        <span style="font-size:9px">${t.type || '?'}</span>
+                        <span style="font-family:var(--mono);font-size:9px">${t.count}</span>
+                    </div>
+                    <div class="bar-track">
+                        <div class="bar-fill ${colorMap[t.type] || 'purple'}" 
+                             style="width:${(t.count / max * 100).toFixed(0)}%"></div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ════════════════════════════════════════════════════════════════════
+        // NEW FUNCTION: Type Filters (Real Data)
+        // ════════════════════════════════════════════════════════════════════
+        function renderGPTypeFiltersReal(types) {
+            const colorMap = {
+                STRUCTURE: '#8b5cf6', CIRQUE: '#3b82f6', FORMATION: '#f59e0b',
+                ROCHE: '#10b981', HYDROTHERMAL: '#ef4444', METHODE: '#06b6d4'
+            };
+            const container = document.getElementById('gp-type-filters');
+            if (!container) return;
+            container.innerHTML = types.map(t => {
+                const active = window._gpActiveTypes?.has(t) ?? true;
+                const color = colorMap[t] || '#8b5cf6';
+                return `
+                    <span onclick="toggleGPType('${t}')" style="
+                        cursor:pointer; font-family:var(--mono); font-size:9px;
+                        padding:3px 8px; border-radius:4px;
+                        border:1px solid ${active ? color + '55' : '#1e2d45'};
+                        background:${active ? color + '22' : 'transparent'};
+                        color:${active ? color : '#475569'};
+                        text-decoration:${active ? 'none' : 'line-through'};
+                        user-select:none; transition:all .15s">
+                        ● ${t}
+                    </span>
+                `;
+            }).join('');
+        }
+
+        function toggleGPType(type) {
+            if (window._gpActiveTypes.has(type)) {
+                window._gpActiveTypes.delete(type);
+            } else {
+                window._gpActiveTypes.add(type);
+            }
+            const types = Array.from(MOCK_GRAPH_DATA.nodes.map(n => n.type).filter(Boolean));
+            renderGPTypeFiltersReal([...new Set(types)]);
+        }
+
+        // ════════════════════════════════════════════════════════════════════
+        // RUN LOUVAIN
+        // ════════════════════════════════════════════════════════════════════
+        async function runGPLouvain() {
+            if (!apiOnline) {
+                console.log('API offline, using mock data');
+                return;
+            }
+
+            try {
+                const res = await fetch(`${API}/graph/louvain`, { method: 'POST' });
+                const d = await res.json();
+
+                if (d.status === 'success') {
+                    let modularity = d.modularity;
+
+                    // Charger les membres depuis /graph/nodes/by-community
+                    try {
+                        const membersRes = await fetch(`${API}/graph/nodes/by-community`);
+                        const membersData = await membersRes.json();
+
+                        if (membersData.communities && membersData.communities.length > 0) {
+                            const COLORS = [
+                                '#8b5cf6', '#3b82f6', '#f59e0b', '#10b981',
+                                '#ef4444', '#06b6d4', '#ec4899', '#f97316',
+                                '#84cc16', '#14b8a6', '#f43f5e', '#a855f7',
+                                '#0ea5e9', '#22c55e', '#fb923c'
+                            ];
+
+                            const communities = membersData.communities
+                                .sort((a, b) => (b.nodes?.length || 0) - (a.nodes?.length || 0))
+                                .map((c, i) => ({
+                                    id: c.community,
+                                    name: `Communauté ${c.community}`,
+                                    size: c.nodes ? c.nodes.length : 0,
+                                    color: COLORS[i % COLORS.length],
+                                    members: (c.nodes || [])
+                                        .slice(0, 12)
+                                        .map(n => n.name || '?')
+                                        .filter(n => n !== '?')
+                                }));
+
+                            MOCK_GRAPH_DATA.communities = communities;
+                            renderGPLouvainCanvas(communities);
+                            renderGPCommunityCards(communities);
+                            document.getElementById('gp-comm-count').textContent = communities.length;
+                            document.getElementById('gp-modularity-val').textContent = modularity || '—';
+                        }
+                    } catch (e) {
+                        console.warn('nodes/by-community error:', e);
+                    }
+                }
+            } catch (e) {
+                console.error('Louvain run error:', e);
+            }
+        }
+
+        // ════════════════════════════════════════════════════════════════════
+        // INIT
+        // ════════════════════════════════════════════════════════════════════
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAPIStatus();
+            // Optionnel: charger vectorial search avec données mock
+        });
+    </script>
+</body>
+</html>

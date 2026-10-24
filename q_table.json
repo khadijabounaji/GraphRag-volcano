@@ -1,0 +1,606 @@
+{
+  "Q": {
+    "graph": {
+      "use_graph": 1.3555156592912,
+      "use_vector": 0.37794196571578736,
+      "use_both": 0.0,
+      "fallback": 0.13750910815625386
+    },
+    "vector": {
+      "use_graph": 0.055758985191882326,
+      "use_vector": 1.1464660148216377,
+      "use_both": 0.0,
+      "fallback": 0.0
+    },
+    "hybrid": {
+      "use_graph": 0.0,
+      "use_vector": 0.0,
+      "use_both": 5.0,
+      "fallback": 0.0
+    },
+    "unknown": {
+      "use_graph": 0.0,
+      "use_vector": 0.3845554689583761,
+      "use_both": 0.0,
+      "fallback": 0.13916284290177483
+    }
+  },
+  "history": [
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779152064
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779152076
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779152184
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779152634
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779152660
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779153042
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779153284
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779153483
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779153615
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779153651
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779154431
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779154471
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779154549
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779191772
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779211314
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779211696
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779212273
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779212380
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779212468
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779212502
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779213856
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 0.0,
+      "t": 1779213949
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 0.0,
+      "t": 1779213949
+    },
+    {
+      "state": "graph",
+      "action": "fallback",
+      "reward": 0.5,
+      "t": 1779215851
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779215867
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 0.0,
+      "t": 1779215878
+    },
+    {
+      "state": "graph",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779215886
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 0.0,
+      "t": 1779215923
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779215951
+    },
+    {
+      "state": "graph",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779216006
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779218606
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 0.0,
+      "t": 1779224257
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779263702
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1779286259
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1779286265
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1779286385
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1779286415
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779286438
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1779286468
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779286575
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1779286588
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1779286698
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1779286705
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1779286790
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779286862
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1779288144
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779288155
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779288174
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1779288187
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779288242
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779288268
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779288271
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779288341
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 1.0,
+      "t": 1779291347
+    },
+    {
+      "state": "graph",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779292842
+    },
+    {
+      "state": "graph",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779293003
+    },
+    {
+      "state": "graph",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779293075
+    },
+    {
+      "state": "graph",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779293314
+    },
+    {
+      "state": "graph",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1779293316
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1779293585
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1780083052
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1780083069
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1780083084
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1780083091
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1781985059
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1781985061
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1781985639
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1781985640
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1781985646
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1781985692
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1781985694
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1781985710
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1781985712
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1781985751
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1781985782
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1781985811
+    },
+    {
+      "state": "unknown",
+      "action": "use_vector",
+      "reward": 1.0,
+      "t": 1781985840
+    },
+    {
+      "state": "graph",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782161210
+    },
+    {
+      "state": "graph",
+      "action": "fallback",
+      "reward": 0.5,
+      "t": 1782161210
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782161233
+    },
+    {
+      "state": "unknown",
+      "action": "fallback",
+      "reward": 0.0,
+      "t": 1782161326
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782216142
+    },
+    {
+      "state": "vector",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1782216341
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782216361
+    },
+    {
+      "state": "graph",
+      "action": "use_graph",
+      "reward": 1.0,
+      "t": 1782218870
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782218927
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782219043
+    },
+    {
+      "state": "vector",
+      "action": "use_graph",
+      "reward": -1.0,
+      "t": 1782219374
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782219389
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": -1.0,
+      "t": 1782219405
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782219409
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782223181
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 1.0,
+      "t": 1782223188
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782223197
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782223296
+    },
+    {
+      "state": "vector",
+      "action": "use_vector",
+      "reward": 0.5,
+      "t": 1782225076
+    }
+  ]
+}

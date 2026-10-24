@@ -1,0 +1,49 @@
+﻿Query,Methode,Precision,Recall,F1-score,MRR,nDCG@5,Temps(ms),Top chunk
+Q1,M1 - Cosine,0.8,0.0727,0.1333,1.0,0.6701,139.46,in the PDC level (RN18-10) dated at 36.5 ? 2.3 ka by ZD
+Q1,M2 - FAISS,0.8,0.0727,0.1333,1.0,0.6701,70.81,in the PDC level (RN18-10) dated at 36.5 ? 2.3 ka by ZD
+Q1,M3 - BM25,1.0,0.0909,0.1667,1.0,0.9673,2.73,estimate for the cessation of volcanism. 97 FIGURE 39 :
+Q1,M4 - DPR,0.8,0.0727,0.1333,1.0,0.6701,81.07,in the PDC level (RN18-10) dated at 36.5 ? 2.3 ka by ZD
+Q1,M5 - Hybride,1.0,0.0909,0.1667,1.0,0.8397,72.49,DU PITON DES NEIGES A PARTIR DE LA CARACTERISATION HYDR
+Q1,M6 - Reranking,1.0,0.0909,0.1667,1.0,0.909,71.4,"6). Ainsi, il semble que les sy?nites ne sont pas les d"
+Q2,M1 - Cosine,0.6,0.0545,0.1,1.0,0.476,62.08,calderas ayant un diam?tre de plusieurs dizaines de kil
+Q2,M2 - FAISS,0.6,0.0545,0.1,1.0,0.476,63.61,calderas ayant un diam?tre de plusieurs dizaines de kil
+Q2,M3 - BM25,1.0,0.0909,0.1667,1.0,0.8607,1.26,"de d?stabilisations de flanc (Labazuy, 1996; de Voogd e"
+Q2,M4 - DPR,0.6,0.0545,0.1,1.0,0.476,62.81,calderas ayant un diam?tre de plusieurs dizaines de kil
+Q2,M5 - Hybride,1.0,0.0909,0.1667,1.0,0.8251,61.62,calderas ayant un diam?tre de plusieurs dizaines de kil
+Q2,M6 - Reranking,1.0,0.0909,0.1667,1.0,0.8733,58.33,"cadre de cette th?se (Chapitre 3), nous essaierons d?ap"
+Q3,M1 - Cosine,1.0,0.0909,0.1667,1.0,0.4087,81.55,used hereafter and are thus made available in Supplemen
+Q3,M2 - FAISS,1.0,0.0909,0.1667,1.0,0.4087,82.75,used hereafter and are thus made available in Supplemen
+Q3,M3 - BM25,1.0,0.0909,0.1667,1.0,0.7683,1.12,?m zircons such as found in the gabbros is >900?C (Cher
+Q3,M4 - DPR,1.0,0.0909,0.1667,1.0,0.4087,85.16,used hereafter and are thus made available in Supplemen
+Q3,M5 - Hybride,1.0,0.0909,0.1667,1.0,0.6191,81.07,?m zircons such as found in the gabbros is >900?C (Cher
+Q3,M6 - Reranking,1.0,0.0909,0.1667,1.0,0.7643,81.53,"chaleur du syst?me hydrothermal, en particulier les int"
+Q4,M1 - Cosine,1.0,0.0909,0.1667,1.0,0.8177,62.95,"(Salazie SZ, Figure 32.A) dans la partie ouest de Salaz"
+Q4,M2 - FAISS,1.0,0.0909,0.1667,1.0,0.8177,54.34,"(Salazie SZ, Figure 32.A) dans la partie ouest de Salaz"
+Q4,M3 - BM25,1.0,0.0909,0.1667,1.0,0.5424,1.21,cependant est compl?tement absente du cirque de Mafate 
+Q4,M4 - DPR,1.0,0.0909,0.1667,1.0,0.8177,62.78,"(Salazie SZ, Figure 32.A) dans la partie ouest de Salaz"
+Q4,M5 - Hybride,1.0,0.0909,0.1667,1.0,0.5803,55.24,la rift zone est du Kilauea (Figure 20.B). Le champ g?o
+Q4,M6 - Reranking,1.0,0.0909,0.1667,1.0,0.9863,63.13,indiquant que le syst?me gabbro?que en lui-m?me ne cons
+Q5,M1 - Cosine,0.8,0.0727,0.1333,1.0,0.7575,67.97,nord-ouest et la coupe GG? repr?sente l?extension de ce
+Q5,M2 - FAISS,0.8,0.0727,0.1333,1.0,0.7575,58.29,nord-ouest et la coupe GG? repr?sente l?extension de ce
+Q5,M3 - BM25,1.0,0.0909,0.1667,1.0,0.9996,1.57,"PN1, REPOSANT ELLES-MEME, SUR LES COULEES LM DE BASE DE"
+Q5,M4 - DPR,0.8,0.0727,0.1333,1.0,0.7575,65.79,nord-ouest et la coupe GG? repr?sente l?extension de ce
+Q5,M5 - Hybride,1.0,0.0909,0.1667,1.0,0.8694,65.46,jusqu?au Ti Col et au rempart des Orangers. Il faudrait
+Q5,M6 - Reranking,1.0,0.0909,0.1667,1.0,0.9201,68.7,"PN1, REPOSANT ELLES-MEME, SUR LES COULEES LM DE BASE DE"
+Q6,M1 - Cosine,0.4,0.0364,0.0667,1.0,0.4012,63.47,M?t o? les sources s??talent sur une plus longue distan
+Q6,M2 - FAISS,0.4,0.0364,0.0667,1.0,0.4012,59.84,M?t o? les sources s??talent sur une plus longue distan
+Q6,M3 - BM25,1.0,0.0909,0.1667,1.0,0.9838,1.4,sur le syst?me hydrothermal 2.1. Contr?le topographique
+Q6,M4 - DPR,0.4,0.0364,0.0667,1.0,0.4012,54.3,M?t o? les sources s??talent sur une plus longue distan
+Q6,M5 - Hybride,1.0,0.0909,0.1667,1.0,0.8963,64.93,sur le syst?me hydrothermal 2.1. Contr?le topographique
+Q6,M6 - Reranking,1.0,0.0909,0.1667,1.0,0.9125,64.08,sur le syst?me hydrothermal 2.1. Contr?le topographique
+Q7,M1 - Cosine,1.0,0.0909,0.1667,1.0,0.6123,71.93,de plus de 350 m dans le secteur de Trou Blanc (points 
+Q7,M2 - FAISS,1.0,0.0909,0.1667,1.0,0.6123,56.48,de plus de 350 m dans le secteur de Trou Blanc (points 
+Q7,M3 - BM25,1.0,0.0909,0.1667,1.0,0.9815,1.59,le massif se situent le long des accidents tectoniques 
+Q7,M4 - DPR,1.0,0.0909,0.1667,1.0,0.6123,62.34,de plus de 350 m dans le secteur de Trou Blanc (points 
+Q7,M5 - Hybride,1.0,0.0909,0.1667,1.0,0.9503,68.33,le massif se situent le long des accidents tectoniques 
+Q7,M6 - Reranking,1.0,0.0909,0.1667,1.0,0.9278,68.57,le massif se situent le long des accidents tectoniques 
+Q8,M1 - Cosine,0.4,0.0364,0.0667,0.5,0.3901,64.27,d?veloppement d?un projet en contexte insulaire........
+Q8,M2 - FAISS,0.4,0.0364,0.0667,0.5,0.3901,55.32,d?veloppement d?un projet en contexte insulaire........
+Q8,M3 - BM25,1.0,0.0909,0.1667,1.0,0.8243,1.43,r?servoir de type ? r?servoir fractur? ? typique des sy
+Q8,M4 - DPR,0.4,0.0364,0.0667,0.5,0.3901,50.35,d?veloppement d?un projet en contexte insulaire........
+Q8,M5 - Hybride,1.0,0.0909,0.1667,1.0,0.8314,65.65,r?servoir de type ? r?servoir fractur? ? typique des sy
+Q8,M6 - Reranking,1.0,0.0909,0.1667,1.0,0.8266,55.74,r?sultats ont des implications sur le syst?me hydrother

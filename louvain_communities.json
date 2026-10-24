@@ -1,0 +1,6306 @@
+{
+  "metadata": {
+    "algorithm": "Louvain (python-louvain)",
+    "modularity": 0.6881,
+    "total_communities": 26,
+    "total_nodes": 1012,
+    "total_edges": 5250,
+    "weighted": true
+  },
+  "communities": {
+    "0": {
+      "community_id": 0,
+      "members": [
+        {
+          "name": "Cependant",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Salazie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "brèche",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "intrusion",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "dyke",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "syénite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cilaos",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Position",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Etude",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rappel",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Plomberie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bras",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Référence",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Remontée",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Réchauffement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Trois",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tibaldi",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Michon",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chaput",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "50 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Quoi",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Parmi",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "avalanche",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "glissement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Varnes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Blahut",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Delcamp",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nord",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chevallier",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Oehler",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chapelle",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bénare",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ferrière",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Trou",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Entrailles",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mapou",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Brûlé",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Grand",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gailler",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Certaines",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Plaine",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nehlig",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Famin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chovelon",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "péridotite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rouge",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pays",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Demange",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Radier",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Vieille",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bénard",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "10 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sucre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Etant",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lénat",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "935 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "100 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "0.4 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Belle",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Peyrefitte",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Étant",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Olivette",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Vidot",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Vers",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lebeau",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Jacquot",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pierrot",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Camp",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bachelier",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Manouilh",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "1413 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "1930 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "2400 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Malais",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Eden",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Libéria",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rein",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "590 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Papangue",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mamelles",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pers",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bassin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Benjoin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Paul",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Furcy",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bois",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nèfles",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "42 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Aurélien",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Noires",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Serré",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dimitile",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "475 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "373 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chaîne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Secteur",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gueule",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Morel",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Béthoune",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Noir",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Plateforme",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pendue",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Palmiste",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Peter",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tapcal",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Limon",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Raisin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sources",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cordes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "85 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Terres",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fines",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pitsa",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Matarum",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Prunes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Carré",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chênes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Encore",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gobert",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chicot",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lion",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tête",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Château",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fouquet",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Arnaud",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Coude",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Compte",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "45 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fort",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mathewson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Poul",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Affouches",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Verticalité",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "1400 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Blanc",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Enchaing",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Orangers",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Agisoft",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Metashape",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Seule",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lacquement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Comm",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Postérieurement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ilet",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Roches",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "28 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Concernant",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Failles",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sous",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Aucun",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Salazes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fougères",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fleurs",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Jaunes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pluies",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Petit",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Picard",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Faim",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Massoune",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bécabot",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Hauts",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bonnet",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Prêtre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lianes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "48 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Poule",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mare",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mariée",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Voile",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bananiers",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 170
+    },
+    "1": {
+      "community_id": 1,
+      "members": [
+        {
+          "name": "Neiges",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Piton",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 2
+    },
+    "2": {
+      "community_id": 2,
+      "members": [
+        {
+          "name": "Système hydrothermal",
+          "type": "",
+          "category": "Concept",
+          "description": ""
+        },
+        {
+          "name": "Piton des Neiges",
+          "type": "",
+          "category": "Location",
+          "description": ""
+        },
+        {
+          "name": "Cirque de Mafate",
+          "type": "",
+          "category": "Geomorphology",
+          "description": ""
+        },
+        {
+          "name": "Cirque de Salazie",
+          "type": "",
+          "category": "Geomorphology",
+          "description": ""
+        },
+        {
+          "name": "Cirque de Cilaos",
+          "type": "",
+          "category": "Geomorphology",
+          "description": ""
+        },
+        {
+          "name": "Stade LM",
+          "type": "",
+          "category": "TimePeriod",
+          "description": ""
+        },
+        {
+          "name": "Stade PN1",
+          "type": "",
+          "category": "TimePeriod",
+          "description": ""
+        },
+        {
+          "name": "Stade PN2",
+          "type": "",
+          "category": "TimePeriod",
+          "description": ""
+        },
+        {
+          "name": "Stade PN3",
+          "type": "",
+          "category": "TimePeriod",
+          "description": ""
+        },
+        {
+          "name": "Stade PN4",
+          "type": "",
+          "category": "TimePeriod",
+          "description": ""
+        },
+        {
+          "name": "Caldera stade différencié",
+          "type": "",
+          "category": "Structure",
+          "description": ""
+        },
+        {
+          "name": "Caldera interne",
+          "type": "",
+          "category": "Structure",
+          "description": ""
+        },
+        {
+          "name": "Caldera externe",
+          "type": "",
+          "category": "Structure",
+          "description": ""
+        },
+        {
+          "name": "Brèche des Orangers",
+          "type": "",
+          "category": "Lithology",
+          "description": ""
+        },
+        {
+          "name": "Brèche noire Br.b1",
+          "type": "",
+          "category": "Lithology",
+          "description": ""
+        },
+        {
+          "name": "Brèche hydrothermale",
+          "type": "",
+          "category": "Lithology",
+          "description": ""
+        },
+        {
+          "name": "Brèche primitive Br.b0",
+          "type": "",
+          "category": "Lithology",
+          "description": ""
+        },
+        {
+          "name": "Brèche Br.b2c",
+          "type": "",
+          "category": "Lithology",
+          "description": ""
+        },
+        {
+          "name": "Brèche pulvérulente Br.b3c",
+          "type": "",
+          "category": "Lithology",
+          "description": ""
+        },
+        {
+          "name": "Brèche d'Aurère",
+          "type": "",
+          "category": "Lithology",
+          "description": ""
+        },
+        {
+          "name": "Syénite La Chapelle",
+          "type": "",
+          "category": "Differentiated",
+          "description": ""
+        },
+        {
+          "name": "Microsyénite Trou Blanc",
+          "type": "",
+          "category": "Differentiated",
+          "description": ""
+        },
+        {
+          "name": "Sill Ferrière",
+          "type": "",
+          "category": "Differentiated",
+          "description": ""
+        },
+        {
+          "name": "Complexe hypovolcanique gabbroïque",
+          "type": "",
+          "category": "Mafic",
+          "description": ""
+        },
+        {
+          "name": "Rift-zone N030",
+          "type": "",
+          "category": "Structure",
+          "description": ""
+        },
+        {
+          "name": "Sill-zone Salazie",
+          "type": "",
+          "category": "Structure",
+          "description": ""
+        },
+        {
+          "name": "Sill-zone Cilaos",
+          "type": "",
+          "category": "Structure",
+          "description": ""
+        },
+        {
+          "name": "Source de chaleur latente",
+          "type": "",
+          "category": "Concept",
+          "description": ""
+        },
+        {
+          "name": "Ignimbrite rhéomorphique",
+          "type": "",
+          "category": "Deposit",
+          "description": ""
+        },
+        {
+          "name": "Col du Taïbit",
+          "type": "",
+          "category": "Location",
+          "description": ""
+        },
+        {
+          "name": "Col des Bœufs",
+          "type": "",
+          "category": "Location",
+          "description": ""
+        },
+        {
+          "name": "Ravine Gobert",
+          "type": "",
+          "category": "Location",
+          "description": ""
+        },
+        {
+          "name": "Ravine Ferrière",
+          "type": "",
+          "category": "Location",
+          "description": ""
+        },
+        {
+          "name": "Piton d'Enchaing",
+          "type": "",
+          "category": "Geomorphology",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [
+        "Concept",
+        "Deposit",
+        "Differentiated",
+        "Geomorphology",
+        "Lithology",
+        "Location",
+        "Mafic",
+        "Structure",
+        "TimePeriod"
+      ],
+      "size": 34
+    },
+    "4": {
+      "community_id": 4,
+      "members": [
+        {
+          "name": "Réunion",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Géographie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Géologie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chronostratigraphie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Structure",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Island",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Article",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Multi",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Geochronology",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Intrusive",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Explosive",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Zonage",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Indien",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Océan",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Vincent",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Madagascar",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Denis",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Afin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Février",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Juin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Centre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "John",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Laeter",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Geosystems",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Geochemistry",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Martin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Camille",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nicholas",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Axel",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bjarne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Christopher",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Carole",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Laurent",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pierre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Austral",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Institut",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Patrick",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Taking",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Radiometric",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Garcin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "10 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fieldmove",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Quatre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Villeneuve",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Juillet",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 45
+    },
+    "5": {
+      "community_id": 5,
+      "members": [
+        {
+          "name": "perméabilité",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "refroidissement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "This",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "fracture",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Perméabilité",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Actuellement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Selon",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "altération",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Typiquement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "calcite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Noyes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Skaergaard",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Groenland",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Petford",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Blanquat",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Faciès",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "porosité",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Join",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pryet",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Kennedy",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Massiot",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Custodio",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Massari",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "cendres",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Smyth",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sruoga",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cashman",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Wright",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Colombier",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dobson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cavailhes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rotevatn",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Senger",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Barrie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Karson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Delaney",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Curewitz",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mordensky",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "argilisation",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Davis",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Communs",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sibson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gingerich",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Berthod",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "900 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "pumpellyite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "prehnite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "800 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "600 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "65 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Deccan",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "430 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "1800 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "950 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bachèlery",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Petrological",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fuerteventura",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Intrusion",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Greenland",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "East",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Allibon",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Canary",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Hawai",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Most",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Crozet",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Brèche",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 66
+    },
+    "6": {
+      "community_id": 6,
+      "members": [
+        {
+          "name": "Caldera différenciée",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "faille",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "effondrement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "rift",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "thermale",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pantelleria",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Islande",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Injection",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Aujourd",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dans",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Taupo",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lipman",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Moho",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Harrison",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Barboni",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Klügel",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Kaiser",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lorsque",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Evolution",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "différenciation",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gudmundsson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Newhall",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Alcedo",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Munro",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mauna",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nilsen",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Kilauea",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dzurisin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Acocella",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Erta",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rowland",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Krafla",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Caldwell",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Davy",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Valles",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Wolff",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Garita",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ramos",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Classiquement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cailleau",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Holohan",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cole",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Maestrelli",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Karátson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Néanmoins",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Puna",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lautze",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Thomas",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Saddle",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Monastero",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "45 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Italie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Scaillet",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fulignati",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Autre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Árnason",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "80 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Laribotnar",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Vtismor",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Hvitholar",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cataldi",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Larderel",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "François",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Larderello",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Plusieurs",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "États",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ailleurs",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Quant",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Reykjanes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chevalier",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sanjuan",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rond",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Régional",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Conseil",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chapitre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rocher",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rivals",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Defos",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Karatson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Billard",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Haurie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Kieffer",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Leurs",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pavillon",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "114 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Montagna",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Monasteri",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "145 ka",
+          "type": "",
+          "category": "TimePeriod",
+          "description": ""
+        },
+        {
+          "name": "68 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Büttner",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Huenges",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "188 ka",
+          "type": "",
+          "category": "TimePeriod",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [
+        "TimePeriod"
+      ],
+      "size": 92
+    },
+    "7": {
+      "community_id": 7,
+      "members": [
+        {
+          "name": "pluton",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "zircon",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "u-pb",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "apatite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Keywords",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Table",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Complexe gabbroïque",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Samples",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dating",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Syenite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Trachytic",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Thermochronology",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Geological",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Annen",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sparks",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "110 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "phlogopite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "150 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "These",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Here",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "2000 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "78 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "8 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Geochronological",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Platinum",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "sims",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Phlogopite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Information",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Supplementary",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Collector",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mass",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Spectrometer",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Facility",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Plasma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "isotope",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Laboratory",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Argus",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Western",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Setting",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "1.5 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Figures",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tables",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Thirty",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "33 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "92 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "82 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "zhe",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "75 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Apatite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "ahe",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Therefore",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Four",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "117 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "77 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nine",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "7.2 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "2.8 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Only",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "zdd",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Twelve",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Site",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Zircon",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Scanning",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Microscope",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Electron",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Farley",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Niobium",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "19 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Combining",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Adopting",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dodson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Watson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cherniak",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Calculated",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Villa",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Namely",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Likewise",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Combined",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Some",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "170 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Similarly",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Finally",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Uncorrected",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "200 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 84
+    },
+    "8": {
+      "community_id": 8,
+      "members": [
+        {
+          "name": "Pour",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "sill",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bilan",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Méthodologie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Présentation",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mafate",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nouvelles",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "datation",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "basalte",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "olivine",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "feldspath",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "coulée",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "pyroclastique",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ignimbrite prismée",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "300 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "130 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "plagioclase",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "mugéarite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "hawaiite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "210 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Deux",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gillot",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Galets",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Salvany",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nativel",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Après",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "9 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "détachement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Taïbit",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "176 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Plate",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Roche",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "dalle",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Marsouins",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "60 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "190 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "70 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "20 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "16 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "180 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "140 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Several",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Antérieurement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pont",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chien",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lélesse",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "2 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Entre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Boeufs",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cafres",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dumont",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Takamaka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Makes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Aloès",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Avirons",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Yves",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "32 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cannes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pieds",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Observatoire",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Coteau",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Maigre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bloc",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dufour",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rais",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "807 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "1900 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "185 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Influence",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "44 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "fusion",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "65 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "40 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "30 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "36 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gros",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Discordances",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sans",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Souci",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "14 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Continuité",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Suzanne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nourry",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "2200 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Patates",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "1300 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Merles",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tout",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ancrée",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sainte",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cimendef",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ecrite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Avec",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Chevaquine",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "24 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "22 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Kerval",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tamarins",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Évolution",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "38 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Post",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Marla",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Durant",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Caverne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Morin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Blanche",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lilas",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Wickers",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Camps",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mazerin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "trachyte",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Écrite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fenêtre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cruchet",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ronde",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cabot",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 116
+    },
+    "12": {
+      "community_id": 12,
+      "members": [
+        {
+          "name": "15 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Grâce",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "thermochronologie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "29 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "4 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "5 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "2 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "7 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "déstabilisation",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "érosion",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Hawaï",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Contrôle",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rift",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Source",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Erreur",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Carracedo",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "pyroxène",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "cristallisation",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ganne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Palma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Borgia",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Moore",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Davies",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Byrne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Maurice",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Vries",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Kauai",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Basse",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Terre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tahiti",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Duffield",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ollier",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Colmenero",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Certains",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Whipple",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gayer",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Boulesteix",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mackey",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Navelot",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Globalement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lanai",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Maui",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Oahu",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ferguson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Inde",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mascareignes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Maharono",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Wilshaw",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Upton",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Wadsworth",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "3 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Comparaison",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "520 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Hildenbrand",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Clément",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Taburiente",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Canarie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tirajana",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lomoschitz",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Atlantique",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pololu",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Laity",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Kohala",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lamb",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Canaries",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tuff",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Granieri",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Green",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Orohena",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bonin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bardintzeff",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Larson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Wiesmaier",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Découverte",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 74
+    },
+    "10": {
+      "community_id": 10,
+      "members": [
+        {
+          "name": "27 ka",
+          "type": "",
+          "category": "TimePeriod",
+          "description": ""
+        },
+        {
+          "name": "Points",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Paris",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "12 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "France",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Université",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Curtin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Laboratoire",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Perth",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Australia",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Present",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "University",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Address",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Environmental",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Earth",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "School",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sciences",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Karls",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Montpellier",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Universität",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Salzburg",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Institute",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Hellbrunner",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Planetary",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Systems",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lodron",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Antilles",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Géosciences",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Aubière",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pascal",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Corresponding",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Auvergne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mineral",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Volcans",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Geology",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cedex",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Feld",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Department",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Germany",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Clermont",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Geography",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Last",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "First",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Endogenous",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Timescales",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Austria",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ruprecht",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Neuenheimer",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Magmas",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Andrews",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Group",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Heidelberg",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Blaise",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [
+        "TimePeriod"
+      ],
+      "size": 53
+    },
+    "11": {
+      "community_id": 11,
+      "members": [
+        {
+          "name": "géothermie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mots",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Milieu",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Historique",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cadre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Loksha",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sector",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "American",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gehringer",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Development",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Inter",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Énergie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gischler",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bank",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Managment",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Energy",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Assistance",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Program",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Face",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lithium",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ademe",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pluriannuelle",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Energie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Programmation",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rançon",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Régulation",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Commission",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lopoukhine",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Stieltjes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gérard",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 30
+    },
+    "15": {
+      "community_id": 15,
+      "members": [
+        {
+          "name": "However",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "River",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Timing",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Saint",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Merle",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "7 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "3 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "6 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "350 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Voogd",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fournaise",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Kluska",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "450 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lebas",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dolomieu",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bachelery",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fouqué",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Enclos",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Alizés",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Malengreau",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Labazuy",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sisavath",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Friant",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Houssaye",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Gilles",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Langevin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bébour",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bélouve",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Deniel",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "k-ar",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "39 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "4 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Plinian",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "10.4 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Moreover",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Quidelleur",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "12.8 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "2.3 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sample",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "23.8 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "7.1 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "20.5 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "26 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Singer",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Delibrias",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Another",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pumice",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Maïdo",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Secondly",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "0.7 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Other",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "benmoreite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Three",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Compton",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "André",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Both",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Since",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Based",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fretzdorff",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "183 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "1.1 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "1.0 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Importantly",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Schmitt",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Taken",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rejecting",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Remaining",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Using",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bronk",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ramsey",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "26.7 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Hogg",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "25.6 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "12.5 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Furthermore",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Discarding",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cambour",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "84 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Hell",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bourg",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 80
+    },
+    "16": {
+      "community_id": 16,
+      "members": [
+        {
+          "name": "Caldera",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Williams",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 2
+    },
+    "9": {
+      "community_id": 9,
+      "members": [
+        {
+          "name": "Hydrothermalisme",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Introduction",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Complément",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Observations",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Géochimie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Apport",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sable",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Contemplation",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Photo",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Perspectives",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ambiance",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Novembre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Comme",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Front",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nuit",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Court",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Matin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rempart",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Thermalisme",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sindrama",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Eperon",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "andésite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "sio2",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Henry",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Louis",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Page",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Référencement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Composition",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Canyon",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lors",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 30
+    },
+    "19": {
+      "community_id": 19,
+      "members": [
+        {
+          "name": "Système",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fonctionnement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Variantes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Moeck",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Stimac",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nicholson",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 6
+    },
+    "20": {
+      "community_id": 20,
+      "members": [
+        {
+          "name": "Hydrogéologie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Guadeloupe",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "subsidence",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "aquifère",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rittershoffen",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Kalina",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Soultz",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rankine",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bouillante",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Alsace",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dogger",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bibby",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Zlotnicki",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Montagne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Marcos",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Soufrère",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Brothelande",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Déformation",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Stromboli",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pelée",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Finizola",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Villasante",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tenerife",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Lachassagne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Marie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Galante",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Capestre",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Besson",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Soufrière",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Poirier",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "250 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Komorowski",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "418 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Habitants",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Permis",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Exclusif",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Vieux",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Recherche",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Géothermie",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Caraïbes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Interreg",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Martinique",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dominique",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nevis",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Kitts",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Montserrat",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Grenadines",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Grenade",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 48
+    },
+    "21": {
+      "community_id": 21,
+      "members": [
+        {
+          "name": "Açores",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Etat",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Problématique",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Zélande",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Zone",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Yellowstone",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Nouvelle",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Africain",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "dégazage",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Miguel",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Grande",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Terceira",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fogo",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Croasdale",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Wallenstein",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ribeira",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Agua",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "74 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Rangel",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Franco",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Pico",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Vermelho",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Alto",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Sables",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Depuis",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Parc",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dezayes",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "National",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Forages",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Zones",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Potentiel",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dennemont",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tortues",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Patrimoine",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Mondiale",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Ravine",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Morne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Marianne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Aurère",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Contrairement",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Discordance",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Cabris",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bourse",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Malheur",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Oussy",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Calumets",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Place",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fourche",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bronchard",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Tamarin",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "380 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bémale",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 52
+    },
+    "17": {
+      "community_id": 17,
+      "members": [
+        {
+          "name": "Turner",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Costa",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 2
+    },
+    "18": {
+      "community_id": 18,
+      "members": [
+        {
+          "name": "Elsworth",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Voight",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bonaccorso",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 3
+    },
+    "22": {
+      "community_id": 22,
+      "members": [
+        {
+          "name": "Décrits",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Hinds",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 2
+    },
+    "23": {
+      "community_id": 23,
+      "members": [
+        {
+          "name": "500 ka",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "428 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "océanite",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "935 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "1 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "47 ma",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 6
+    },
+    "24": {
+      "community_id": 24,
+      "members": [
+        {
+          "name": "Salé",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Etang",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Smietana",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 3
+    },
+    "25": {
+      "community_id": 25,
+      "members": [
+        {
+          "name": "Capricorne",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Située",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 2
+    },
+    "3": {
+      "community_id": 3,
+      "members": [
+        {
+          "name": "Porte",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Bret",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Aval",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 3
+    },
+    "13": {
+      "community_id": 13,
+      "members": [
+        {
+          "name": "Council",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Research",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Fellowship",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Discovery",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Australian",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 5
+    },
+    "14": {
+      "community_id": 14,
+      "members": [
+        {
+          "name": "icp-ms",
+          "type": "",
+          "category": "",
+          "description": ""
+        },
+        {
+          "name": "Dunkl",
+          "type": "",
+          "category": "",
+          "description": ""
+        }
+      ],
+      "types": [],
+      "categories": [],
+      "size": 2
+    }
+  }
+}

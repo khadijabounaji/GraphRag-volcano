@@ -1,0 +1,8 @@
+﻿Methode,Nb chunks,Longueur moy (chars),Ecart-type,Intra-similarity,Inter-similarity,Recall@5,Precision@5,F1-score,Score Global
+M7 - Token-Based,412,1259.9,209.6,0.4253,0.1781,0.119,1.0,0.2128,0.4853
+M4 - Sliding Window,549,1889.6,301.9,0.5111,0.2378,0.0909,1.0,0.1667,0.4764
+M3 - Paragraph-Based,439,1170.5,1051.3,0.352,0.1271,0.1136,1.0,0.2041,0.4751
+M1 - Fixed-Size,1001,599.4,9.2,0.2692,0.1,0.0495,1.0,0.0943,0.4098
+M6 - Recursive Split,987,525.1,196.8,0.2481,0.0872,0.0505,1.0,0.0962,0.4035
+M5 - Semantic,2470,207.8,112.0,0.1126,0.0472,0.0202,1.0,0.0397,0.3424
+M2 - Sentence-Based,2625,195.4,98.9,0.1014,0.0481,0.019,1.0,0.0373,0.3384

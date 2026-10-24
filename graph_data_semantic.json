@@ -1,0 +1,10016 @@
+{
+  "nodes": [
+    {
+      "id": "pdn",
+      "name": "Piton des Neiges",
+      "labels": [
+        "Volcano",
+        "Entity"
+      ],
+      "type": "Volcano",
+      "description": "Volcan principal inactif depuis ~27 ka, île de La Réunion",
+      "community": 0,
+      "pagerank": 0.013278,
+      "mention_count": 311
+    },
+    {
+      "id": "pdf",
+      "name": "Piton de la Fournaise",
+      "labels": [
+        "Volcano",
+        "Entity"
+      ],
+      "type": "Volcano",
+      "description": "Volcan actif, partie est de La Réunion",
+      "community": 0,
+      "pagerank": 0.00692,
+      "mention_count": 13
+    },
+    {
+      "id": "reunion",
+      "name": "La Réunion",
+      "labels": [
+        "Location",
+        "Entity"
+      ],
+      "type": "Island",
+      "description": "Île volcanique de l'Océan Indien, point chaud",
+      "community": 0,
+      "pagerank": 0.012444,
+      "mention_count": 64
+    },
+    {
+      "id": "ocean_indien",
+      "name": "Océan Indien",
+      "labels": [
+        "Location",
+        "Entity"
+      ],
+      "type": "Ocean",
+      "description": "",
+      "community": 0,
+      "pagerank": 0.01432,
+      "mention_count": 0
+    },
+    {
+      "id": "mascareignes",
+      "name": "Mascareignes",
+      "labels": [
+        "Location",
+        "Entity"
+      ],
+      "type": "ArchipelagoGroup",
+      "description": "",
+      "community": 2,
+      "pagerank": 0.003741,
+      "mention_count": 0
+    },
+    {
+      "id": "mafate",
+      "name": "Cirque de Mafate",
+      "labels": [
+        "Cirque",
+        "Entity"
+      ],
+      "type": "Cirque",
+      "description": "Cirque nord-ouest du Piton des Neiges, inaccessible par route",
+      "community": 3,
+      "pagerank": 0.033842,
+      "mention_count": 127
+    },
+    {
+      "id": "salazie",
+      "name": "Cirque de Salazie",
+      "labels": [
+        "Cirque",
+        "Entity"
+      ],
+      "type": "Cirque",
+      "description": "Cirque nord-est, rivière du Mât, complexe gabbroïque",
+      "community": 3,
+      "pagerank": 0.083029,
+      "mention_count": 188
+    },
+    {
+      "id": "cilaos",
+      "name": "Cirque de Cilaos",
+      "labels": [
+        "Cirque",
+        "Entity"
+      ],
+      "type": "Cirque",
+      "description": "Cirque sud, sources thermales, syénites",
+      "community": 4,
+      "pagerank": 0.050183,
+      "mention_count": 189
+    },
+    {
+      "id": "pn0",
+      "name": "PN0",
+      "labels": [
+        "GeologicalStage",
+        "Entity"
+      ],
+      "type": "ShieldStage",
+      "description": "Stade bouclier le plus ancien, basaltes à olivine",
+      "community": 5,
+      "pagerank": 0.009648,
+      "mention_count": 14
+    },
+    {
+      "id": "lm",
+      "name": "LM",
+      "labels": [
+        "GeologicalStage",
+        "Entity"
+      ],
+      "type": "ShieldStage",
+      "description": "Coulées de basalte à olivine zéolitisées",
+      "community": 5,
+      "pagerank": 0.01194,
+      "mention_count": 129
+    },
+    {
+      "id": "pn1",
+      "name": "PN1",
+      "labels": [
+        "GeologicalStage",
+        "Entity"
+      ],
+      "type": "ShieldStage",
+      "description": "Stade bouclier, basaltes à olivine dominants",
+      "community": 5,
+      "pagerank": 0.01389,
+      "mention_count": 224
+    },
+    {
+      "id": "pn2",
+      "name": "PN2",
+      "labels": [
+        "GeologicalStage",
+        "Entity"
+      ],
+      "type": "ShieldStage",
+      "description": "Basaltes à olivine, discordance nette sur PN1",
+      "community": 5,
+      "pagerank": 0.01555,
+      "mention_count": 129
+    },
+    {
+      "id": "pn3",
+      "name": "PN3",
+      "labels": [
+        "GeologicalStage",
+        "Entity"
+      ],
+      "type": "DifferentiatedStage",
+      "description": "Stade différencié, mugéarites, trachytes, phonolites",
+      "community": 5,
+      "pagerank": 0.016958,
+      "mention_count": 148
+    },
+    {
+      "id": "pn4",
+      "name": "PN4",
+      "labels": [
+        "GeologicalStage",
+        "Entity"
+      ],
+      "type": "DifferentiatedStage",
+      "description": "Stade terminal, coulées et tufs phonolitiques, ~27 ka",
+      "community": 5,
+      "pagerank": 0.025799,
+      "mention_count": 107
+    },
+    {
+      "id": "lm_flows",
+      "name": "Coulées LM",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "",
+      "community": 3,
+      "pagerank": 0.027802,
+      "mention_count": 16
+    },
+    {
+      "id": "pn1_flows",
+      "name": "Coulées PN1",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "",
+      "community": 6,
+      "pagerank": 0.036515,
+      "mention_count": 64
+    },
+    {
+      "id": "pn2_flows",
+      "name": "Coulées PN2",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "",
+      "community": 6,
+      "pagerank": 0.023362,
+      "mention_count": 17
+    },
+    {
+      "id": "pn3_flows",
+      "name": "Coulées PN3",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "",
+      "community": 7,
+      "pagerank": 0.018905,
+      "mention_count": 18
+    },
+    {
+      "id": "pn4_flows",
+      "name": "Coulées PN4",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "",
+      "community": 6,
+      "pagerank": 0.010417,
+      "mention_count": 10
+    },
+    {
+      "id": "br_orangers",
+      "name": "Brèche des Orangers",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "Avalanche de débris entre PN1 et PN2, Mafate, faciès jig-saw, méga-blocs",
+      "community": 3,
+      "pagerank": 0.025141,
+      "mention_count": 39
+    },
+    {
+      "id": "br_b1",
+      "name": "Brèche noire Br.b1",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "Brèche basique indurée polygénique, fond de cirque, entre LM et PN1",
+      "community": 3,
+      "pagerank": 0.038767,
+      "mention_count": 134
+    },
+    {
+      "id": "br_b2c",
+      "name": "Brèche intra-PN1 Br.b2c",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "Brèche en lentille dans rempart sud-est Cilaos (Dimitile)",
+      "community": 6,
+      "pagerank": 0.003741,
+      "mention_count": 21
+    },
+    {
+      "id": "br_b3c",
+      "name": "Brèche pulvérulente Br.b3c",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "Brèche basique à patine claire, plateaux Cilaos, < 70 ka",
+      "community": 4,
+      "pagerank": 0.003741,
+      "mention_count": 39
+    },
+    {
+      "id": "br_hydro",
+      "name": "Brèche hydrothermale intra-caldera",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "Brèche fracturée altérée schiste vert, à l'intérieur caldera différenciée",
+      "community": 15,
+      "pagerank": 0.027438,
+      "mention_count": 26
+    },
+    {
+      "id": "ignimbrite",
+      "name": "Ignimbrite prismée",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "Dépôt pyroclastique plinien, effondrement caldera principale",
+      "community": 15,
+      "pagerank": 0.020159,
+      "mention_count": 71
+    },
+    {
+      "id": "dalle",
+      "name": "Dalle soudée",
+      "labels": [
+        "GeologicalUnit",
+        "Entity"
+      ],
+      "type": "",
+      "description": "Dalle soudée au sommet rempart ouest (Maïdo, Taïbit), sur PN3",
+      "community": 7,
+      "pagerank": 0.00692,
+      "mention_count": 8
+    },
+    {
+      "id": "cpx_gabbro",
+      "name": "Complexe hypovolcanique gabbroïque",
+      "labels": [
+        "Intrusion",
+        "Entity"
+      ],
+      "type": "PlutonicComplex",
+      "description": "Toit affleurant rivière du Mât, Salazie, anomalie gravimétrique >10 km diamètre",
+      "community": 9,
+      "pagerank": 0.035997,
+      "mention_count": 75
+    },
+    {
+      "id": "sy_chapelle",
+      "name": "Dyke de syénite La Chapelle",
+      "labels": [
+        "Intrusion",
+        "Entity"
+      ],
+      "type": "SyeniteDyke",
+      "description": "Cone-sheet sur bordure externe caldera, Cilaos",
+      "community": 7,
+      "pagerank": 0.007516,
+      "mention_count": 65
+    },
+    {
+      "id": "sy_tb",
+      "name": "Microsyénite de Trou Blanc",
+      "labels": [
+        "Intrusion",
+        "Entity"
+      ],
+      "type": "SyeniteLaccolith",
+      "description": "Salazie, recoupe gabbro, âge apatite 145 ± 77 ka",
+      "community": 9,
+      "pagerank": 0.0151,
+      "mention_count": 20
+    },
+    {
+      "id": "basalte",
+      "name": "basalte",
+      "labels": [
+        "Rock",
+        "Entity"
+      ],
+      "type": "VolcanicRock",
+      "description": "Roche volcanique primitive de La Réunion",
+      "community": 6,
+      "pagerank": 0.00692,
+      "mention_count": 118
+    },
+    {
+      "id": "phonolite",
+      "name": "phonolite",
+      "labels": [
+        "Rock",
+        "Entity"
+      ],
+      "type": "VolcanicRock",
+      "description": "Roche différenciée, stades PN3-PN4",
+      "community": 6,
+      "pagerank": 0.00692,
+      "mention_count": 0
+    },
+    {
+      "id": "trachyte",
+      "name": "trachyte",
+      "labels": [
+        "Rock",
+        "Entity"
+      ],
+      "type": "VolcanicRock",
+      "description": "Roche intermédiaire différenciée",
+      "community": 7,
+      "pagerank": 0.003741,
+      "mention_count": 17
+    },
+    {
+      "id": "mugearite",
+      "name": "mugéarite",
+      "labels": [
+        "Rock",
+        "Entity"
+      ],
+      "type": "VolcanicRock",
+      "description": "Roche différenciée intermédiaire PN3",
+      "community": 7,
+      "pagerank": 0.003741,
+      "mention_count": 4
+    },
+    {
+      "id": "syenite",
+      "name": "syénite",
+      "labels": [
+        "Rock",
+        "Entity"
+      ],
+      "type": "PlutonicRock",
+      "description": "Roche plutonique différenciée, intrusions Cilaos/Salazie",
+      "community": 9,
+      "pagerank": 0.003741,
+      "mention_count": 84
+    },
+    {
+      "id": "gabbro",
+      "name": "gabbro",
+      "labels": [
+        "Rock",
+        "Entity"
+      ],
+      "type": "PlutonicRock",
+      "description": "Roche plutonique basique, complexe hypovolcanique",
+      "community": 9,
+      "pagerank": 0.003741,
+      "mention_count": 68
+    },
+    {
+      "id": "peridotite",
+      "name": "péridotite",
+      "labels": [
+        "Rock",
+        "Entity"
+      ],
+      "type": "MantleRock",
+      "description": "Roche mantellique, xénolithes",
+      "community": 10,
+      "pagerank": 0.003741,
+      "mention_count": 0
+    },
+    {
+      "id": "ignimbrite_rock",
+      "name": "ignimbrite",
+      "labels": [
+        "Rock",
+        "Entity"
+      ],
+      "type": "PyroclaticRock",
+      "description": "Dépôt pyroclastique soudé",
+      "community": 15,
+      "pagerank": 0.003741,
+      "mention_count": 61
+    },
+    {
+      "id": "breccia",
+      "name": "brèche",
+      "labels": [
+        "Rock",
+        "Entity"
+      ],
+      "type": "VolcanicRock",
+      "description": "Roche bréchique volcanique ou hydrothermale",
+      "community": 3,
+      "pagerank": 0.003741,
+      "mention_count": 266
+    },
+    {
+      "id": "tephra",
+      "name": "téphra",
+      "labels": [
+        "Rock",
+        "Entity"
+      ],
+      "type": "PyroclaticRock",
+      "description": "Retombées pyroclastiques",
+      "community": 11,
+      "pagerank": 0.003741,
+      "mention_count": 5
+    },
+    {
+      "id": "zeolite",
+      "name": "zéolite",
+      "labels": [
+        "Mineral",
+        "Entity"
+      ],
+      "type": "Mineral",
+      "description": "Minéral hydrothermal basse température",
+      "community": 3,
+      "pagerank": 0.003741,
+      "mention_count": 0
+    },
+    {
+      "id": "prehnite",
+      "name": "prehnite",
+      "labels": [
+        "Mineral",
+        "Entity"
+      ],
+      "type": "Mineral",
+      "description": "Minéral faciès prehnite-pumpellyite",
+      "community": 15,
+      "pagerank": 0.003741,
+      "mention_count": 13
+    },
+    {
+      "id": "pumpellyite",
+      "name": "pumpellyite",
+      "labels": [
+        "Mineral",
+        "Entity"
+      ],
+      "type": "Mineral",
+      "description": "Minéral faciès préhnite-pumpellyite",
+      "community": 15,
+      "pagerank": 0.003741,
+      "mention_count": 13
+    },
+    {
+      "id": "apatite",
+      "name": "apatite",
+      "labels": [
+        "Mineral",
+        "Entity"
+      ],
+      "type": "Mineral",
+      "description": "Minéral utilisé en thermochronologie (U-Th)/He",
+      "community": 9,
+      "pagerank": 0.003741,
+      "mention_count": 44
+    },
+    {
+      "id": "zircon",
+      "name": "zircon",
+      "labels": [
+        "Mineral",
+        "Entity"
+      ],
+      "type": "Mineral",
+      "description": "Minéral utilisé en géochronologie U-Pb et ZDD",
+      "community": 12,
+      "pagerank": 0.003741,
+      "mention_count": 43
+    },
+    {
+      "id": "phlogopite",
+      "name": "phlogopite",
+      "labels": [
+        "Mineral",
+        "Entity"
+      ],
+      "type": "Mineral",
+      "description": "Minéral utilisé en géochronologie K-Ar/Ar-Ar",
+      "community": 13,
+      "pagerank": 0.003741,
+      "mention_count": 26
+    },
+    {
+      "id": "olivine",
+      "name": "olivine",
+      "labels": [
+        "Mineral",
+        "Entity"
+      ],
+      "type": "Mineral",
+      "description": "Minéral mafique, basaltes primitifs",
+      "community": 14,
+      "pagerank": 0.003741,
+      "mention_count": 64
+    },
+    {
+      "id": "rift_n030",
+      "name": "Rift-zone N030°E",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "RiftZone",
+      "description": "Structure majeure traversant Salazie et Cilaos, prolongée vers Etang Salé",
+      "community": 4,
+      "pagerank": 0.006223,
+      "mention_count": 80
+    },
+    {
+      "id": "sz_salazie",
+      "name": "Sill-zone de Salazie",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "SillZone",
+      "description": "Zone de sills dans la partie ouest de Salazie",
+      "community": 3,
+      "pagerank": 0.00533,
+      "mention_count": 2
+    },
+    {
+      "id": "sz_cilaos",
+      "name": "Sill-zone de Cilaos",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "SillZone",
+      "description": "Zone de sills dans la partie ouest de Cilaos",
+      "community": 4,
+      "pagerank": 0.00533,
+      "mention_count": 0
+    },
+    {
+      "id": "caldera",
+      "name": "Caldera différenciée principale",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "Caldera",
+      "description": "Forme elliptique, ~35 km², inter-cirques, ~188 ka",
+      "community": 4,
+      "pagerank": 0.013089,
+      "mention_count": 207
+    },
+    {
+      "id": "f_taibit",
+      "name": "Faille de caldera Col du Taïbit",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "NormalFault",
+      "description": "Limite ouest caldera, décalage ~500 m coulées PN1",
+      "community": 4,
+      "pagerank": 0.005131,
+      "mention_count": 52
+    },
+    {
+      "id": "f_boeufs",
+      "name": "Faille de caldera Col des Bœufs",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "NormalFault",
+      "description": "Limite sud caldera",
+      "community": 4,
+      "pagerank": 0.005131,
+      "mention_count": 29
+    },
+    {
+      "id": "f_gobert",
+      "name": "Faille ravine Gobert",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "NormalFault",
+      "description": "Limite est caldera, Cilaos",
+      "community": 4,
+      "pagerank": 0.005131,
+      "mention_count": 9
+    },
+    {
+      "id": "f_ferriere",
+      "name": "Faille ravine Ferrière",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "NormalFault",
+      "description": "Limite est caldera, Château Fort",
+      "community": 4,
+      "pagerank": 0.005131,
+      "mention_count": 10
+    },
+    {
+      "id": "dyke",
+      "name": "dyke",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "Intrusive",
+      "description": "Filon de roche intrusive sub-vertical",
+      "community": 15,
+      "pagerank": 0.003741,
+      "mention_count": 52
+    },
+    {
+      "id": "sill",
+      "name": "sill",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "Intrusive",
+      "description": "Filon de roche intrusive sub-horizontal",
+      "community": 3,
+      "pagerank": 0.003741,
+      "mention_count": 119
+    },
+    {
+      "id": "faille",
+      "name": "faille",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "Fault",
+      "description": "Discontinuité tectonique générique",
+      "community": 15,
+      "pagerank": 0.00692,
+      "mention_count": 136
+    },
+    {
+      "id": "fracture",
+      "name": "fracture",
+      "labels": [
+        "Structure",
+        "Entity"
+      ],
+      "type": "Discontinuity",
+      "description": "Discontinuité mécanique",
+      "community": 15,
+      "pagerank": 0.003741,
+      "mention_count": 45
+    },
+    {
+      "id": "m_upb",
+      "name": "U-Pb",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "GeochronologicalMethod",
+      "description": "Datation U-Pb sur zircon, âge de cristallisation",
+      "community": 9,
+      "pagerank": 0.007979,
+      "mention_count": 34
+    },
+    {
+      "id": "m_arar",
+      "name": "Ar-Ar",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "GeochronologicalMethod",
+      "description": "Géochronologie Ar-Ar sur phlogopite, feldspath",
+      "community": 13,
+      "pagerank": 0.00692,
+      "mention_count": 26
+    },
+    {
+      "id": "m_kar",
+      "name": "K-Ar",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "GeochronologicalMethod",
+      "description": "Géochronologie K-Ar classique",
+      "community": 0,
+      "pagerank": 0.00533,
+      "mention_count": 24
+    },
+    {
+      "id": "m_zdd",
+      "name": "ZDD",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "ThermochronologicalMethod",
+      "description": "Zircon (U-Th)/He double dating, thèse principale",
+      "community": 12,
+      "pagerank": 0.0048,
+      "mention_count": 18
+    },
+    {
+      "id": "m_ahe",
+      "name": "AHe",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "ThermochronologicalMethod",
+      "description": "Apatite (U-Th)/He, thermochronologie basse température",
+      "community": 9,
+      "pagerank": 0.00692,
+      "mention_count": 14
+    },
+    {
+      "id": "m_zhe",
+      "name": "ZHe",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "ThermochronologicalMethod",
+      "description": "Zircon (U-Th)/He",
+      "community": 12,
+      "pagerank": 0.0048,
+      "mention_count": 13
+    },
+    {
+      "id": "m_sims",
+      "name": "SIMS",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "AnalyticalMethod",
+      "description": "Secondary Ion Mass Spectrometry, micro-analyse in-situ",
+      "community": 9,
+      "pagerank": 0.003741,
+      "mention_count": 4
+    },
+    {
+      "id": "m_cartog",
+      "name": "cartographie géologique",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "FieldMethod",
+      "description": "Levés de terrain, carte géologique 1/25000",
+      "community": 0,
+      "pagerank": 0.003741,
+      "mention_count": 45
+    },
+    {
+      "id": "m_photog",
+      "name": "photogrammétrie",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "RemoteSensingMethod",
+      "description": "Modèle numérique de terrain par photogrammétrie",
+      "community": 16,
+      "pagerank": 0.003741,
+      "mention_count": 6
+    },
+    {
+      "id": "m_gravim",
+      "name": "gravimétrie",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "GeophysicalMethod",
+      "description": "Anomalie de Bouguer, structure profonde",
+      "community": 0,
+      "pagerank": 0.00533,
+      "mention_count": 6
+    },
+    {
+      "id": "m_geochem",
+      "name": "géochimie",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "GeochemicalMethod",
+      "description": "Éléments majeurs, traces, terres rares, isotopes",
+      "community": 6,
+      "pagerank": 0.003741,
+      "mention_count": 12
+    },
+    {
+      "id": "m_thermochrono",
+      "name": "thermochronologie",
+      "labels": [
+        "Method",
+        "Entity"
+      ],
+      "type": "ThermochronologicalMethod",
+      "description": "Ensemble des méthodes thermochronologiques",
+      "community": 9,
+      "pagerank": 0.003741,
+      "mention_count": 6
+    },
+    {
+      "id": "sys_hydro",
+      "name": "Système hydrothermal du Piton des Neiges",
+      "labels": [
+        "HydrothermalSystem",
+        "Entity"
+      ],
+      "type": "HydrothermalSystem",
+      "description": "",
+      "community": 5,
+      "pagerank": 0.00533,
+      "mention_count": 112
+    },
+    {
+      "id": "src_chaleur",
+      "name": "Chambre magmatique différenciée (refroidissement)",
+      "labels": [
+        "HeatSource",
+        "Entity"
+      ],
+      "type": "LatentHeatSource",
+      "description": "Source de chaleur latente depuis la fin du volcanisme",
+      "community": 5,
+      "pagerank": 0.005251,
+      "mention_count": 79
+    },
+    {
+      "id": "src_cilaos",
+      "name": "Sources thermales de Cilaos",
+      "labels": [
+        "HydrothermalFeature",
+        "Entity"
+      ],
+      "type": "ThermalSpring",
+      "description": "",
+      "community": 4,
+      "pagerank": 0.005251,
+      "mention_count": 2
+    },
+    {
+      "id": "src_salazie",
+      "name": "Sources thermales de Salazie",
+      "labels": [
+        "HydrothermalFeature",
+        "Entity"
+      ],
+      "type": "ThermalSpring",
+      "description": "",
+      "community": 5,
+      "pagerank": 0.005251,
+      "mention_count": 0
+    },
+    {
+      "id": "reservoir_fracture",
+      "name": "Réservoir fracturé",
+      "labels": [
+        "HydrothermalFeature",
+        "Entity"
+      ],
+      "type": "FracturedReservoir",
+      "description": "Réservoir géothermique dans brèches et fractures",
+      "community": 15,
+      "pagerank": 0.012802,
+      "mention_count": 6
+    },
+    {
+      "id": "alteration_hydro",
+      "name": "Altération hydrothermale",
+      "labels": [
+        "HydrothermalFeature",
+        "Entity"
+      ],
+      "type": "HydrothermalAlteration",
+      "description": "Argilisation, silicification, chloritisation",
+      "community": 15,
+      "pagerank": 0.003741,
+      "mention_count": 21
+    },
+    {
+      "id": "gradient_geoth",
+      "name": "Gradient géothermique",
+      "labels": [
+        "HydrothermalFeature",
+        "Entity"
+      ],
+      "type": "ThermalGradient",
+      "description": "",
+      "community": 17,
+      "pagerank": 0.003741,
+      "mention_count": 15
+    },
+    {
+      "id": "age_188",
+      "name": "188 ± 5 ka",
+      "labels": [
+        "Age",
+        "Entity"
+      ],
+      "type": "",
+      "description": "",
+      "community": 12,
+      "pagerank": 0.007821,
+      "mention_count": 41
+    },
+    {
+      "id": "age_27",
+      "name": "~27 ka",
+      "labels": [
+        "Age",
+        "Entity"
+      ],
+      "type": "",
+      "description": "",
+      "community": 5,
+      "pagerank": 0.003741,
+      "mention_count": 23
+    },
+    {
+      "id": "age_145",
+      "name": "145 ± 77 ka",
+      "labels": [
+        "Age",
+        "Entity"
+      ],
+      "type": "",
+      "description": "",
+      "community": 9,
+      "pagerank": 0.009622,
+      "mention_count": 5
+    },
+    {
+      "id": "age_2021",
+      "name": "2021 ± 16 ka",
+      "labels": [
+        "Age",
+        "Entity"
+      ],
+      "type": "",
+      "description": "",
+      "community": 9,
+      "pagerank": 0.007132,
+      "mention_count": 0
+    },
+    {
+      "id": "age_1414",
+      "name": "1414 ± 8 ka",
+      "labels": [
+        "Age",
+        "Entity"
+      ],
+      "type": "",
+      "description": "",
+      "community": 9,
+      "pagerank": 0.007132,
+      "mention_count": 0
+    },
+    {
+      "id": "age_212",
+      "name": "212 ± 4 ka",
+      "labels": [
+        "Age",
+        "Entity"
+      ],
+      "type": "",
+      "description": "",
+      "community": 7,
+      "pagerank": 0.003741,
+      "mention_count": 0
+    },
+    {
+      "id": "for_slz1",
+      "name": "Forage SLZ-1",
+      "labels": [
+        "Drilling",
+        "Entity"
+      ],
+      "type": "ExplorationWell",
+      "description": "Forage géothermique Salazie",
+      "community": 0,
+      "pagerank": 0.01145,
+      "mention_count": 16
+    },
+    {
+      "id": "proc_destab",
+      "name": "Déstabilisation de flanc des Orangers",
+      "labels": [
+        "Process",
+        "Entity"
+      ],
+      "type": "FlankCollapse",
+      "description": "Avalanche de débris entre PN1 et PN2, faciès jig-saw",
+      "community": 3,
+      "pagerank": 0.00692,
+      "mention_count": 77
+    },
+    {
+      "id": "proc_erosion",
+      "name": "Érosion régressive",
+      "labels": [
+        "Process",
+        "Entity"
+      ],
+      "type": "Erosion",
+      "description": "Incision fluviatile guidée par structures, formation des cirques",
+      "community": 3,
+      "pagerank": 0.003741,
+      "mention_count": 116
+    },
+    {
+      "id": "proc_caldera",
+      "name": "Effondrement caldérique",
+      "labels": [
+        "Process",
+        "Entity"
+      ],
+      "type": "CalderaCollapse",
+      "description": "Effondrement ~188 ka, éruption plinienne associée",
+      "community": 15,
+      "pagerank": 0.003741,
+      "mention_count": 19
+    },
+    {
+      "id": "proc_diffmag",
+      "name": "Différenciation magmatique",
+      "labels": [
+        "Process",
+        "Entity"
+      ],
+      "type": "MagmaticProcess",
+      "description": "Évolution du basalte vers phonolite, PN2 → PN3 → PN4",
+      "community": 7,
+      "pagerank": 0.003741,
+      "mention_count": 4
+    },
+    {
+      "id": "proc_eruption",
+      "name": "Éruption volcanique",
+      "labels": [
+        "Process",
+        "Entity"
+      ],
+      "type": "VolcanicProcess",
+      "description": "Activité éruptive effusive et explosive",
+      "community": 6,
+      "pagerank": 0.003741,
+      "mention_count": 38
+    },
+    {
+      "id": "proc_exhum",
+      "name": "Exhumation thermique",
+      "labels": [
+        "Process",
+        "Entity"
+      ],
+      "type": "ThermochronologicalProcess",
+      "description": "Refroidissement des roches, tracé par thermochronologie",
+      "community": 18,
+      "pagerank": 0.003741,
+      "mention_count": 0
+    },
+    {
+      "id": "pointchaud",
+      "name": "Point chaud",
+      "labels": [
+        "Process",
+        "Entity"
+      ],
+      "type": "HotspotMechanism",
+      "description": "Panache mantellique à l'origine du volcanisme réunionnais",
+      "community": 0,
+      "pagerank": 0.003741,
+      "mention_count": 18
+    },
+    {
+      "id": "ipgp",
+      "name": "IPGP",
+      "labels": [
+        "Institution",
+        "Entity"
+      ],
+      "type": "ResearchInstitute",
+      "description": "Institut de Physique du Globe de Paris",
+      "community": 5,
+      "pagerank": 0.00533,
+      "mention_count": 0
+    },
+    {
+      "id": "brgm",
+      "name": "BRGM",
+      "labels": [
+        "Institution",
+        "Entity"
+      ],
+      "type": "ResearchInstitute",
+      "description": "Bureau de Recherches Géologiques et Minières",
+      "community": 0,
+      "pagerank": 0.00533,
+      "mention_count": 6
+    },
+    {
+      "id": "cnrs",
+      "name": "CNRS",
+      "labels": [
+        "Institution",
+        "Entity"
+      ],
+      "type": "ResearchInstitute",
+      "description": "",
+      "community": 8,
+      "pagerank": 0.003741,
+      "mention_count": 3
+    },
+    {
+      "id": "ovpf",
+      "name": "OVPF",
+      "labels": [
+        "Institution",
+        "Entity"
+      ],
+      "type": "Observatory",
+      "description": "Observatoire Volcanologique du Piton de la Fournaise",
+      "community": 0,
+      "pagerank": 0.00533,
+      "mention_count": 0
+    },
+    {
+      "id": "edr",
+      "name": "EDR",
+      "labels": [
+        "Institution",
+        "Entity"
+      ],
+      "type": "Company",
+      "description": "Energie De La Réunion, géothermie",
+      "community": 0,
+      "pagerank": 0.003741,
+      "mention_count": 0
+    },
+    {
+      "id": "univ_run",
+      "name": "Université de La Réunion",
+      "labels": [
+        "Institution",
+        "Entity"
+      ],
+      "type": "University",
+      "description": "",
+      "community": 0,
+      "pagerank": 0.00533,
+      "mention_count": 4
+    },
+    {
+      "id": "famin",
+      "name": "Famin",
+      "labels": [
+        "Author",
+        "Entity"
+      ],
+      "type": "Researcher",
+      "description": "",
+      "community": 0,
+      "pagerank": 0.003741,
+      "mention_count": 51
+    },
+    {
+      "id": "chaput",
+      "name": "Chaput",
+      "labels": [
+        "Author",
+        "Entity"
+      ],
+      "type": "Researcher",
+      "description": "",
+      "community": 5,
+      "pagerank": 0.003741,
+      "mention_count": 105
+    },
+    {
+      "id": "gillot",
+      "name": "Gillot",
+      "labels": [
+        "Author",
+        "Entity"
+      ],
+      "type": "Researcher",
+      "description": "Géochronologie K-Ar La Réunion",
+      "community": 0,
+      "pagerank": 0.003741,
+      "mention_count": 24
+    },
+    {
+      "id": "lenat",
+      "name": "Lénat",
+      "labels": [
+        "Author",
+        "Entity"
+      ],
+      "type": "Researcher",
+      "description": "Structure Piton des Neiges",
+      "community": 0,
+      "pagerank": 0.003741,
+      "mention_count": 20
+    },
+    {
+      "id": "nativel",
+      "name": "Nativel",
+      "labels": [
+        "Author",
+        "Entity"
+      ],
+      "type": "Researcher",
+      "description": "Pétrologie Piton des Neiges",
+      "community": 6,
+      "pagerank": 0.003741,
+      "mention_count": 20
+    },
+    {
+      "id": "michon",
+      "name": "Michon",
+      "labels": [
+        "Author",
+        "Entity"
+      ],
+      "type": "Researcher",
+      "description": "Tectonique volcanique La Réunion",
+      "community": 4,
+      "pagerank": 0.003741,
+      "mention_count": 37
+    },
+    {
+      "id": "bachel",
+      "name": "Bachèlery",
+      "labels": [
+        "Author",
+        "Entity"
+      ],
+      "type": "Researcher",
+      "description": "Volcanologie Piton de la Fournaise",
+      "community": 0,
+      "pagerank": 0.003741,
+      "mention_count": 9
+    },
+    {
+      "id": "oehler",
+      "name": "Oehler",
+      "labels": [
+        "Author",
+        "Entity"
+      ],
+      "type": "Researcher",
+      "description": "Déstabilisations de flanc La Réunion",
+      "community": 3,
+      "pagerank": 0.003741,
+      "mention_count": 42
+    },
+    {
+      "id": "nehlig",
+      "name": "Nehlig",
+      "labels": [
+        "Author",
+        "Entity"
+      ],
+      "type": "Researcher",
+      "description": "BRGM, géologie La Réunion",
+      "community": 0,
+      "pagerank": 0.003741,
+      "mention_count": 65
+    },
+    {
+      "id": "cayol",
+      "name": "Cayol",
+      "labels": [
+        "Author",
+        "Entity"
+      ],
+      "type": "Researcher",
+      "description": "Modélisation volcanique",
+      "community": 1,
+      "pagerank": 0.003741,
+      "mention_count": 0
+    }
+  ],
+  "relations": [
+    {
+      "from": "pdn",
+      "to": "mafate",
+      "type": "HAS_CIRQUE",
+      "justification": "Piton des Neiges incisé par trois cirques"
+    },
+    {
+      "from": "pdn",
+      "to": "salazie",
+      "type": "HAS_CIRQUE",
+      "justification": ""
+    },
+    {
+      "from": "pdn",
+      "to": "cilaos",
+      "type": "HAS_CIRQUE",
+      "justification": ""
+    },
+    {
+      "from": "pdn",
+      "to": "reunion",
+      "type": "LOCATED_ON",
+      "justification": ""
+    },
+    {
+      "from": "pdf",
+      "to": "reunion",
+      "type": "LOCATED_ON",
+      "justification": ""
+    },
+    {
+      "from": "reunion",
+      "to": "ocean_indien",
+      "type": "LOCATED_IN",
+      "justification": ""
+    },
+    {
+      "from": "pn0",
+      "to": "lm",
+      "type": "PRECEDES",
+      "justification": "PN0 (3–2.5 Ma) précède LM (2.2–1.9 Ma)"
+    },
+    {
+      "from": "lm",
+      "to": "pn1",
+      "type": "PRECEDES",
+      "justification": "LM (2.2–1.9 Ma) précède PN1 (1.4–0.935 Ma)"
+    },
+    {
+      "from": "pn1",
+      "to": "pn2",
+      "type": "PRECEDES",
+      "justification": "PN1 précède PN2 (0.807–0.428 Ma)"
+    },
+    {
+      "from": "pn2",
+      "to": "pn3",
+      "type": "PRECEDES",
+      "justification": "PN2 précède PN3 (0.340–0.180 Ma)"
+    },
+    {
+      "from": "pn3",
+      "to": "pn4",
+      "type": "PRECEDES",
+      "justification": "PN3 précède PN4 (<0.140 Ma)"
+    },
+    {
+      "from": "lm_flows",
+      "to": "pn0",
+      "type": "OVERLIES",
+      "justification": "Ch.4: LM repose sur PN0, rivière des Galets"
+    },
+    {
+      "from": "lm_flows",
+      "to": "mafate",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "lm_flows",
+      "to": "salazie",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "lm_flows",
+      "to": "cilaos",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "pn1_flows",
+      "to": "br_b1",
+      "type": "OVERLIES",
+      "justification": "Ch.4: PN1 en discordance sur Br.b1"
+    },
+    {
+      "from": "pn1_flows",
+      "to": "br_orangers",
+      "type": "OVERLIES",
+      "justification": ""
+    },
+    {
+      "from": "pn2_flows",
+      "to": "pn1_flows",
+      "type": "OVERLIES",
+      "justification": "Ch.4: PN2 sur PN1 ou Br.b2c"
+    },
+    {
+      "from": "pn3_flows",
+      "to": "pn2_flows",
+      "type": "OVERLIES",
+      "justification": "Ch.4: PN3 en discordance sur PN2 (remparts Taïbit, Grand Bénare)"
+    },
+    {
+      "from": "pn4_flows",
+      "to": "ignimbrite",
+      "type": "OVERLIES",
+      "justification": "Ch.4: PN4 surmonte ignimbrite (crêtes sommitales)"
+    },
+    {
+      "from": "br_orangers",
+      "to": "lm_flows",
+      "type": "OVERLIES",
+      "justification": "Ch.4: Brèche Orangers sur LM (Mafate, Dos d'Âne)"
+    },
+    {
+      "from": "br_orangers",
+      "to": "mafate",
+      "type": "PRESENT_IN",
+      "justification": "Ch.4: Brèche Orangers dominante dans Mafate"
+    },
+    {
+      "from": "br_b1",
+      "to": "lm_flows",
+      "type": "OVERLIES",
+      "justification": "Ch.4: Br.b1 en discordance sur LM (rivière du Mât, Tapcal)"
+    },
+    {
+      "from": "br_b1",
+      "to": "salazie",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "br_b1",
+      "to": "cilaos",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "br_b1",
+      "to": "mafate",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "br_b2c",
+      "to": "pn1_flows",
+      "type": "OVERLIES",
+      "justification": "Ch.4: Br.b2c intercalée dans PN1 (Dimitile)"
+    },
+    {
+      "from": "br_b2c",
+      "to": "cilaos",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "br_b3c",
+      "to": "cilaos",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "br_hydro",
+      "to": "pn1_flows",
+      "type": "OVERLIES",
+      "justification": "Ch.4: brèche hydrothermale sur PN1, sous ignimbrite"
+    },
+    {
+      "from": "br_hydro",
+      "to": "salazie",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "br_hydro",
+      "to": "cilaos",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "ignimbrite",
+      "to": "br_b1",
+      "type": "OVERLIES",
+      "justification": "Ch.4: ignimbrite (~193 ka) sur Br.b1 dans les cirques"
+    },
+    {
+      "from": "ignimbrite",
+      "to": "br_hydro",
+      "type": "OVERLIES",
+      "justification": ""
+    },
+    {
+      "from": "ignimbrite",
+      "to": "salazie",
+      "type": "PRESENT_IN",
+      "justification": "Ch.4: ignimbrite dans Salazie (Trou de Fer, plateau Wickers)"
+    },
+    {
+      "from": "ignimbrite",
+      "to": "cilaos",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "dalle",
+      "to": "pn3_flows",
+      "type": "OVERLIES",
+      "justification": "Ch.4: dalle soudée (~212 ka) sur PN3 (Maïdo, Taïbit)"
+    },
+    {
+      "from": "cpx_gabbro",
+      "to": "salazie",
+      "type": "PRESENT_IN",
+      "justification": "Ch.2&4: gabbro affleurant rivière du Mât"
+    },
+    {
+      "from": "sy_chapelle",
+      "to": "cilaos",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "sy_chapelle",
+      "to": "br_b1",
+      "type": "INTRUDES",
+      "justification": "Ch.4&5: syénite recoupe Br.b1 (cone-sheet)"
+    },
+    {
+      "from": "sy_chapelle",
+      "to": "pn3_flows",
+      "type": "INTRUDES",
+      "justification": ""
+    },
+    {
+      "from": "sy_tb",
+      "to": "salazie",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "sy_tb",
+      "to": "cpx_gabbro",
+      "type": "INTRUDES",
+      "justification": "Ch.3&4: microsyénite recoupe le complexe gabbroïque"
+    },
+    {
+      "from": "sy_tb",
+      "to": "br_b1",
+      "type": "INTRUDES",
+      "justification": ""
+    },
+    {
+      "from": "basalte",
+      "to": "pn1_flows",
+      "type": "CONSTITUTES",
+      "justification": "Les coulées PN1 sont composées de basalte à olivine"
+    },
+    {
+      "from": "basalte",
+      "to": "pn2_flows",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "basalte",
+      "to": "lm_flows",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "phonolite",
+      "to": "pn4_flows",
+      "type": "CONSTITUTES",
+      "justification": "PN4 = coulées phonolitiques terminales"
+    },
+    {
+      "from": "trachyte",
+      "to": "pn3_flows",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "mugearite",
+      "to": "pn3_flows",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "syenite",
+      "to": "sy_chapelle",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "syenite",
+      "to": "sy_tb",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "gabbro",
+      "to": "cpx_gabbro",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "ignimbrite_rock",
+      "to": "ignimbrite",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "breccia",
+      "to": "br_b1",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "breccia",
+      "to": "br_hydro",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "zeolite",
+      "to": "lm_flows",
+      "type": "PRESENT_IN",
+      "justification": "Basaltes LM à olivine zéolitisés"
+    },
+    {
+      "from": "prehnite",
+      "to": "br_hydro",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "pumpellyite",
+      "to": "br_hydro",
+      "type": "PRESENT_IN",
+      "justification": ""
+    },
+    {
+      "from": "apatite",
+      "to": "m_ahe",
+      "type": "USED_IN",
+      "justification": ""
+    },
+    {
+      "from": "zircon",
+      "to": "m_upb",
+      "type": "USED_IN",
+      "justification": "Zircon analysé par U-Pb (SIMS, LA-ICP-MS)"
+    },
+    {
+      "from": "zircon",
+      "to": "m_zdd",
+      "type": "USED_IN",
+      "justification": ""
+    },
+    {
+      "from": "zircon",
+      "to": "m_zhe",
+      "type": "USED_IN",
+      "justification": ""
+    },
+    {
+      "from": "phlogopite",
+      "to": "m_arar",
+      "type": "USED_IN",
+      "justification": ""
+    },
+    {
+      "from": "rift_n030",
+      "to": "salazie",
+      "type": "PASSES_THROUGH",
+      "justification": ""
+    },
+    {
+      "from": "rift_n030",
+      "to": "cilaos",
+      "type": "PASSES_THROUGH",
+      "justification": ""
+    },
+    {
+      "from": "sz_salazie",
+      "to": "salazie",
+      "type": "LOCATED_IN",
+      "justification": ""
+    },
+    {
+      "from": "sz_cilaos",
+      "to": "cilaos",
+      "type": "LOCATED_IN",
+      "justification": ""
+    },
+    {
+      "from": "caldera",
+      "to": "f_taibit",
+      "type": "DEFINED_BY",
+      "justification": "Ch.5: limite ouest caldera au Col du Taïbit"
+    },
+    {
+      "from": "caldera",
+      "to": "f_boeufs",
+      "type": "DEFINED_BY",
+      "justification": ""
+    },
+    {
+      "from": "caldera",
+      "to": "f_gobert",
+      "type": "DEFINED_BY",
+      "justification": ""
+    },
+    {
+      "from": "caldera",
+      "to": "f_ferriere",
+      "type": "DEFINED_BY",
+      "justification": ""
+    },
+    {
+      "from": "caldera",
+      "to": "mafate",
+      "type": "INTERSECTS",
+      "justification": ""
+    },
+    {
+      "from": "caldera",
+      "to": "salazie",
+      "type": "INTERSECTS",
+      "justification": ""
+    },
+    {
+      "from": "caldera",
+      "to": "cilaos",
+      "type": "INTERSECTS",
+      "justification": ""
+    },
+    {
+      "from": "caldera",
+      "to": "sy_chapelle",
+      "type": "BORDERED_BY",
+      "justification": "Ch.5: syénites sur bordure externe caldera"
+    },
+    {
+      "from": "dyke",
+      "to": "faille",
+      "type": "ASSOCIATED_WITH",
+      "justification": ""
+    },
+    {
+      "from": "sill",
+      "to": "sz_salazie",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "sill",
+      "to": "sz_cilaos",
+      "type": "CONSTITUTES",
+      "justification": ""
+    },
+    {
+      "from": "faille",
+      "to": "reservoir_fracture",
+      "type": "CREATES",
+      "justification": ""
+    },
+    {
+      "from": "fracture",
+      "to": "reservoir_fracture",
+      "type": "CREATES",
+      "justification": ""
+    },
+    {
+      "from": "m_upb",
+      "to": "age_2021",
+      "type": "PRODUCES",
+      "justification": ""
+    },
+    {
+      "from": "m_upb",
+      "to": "age_1414",
+      "type": "PRODUCES",
+      "justification": ""
+    },
+    {
+      "from": "m_zdd",
+      "to": "age_188",
+      "type": "PRODUCES",
+      "justification": ""
+    },
+    {
+      "from": "m_ahe",
+      "to": "age_145",
+      "type": "PRODUCES",
+      "justification": ""
+    },
+    {
+      "from": "m_sims",
+      "to": "m_upb",
+      "type": "INSTRUMENT_FOR",
+      "justification": ""
+    },
+    {
+      "from": "m_cartog",
+      "to": "pdn",
+      "type": "APPLIED_TO",
+      "justification": ""
+    },
+    {
+      "from": "m_cartog",
+      "to": "caldera",
+      "type": "APPLIED_TO",
+      "justification": ""
+    },
+    {
+      "from": "m_gravim",
+      "to": "cpx_gabbro",
+      "type": "REVEALS",
+      "justification": "Anomalie gravimétrique >10 km = complexe gabbroïque"
+    },
+    {
+      "from": "m_geochem",
+      "to": "basalte",
+      "type": "APPLIED_TO",
+      "justification": ""
+    },
+    {
+      "from": "m_geochem",
+      "to": "phonolite",
+      "type": "APPLIED_TO",
+      "justification": ""
+    },
+    {
+      "from": "m_thermochrono",
+      "to": "cpx_gabbro",
+      "type": "APPLIED_TO",
+      "justification": ""
+    },
+    {
+      "from": "m_thermochrono",
+      "to": "sy_tb",
+      "type": "APPLIED_TO",
+      "justification": ""
+    },
+    {
+      "from": "sys_hydro",
+      "to": "src_chaleur",
+      "type": "FED_BY",
+      "justification": "Ch.6: chaleur latente refroidissement chambre différenciée"
+    },
+    {
+      "from": "sys_hydro",
+      "to": "src_cilaos",
+      "type": "HAS_EMERGENCE",
+      "justification": ""
+    },
+    {
+      "from": "sys_hydro",
+      "to": "src_salazie",
+      "type": "HAS_EMERGENCE",
+      "justification": ""
+    },
+    {
+      "from": "src_chaleur",
+      "to": "pn4",
+      "type": "LINKED_TO",
+      "justification": "Ch.6: fin volcanism ~27 ka = début refroidissement chambre"
+    },
+    {
+      "from": "src_cilaos",
+      "to": "cilaos",
+      "type": "LOCATED_IN",
+      "justification": ""
+    },
+    {
+      "from": "src_cilaos",
+      "to": "caldera",
+      "type": "CONTROLLED_BY",
+      "justification": "Ch.6: sources à l'intersection caldera + rift-zone N030"
+    },
+    {
+      "from": "src_cilaos",
+      "to": "rift_n030",
+      "type": "CONTROLLED_BY",
+      "justification": ""
+    },
+    {
+      "from": "src_cilaos",
+      "to": "br_b1",
+      "type": "EMERGES_IN",
+      "justification": "Ch.6: sources dans Br.b1 et brèche hydrothermale"
+    },
+    {
+      "from": "src_cilaos",
+      "to": "br_hydro",
+      "type": "EMERGES_IN",
+      "justification": ""
+    },
+    {
+      "from": "src_salazie",
+      "to": "salazie",
+      "type": "LOCATED_IN",
+      "justification": ""
+    },
+    {
+      "from": "src_salazie",
+      "to": "caldera",
+      "type": "CONTROLLED_BY",
+      "justification": ""
+    },
+    {
+      "from": "src_salazie",
+      "to": "br_b1",
+      "type": "EMERGES_IN",
+      "justification": ""
+    },
+    {
+      "from": "src_salazie",
+      "to": "br_hydro",
+      "type": "EMERGES_IN",
+      "justification": ""
+    },
+    {
+      "from": "src_salazie",
+      "to": "cpx_gabbro",
+      "type": "EMERGES_IN",
+      "justification": ""
+    },
+    {
+      "from": "reservoir_fracture",
+      "to": "br_b1",
+      "type": "HOSTED_BY",
+      "justification": ""
+    },
+    {
+      "from": "reservoir_fracture",
+      "to": "br_hydro",
+      "type": "HOSTED_BY",
+      "justification": ""
+    },
+    {
+      "from": "alteration_hydro",
+      "to": "br_hydro",
+      "type": "AFFECTS",
+      "justification": ""
+    },
+    {
+      "from": "age_188",
+      "to": "caldera",
+      "type": "DATES",
+      "justification": "Ch.3: ZDD RN18-12 = 188.2±10.4 ka, effondrement caldera"
+    },
+    {
+      "from": "age_188",
+      "to": "ignimbrite",
+      "type": "DATES",
+      "justification": ""
+    },
+    {
+      "from": "age_27",
+      "to": "pn4",
+      "type": "DATES",
+      "justification": "Ch.3: fin activité ~27 ka (rejet âge 12.5 ka)"
+    },
+    {
+      "from": "age_145",
+      "to": "sy_tb",
+      "type": "DATES",
+      "justification": "Ch.3: AHe syénite Trou Blanc = 145±77 ka"
+    },
+    {
+      "from": "age_2021",
+      "to": "cpx_gabbro",
+      "type": "DATES",
+      "justification": "Ch.3: U-Pb RN18-1 = 2021±16 ka, gabbro lité"
+    },
+    {
+      "from": "age_1414",
+      "to": "cpx_gabbro",
+      "type": "DATES",
+      "justification": "Ch.3: U-Pb CB2 = 1414±8 ka, gabbro pegmatoïde"
+    },
+    {
+      "from": "age_212",
+      "to": "dalle",
+      "type": "DATES",
+      "justification": "Ch.4: Ar-Ar dalle soudée = 212±4 ka"
+    },
+    {
+      "from": "for_slz1",
+      "to": "salazie",
+      "type": "LOCATED_IN",
+      "justification": ""
+    },
+    {
+      "from": "for_slz1",
+      "to": "cpx_gabbro",
+      "type": "INTERSECTS",
+      "justification": "Ch.2: SLZ-1 recoupe le complexe gabbroïque"
+    },
+    {
+      "from": "proc_destab",
+      "to": "br_orangers",
+      "type": "PRODUCES",
+      "justification": "Ch.4: déstabilisation flanc → dépôt brèche Orangers"
+    },
+    {
+      "from": "proc_erosion",
+      "to": "mafate",
+      "type": "AFFECTS",
+      "justification": ""
+    },
+    {
+      "from": "proc_erosion",
+      "to": "salazie",
+      "type": "AFFECTS",
+      "justification": ""
+    },
+    {
+      "from": "proc_erosion",
+      "to": "cilaos",
+      "type": "AFFECTS",
+      "justification": ""
+    },
+    {
+      "from": "proc_caldera",
+      "to": "ignimbrite",
+      "type": "PRODUCES",
+      "justification": "Ch.5: effondrement ~188 ka → ignimbrite + brèche hydro"
+    },
+    {
+      "from": "proc_caldera",
+      "to": "br_hydro",
+      "type": "PRODUCES",
+      "justification": ""
+    },
+    {
+      "from": "proc_caldera",
+      "to": "caldera",
+      "type": "CREATES",
+      "justification": ""
+    },
+    {
+      "from": "proc_diffmag",
+      "to": "pn3_flows",
+      "type": "PRODUCES",
+      "justification": "Différenciation → roches PN3 (mugéarite, trachyte, phonolite)"
+    },
+    {
+      "from": "proc_diffmag",
+      "to": "pn4_flows",
+      "type": "PRODUCES",
+      "justification": ""
+    },
+    {
+      "from": "proc_diffmag",
+      "to": "sy_chapelle",
+      "type": "PRODUCES",
+      "justification": ""
+    },
+    {
+      "from": "proc_diffmag",
+      "to": "cpx_gabbro",
+      "type": "PRODUCES",
+      "justification": ""
+    },
+    {
+      "from": "proc_eruption",
+      "to": "pn1_flows",
+      "type": "PRODUCES",
+      "justification": ""
+    },
+    {
+      "from": "proc_eruption",
+      "to": "pn2_flows",
+      "type": "PRODUCES",
+      "justification": ""
+    },
+    {
+      "from": "pointchaud",
+      "to": "pdn",
+      "type": "GENERATES",
+      "justification": "Point chaud Réunion à l'origine du Piton des Neiges"
+    },
+    {
+      "from": "pointchaud",
+      "to": "pdf",
+      "type": "GENERATES",
+      "justification": ""
+    },
+    {
+      "from": "brgm",
+      "to": "for_slz1",
+      "type": "DRILLED",
+      "justification": ""
+    },
+    {
+      "from": "edr",
+      "to": "for_slz1",
+      "type": "OPERATES",
+      "justification": ""
+    },
+    {
+      "from": "famin",
+      "to": "pdn",
+      "type": "STUDIED",
+      "justification": "Famin 2018 : chronostratigraphie Piton des Neiges"
+    },
+    {
+      "from": "famin",
+      "to": "univ_run",
+      "type": "AFFILIATED_WITH",
+      "justification": ""
+    },
+    {
+      "from": "chaput",
+      "to": "sys_hydro",
+      "type": "STUDIED",
+      "justification": ""
+    },
+    {
+      "from": "chaput",
+      "to": "ipgp",
+      "type": "AFFILIATED_WITH",
+      "justification": ""
+    },
+    {
+      "from": "gillot",
+      "to": "pdn",
+      "type": "STUDIED",
+      "justification": ""
+    },
+    {
+      "from": "gillot",
+      "to": "m_kar",
+      "type": "USED",
+      "justification": ""
+    },
+    {
+      "from": "lenat",
+      "to": "pdn",
+      "type": "STUDIED",
+      "justification": ""
+    },
+    {
+      "from": "lenat",
+      "to": "m_gravim",
+      "type": "USED",
+      "justification": ""
+    },
+    {
+      "from": "nativel",
+      "to": "basalte",
+      "type": "STUDIED",
+      "justification": ""
+    },
+    {
+      "from": "nativel",
+      "to": "phonolite",
+      "type": "STUDIED",
+      "justification": ""
+    },
+    {
+      "from": "michon",
+      "to": "rift_n030",
+      "type": "STUDIED",
+      "justification": ""
+    },
+    {
+      "from": "michon",
+      "to": "caldera",
+      "type": "STUDIED",
+      "justification": ""
+    },
+    {
+      "from": "bachel",
+      "to": "pdf",
+      "type": "STUDIED",
+      "justification": ""
+    },
+    {
+      "from": "bachel",
+      "to": "ovpf",
+      "type": "AFFILIATED_WITH",
+      "justification": ""
+    },
+    {
+      "from": "oehler",
+      "to": "proc_destab",
+      "type": "STUDIED",
+      "justification": ""
+    },
+    {
+      "from": "nehlig",
+      "to": "pdn",
+      "type": "STUDIED",
+      "justification": ""
+    },
+    {
+      "from": "nehlig",
+      "to": "brgm",
+      "type": "AFFILIATED_WITH",
+      "justification": ""
+    }
+  ],
+  "chunk_mentions": [
+    {
+      "chunk_id": 0,
+      "entity_ids": [
+        "apatite",
+        "m_thermochrono",
+        "age_188",
+        "caldera",
+        "m_upb",
+        "age_27",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "faille",
+        "salazie",
+        "zircon",
+        "proc_eruption",
+        "reunion",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 1,
+      "entity_ids": [
+        "apatite",
+        "m_thermochrono",
+        "caldera",
+        "m_upb",
+        "age_27",
+        "proc_caldera",
+        "src_chaleur",
+        "pdn",
+        "breccia",
+        "zircon",
+        "proc_erosion",
+        "proc_eruption",
+        "pn3",
+        "age_188",
+        "m_photog",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 2,
+      "entity_ids": [
+        "caldera",
+        "reservoir_fracture",
+        "proc_caldera",
+        "sys_hydro",
+        "pdn",
+        "breccia",
+        "faille",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "proc_erosion",
+        "pn3",
+        "reunion",
+        "m_photog",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 3,
+      "entity_ids": [
+        "apatite",
+        "caldera",
+        "m_upb",
+        "reservoir_fracture",
+        "sys_hydro",
+        "pdn",
+        "breccia",
+        "faille",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "zircon",
+        "reunion",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 4,
+      "entity_ids": [
+        "apatite",
+        "caldera",
+        "m_upb",
+        "age_27",
+        "pdn",
+        "zircon",
+        "pn3",
+        "age_188"
+      ]
+    },
+    {
+      "chunk_id": 5,
+      "entity_ids": [
+        "caldera",
+        "age_27",
+        "fracture",
+        "pdn",
+        "sill",
+        "rift_n030",
+        "pn3",
+        "age_188"
+      ]
+    },
+    {
+      "chunk_id": 6,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "fracture",
+        "pdn",
+        "sill",
+        "rift_n030",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 7,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "rift_n030",
+        "proc_erosion",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 8,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "rift_n030",
+        "pointchaud",
+        "proc_erosion",
+        "syenite",
+        "reunion",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 9,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "sill",
+        "pointchaud",
+        "proc_erosion",
+        "syenite",
+        "reunion",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 10,
+      "entity_ids": [
+        "src_chaleur",
+        "pdn",
+        "mafate",
+        "sill",
+        "proc_erosion",
+        "m_geochem",
+        "syenite",
+        "reunion",
+        "cpx_gabbro",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 11,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "proc_erosion",
+        "m_geochem",
+        "syenite",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 12,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "proc_erosion",
+        "syenite",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 13,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "breccia",
+        "sill",
+        "rift_n030",
+        "syenite",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 14,
+      "entity_ids": [
+        "src_chaleur",
+        "pdn"
+      ]
+    },
+    {
+      "chunk_id": 15,
+      "entity_ids": [
+        "reunion",
+        "faille",
+        "src_chaleur",
+        "rift_n030"
+      ]
+    },
+    {
+      "chunk_id": 16,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "faille",
+        "rift_n030",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 17,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "salazie"
+      ]
+    },
+    {
+      "chunk_id": 18,
+      "entity_ids": [
+        "m_thermochrono",
+        "sys_hydro",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "salazie"
+      ]
+    },
+    {
+      "chunk_id": 19,
+      "entity_ids": [
+        "src_chaleur",
+        "m_thermochrono",
+        "pdn",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 20,
+      "entity_ids": [
+        "src_chaleur",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 21,
+      "entity_ids": [
+        "src_chaleur",
+        "gradient_geoth",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 22,
+      "entity_ids": [
+        "gradient_geoth",
+        "proc_eruption",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 23,
+      "entity_ids": [
+        "gradient_geoth",
+        "proc_eruption"
+      ]
+    },
+    {
+      "chunk_id": 24,
+      "entity_ids": [
+        "sys_hydro",
+        "fracture",
+        "src_chaleur",
+        "brgm",
+        "proc_eruption"
+      ]
+    },
+    {
+      "chunk_id": 25,
+      "entity_ids": [
+        "fracture",
+        "src_chaleur",
+        "brgm",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 26,
+      "entity_ids": [
+        "faille",
+        "fracture",
+        "src_chaleur",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 27,
+      "entity_ids": [
+        "faille",
+        "alteration_hydro",
+        "fracture",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 28,
+      "entity_ids": [
+        "src_chaleur",
+        "alteration_hydro",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 29,
+      "entity_ids": [
+        "faille",
+        "alteration_hydro",
+        "src_chaleur",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 30,
+      "entity_ids": [
+        "faille",
+        "caldera",
+        "src_chaleur",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 31,
+      "entity_ids": [
+        "faille",
+        "caldera",
+        "src_chaleur",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 32,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "sill",
+        "faille",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 33,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "sill",
+        "faille",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 34,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "sill",
+        "gradient_geoth",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 35,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "sill",
+        "rift_n030",
+        "gradient_geoth",
+        "michon",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 36,
+      "entity_ids": [
+        "src_chaleur",
+        "chaput",
+        "sill",
+        "rift_n030",
+        "pointchaud",
+        "michon",
+        "basalte",
+        "proc_diffmag"
+      ]
+    },
+    {
+      "chunk_id": 37,
+      "entity_ids": [
+        "src_chaleur",
+        "chaput",
+        "sill",
+        "pointchaud",
+        "basalte",
+        "proc_diffmag"
+      ]
+    },
+    {
+      "chunk_id": 38,
+      "entity_ids": [
+        "src_chaleur",
+        "proc_erosion",
+        "proc_eruption",
+        "basalte",
+        "proc_diffmag"
+      ]
+    },
+    {
+      "chunk_id": 39,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "proc_erosion",
+        "proc_eruption",
+        "basalte",
+        "proc_diffmag"
+      ]
+    },
+    {
+      "chunk_id": 40,
+      "entity_ids": [
+        "src_chaleur",
+        "sys_hydro",
+        "proc_eruption",
+        "sill"
+      ]
+    },
+    {
+      "chunk_id": 41,
+      "entity_ids": [
+        "src_chaleur",
+        "basalte",
+        "sill"
+      ]
+    },
+    {
+      "chunk_id": 42,
+      "entity_ids": [
+        "basalte",
+        "sill"
+      ]
+    },
+    {
+      "chunk_id": 43,
+      "entity_ids": [
+        "rift_n030",
+        "basalte",
+        "faille",
+        "sill"
+      ]
+    },
+    {
+      "chunk_id": 44,
+      "entity_ids": [
+        "rift_n030",
+        "faille",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 45,
+      "entity_ids": [
+        "faille",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 46,
+      "entity_ids": [
+        "fracture"
+      ]
+    },
+    {
+      "chunk_id": 47,
+      "entity_ids": [
+        "fracture"
+      ]
+    },
+    {
+      "chunk_id": 48,
+      "entity_ids": [
+        "alteration_hydro",
+        "breccia"
+      ]
+    },
+    {
+      "chunk_id": 49,
+      "entity_ids": [
+        "alteration_hydro",
+        "dyke",
+        "breccia",
+        "sill"
+      ]
+    },
+    {
+      "chunk_id": 50,
+      "entity_ids": [
+        "fracture",
+        "alteration_hydro",
+        "dyke",
+        "sill"
+      ]
+    },
+    {
+      "chunk_id": 51,
+      "entity_ids": [
+        "fracture",
+        "alteration_hydro",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 52,
+      "entity_ids": [
+        "faille",
+        "fracture"
+      ]
+    },
+    {
+      "chunk_id": 53,
+      "entity_ids": [
+        "proc_caldera",
+        "caldera",
+        "fracture",
+        "src_chaleur",
+        "proc_eruption",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 54,
+      "entity_ids": [
+        "proc_caldera",
+        "caldera",
+        "src_chaleur",
+        "proc_eruption",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 55,
+      "entity_ids": [
+        "faille",
+        "dyke",
+        "proc_caldera",
+        "caldera"
+      ]
+    },
+    {
+      "chunk_id": 56,
+      "entity_ids": [
+        "caldera",
+        "proc_caldera",
+        "fracture",
+        "rift_n030",
+        "faille",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 57,
+      "entity_ids": [
+        "proc_caldera",
+        "caldera",
+        "fracture",
+        "rift_n030",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 58,
+      "entity_ids": [
+        "faille",
+        "caldera",
+        "breccia",
+        "fracture"
+      ]
+    },
+    {
+      "chunk_id": 59,
+      "entity_ids": [
+        "faille",
+        "fracture",
+        "breccia",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 60,
+      "entity_ids": [
+        "rift_n030",
+        "sys_hydro",
+        "chaput",
+        "sill"
+      ]
+    },
+    {
+      "chunk_id": 61,
+      "entity_ids": [
+        "rift_n030",
+        "chaput",
+        "proc_erosion",
+        "sill"
+      ]
+    },
+    {
+      "chunk_id": 62,
+      "entity_ids": [
+        "faille",
+        "proc_erosion"
+      ]
+    },
+    {
+      "chunk_id": 63,
+      "entity_ids": [
+        "faille",
+        "proc_erosion"
+      ]
+    },
+    {
+      "chunk_id": 64,
+      "entity_ids": [
+        "proc_erosion"
+      ]
+    },
+    {
+      "chunk_id": 65,
+      "entity_ids": [
+        "proc_erosion"
+      ]
+    },
+    {
+      "chunk_id": 66,
+      "entity_ids": [
+        "proc_erosion",
+        "dyke",
+        "sill"
+      ]
+    },
+    {
+      "chunk_id": 67,
+      "entity_ids": [
+        "proc_erosion",
+        "dyke",
+        "sill"
+      ]
+    },
+    {
+      "chunk_id": 68,
+      "entity_ids": [
+        "proc_erosion",
+        "proc_destab"
+      ]
+    },
+    {
+      "chunk_id": 69,
+      "entity_ids": [
+        "proc_eruption",
+        "proc_erosion",
+        "proc_destab"
+      ]
+    },
+    {
+      "chunk_id": 70,
+      "entity_ids": [
+        "proc_eruption"
+      ]
+    },
+    {
+      "chunk_id": 71,
+      "entity_ids": [
+        "proc_eruption"
+      ]
+    },
+    {
+      "chunk_id": 72,
+      "entity_ids": [
+        "rift_n030",
+        "src_chaleur",
+        "proc_eruption",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 73,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "rift_n030",
+        "gradient_geoth",
+        "proc_eruption"
+      ]
+    },
+    {
+      "chunk_id": 74,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "rift_n030",
+        "gradient_geoth",
+        "proc_eruption",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 75,
+      "entity_ids": [
+        "dyke",
+        "caldera",
+        "sys_hydro",
+        "rift_n030",
+        "gradient_geoth",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 76,
+      "entity_ids": [
+        "dyke",
+        "caldera",
+        "sys_hydro",
+        "fracture",
+        "rift_n030",
+        "faille",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 77,
+      "entity_ids": [
+        "caldera",
+        "proc_caldera",
+        "sys_hydro",
+        "fracture",
+        "sy_chapelle",
+        "syenite",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 78,
+      "entity_ids": [
+        "caldera",
+        "proc_caldera",
+        "sys_hydro",
+        "sy_chapelle",
+        "syenite",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 79,
+      "entity_ids": [
+        "rift_n030",
+        "caldera",
+        "faille",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 80,
+      "entity_ids": [
+        "trachyte",
+        "caldera",
+        "sys_hydro",
+        "rift_n030",
+        "pointchaud",
+        "proc_eruption",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 81,
+      "entity_ids": [
+        "trachyte",
+        "caldera",
+        "sys_hydro",
+        "fracture",
+        "pointchaud",
+        "proc_eruption",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 82,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "fracture",
+        "src_chaleur",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 83,
+      "entity_ids": [
+        "faille",
+        "caldera",
+        "src_chaleur",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 84,
+      "entity_ids": [
+        "faille",
+        "caldera",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 85,
+      "entity_ids": [
+        "faille",
+        "caldera",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 86,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "rift_n030",
+        "proc_eruption",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 87,
+      "entity_ids": [
+        "rift_n030",
+        "src_chaleur",
+        "proc_eruption",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 97,
+      "entity_ids": [
+        "proc_eruption"
+      ]
+    },
+    {
+      "chunk_id": 98,
+      "entity_ids": [
+        "proc_eruption"
+      ]
+    },
+    {
+      "chunk_id": 103,
+      "entity_ids": [
+        "fracture",
+        "pdn",
+        "faille",
+        "pointchaud",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 104,
+      "entity_ids": [
+        "fracture",
+        "pdn",
+        "faille",
+        "pdf",
+        "m_gravim",
+        "pointchaud",
+        "gillot",
+        "reunion",
+        "lenat",
+        "bachel"
+      ]
+    },
+    {
+      "chunk_id": 105,
+      "entity_ids": [
+        "caldera",
+        "pdn",
+        "pdf",
+        "m_gravim",
+        "gillot",
+        "proc_eruption",
+        "reunion",
+        "lenat",
+        "bachel"
+      ]
+    },
+    {
+      "chunk_id": 106,
+      "entity_ids": [
+        "caldera",
+        "pdn",
+        "pdf",
+        "proc_eruption",
+        "m_gravim",
+        "lenat",
+        "bachel"
+      ]
+    },
+    {
+      "chunk_id": 107,
+      "entity_ids": [
+        "oehler",
+        "chaput",
+        "pdn",
+        "pdf",
+        "pointchaud",
+        "proc_eruption",
+        "m_gravim",
+        "lenat",
+        "bachel"
+      ]
+    },
+    {
+      "chunk_id": 108,
+      "entity_ids": [
+        "oehler",
+        "fracture",
+        "chaput",
+        "pointchaud",
+        "proc_eruption",
+        "reunion",
+        "lenat",
+        "bachel"
+      ]
+    },
+    {
+      "chunk_id": 109,
+      "entity_ids": [
+        "oehler",
+        "fracture",
+        "cilaos",
+        "pdn",
+        "mafate",
+        "salazie",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 110,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "pdf",
+        "salazie",
+        "mafate"
+      ]
+    },
+    {
+      "chunk_id": 111,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "pdf",
+        "salazie",
+        "mafate",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 112,
+      "entity_ids": [
+        "reunion",
+        "caldera"
+      ]
+    },
+    {
+      "chunk_id": 113,
+      "entity_ids": [
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 114,
+      "entity_ids": [
+        "pdn",
+        "nehlig",
+        "famin",
+        "reunion",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 115,
+      "entity_ids": [
+        "pn1",
+        "pn4",
+        "pdn",
+        "nehlig",
+        "famin",
+        "pn0",
+        "pn2",
+        "reunion",
+        "pn3",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 116,
+      "entity_ids": [
+        "pn1",
+        "nativel",
+        "pn4",
+        "pdn",
+        "nehlig",
+        "olivine",
+        "gillot",
+        "famin",
+        "pn0",
+        "pn2",
+        "reunion",
+        "basalte",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 117,
+      "entity_ids": [
+        "pn1",
+        "nativel",
+        "pn4",
+        "pdn",
+        "olivine",
+        "gillot",
+        "pn2",
+        "proc_eruption",
+        "pn3",
+        "famin",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 118,
+      "entity_ids": [
+        "pn1",
+        "dyke",
+        "pn4",
+        "pdn",
+        "chaput",
+        "sill",
+        "olivine",
+        "proc_erosion",
+        "famin",
+        "proc_eruption",
+        "pn3",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 119,
+      "entity_ids": [
+        "oehler",
+        "cilaos",
+        "pdn",
+        "chaput",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "proc_erosion",
+        "famin",
+        "dyke",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 120,
+      "entity_ids": [
+        "oehler",
+        "cilaos",
+        "pdn",
+        "chaput",
+        "mafate",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "lenat"
+      ]
+    },
+    {
+      "chunk_id": 121,
+      "entity_ids": [
+        "chaput",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "mafate",
+        "salazie",
+        "syenite",
+        "breccia",
+        "rift_n030",
+        "f_ferriere",
+        "sill",
+        "sy_chapelle",
+        "pn3",
+        "gabbro",
+        "sy_tb",
+        "lenat"
+      ]
+    },
+    {
+      "chunk_id": 122,
+      "entity_ids": [
+        "pn4",
+        "pdn",
+        "breccia",
+        "salazie",
+        "syenite",
+        "sill",
+        "f_ferriere",
+        "sy_chapelle",
+        "pn3",
+        "gabbro",
+        "sy_tb",
+        "cpx_gabbro",
+        "lenat"
+      ]
+    },
+    {
+      "chunk_id": 123,
+      "entity_ids": [
+        "alteration_hydro",
+        "pn1",
+        "caldera",
+        "f_taibit",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "sill",
+        "sy_chapelle",
+        "famin",
+        "faille",
+        "gabbro",
+        "michon",
+        "dyke",
+        "cpx_gabbro",
+        "lenat"
+      ]
+    },
+    {
+      "chunk_id": 124,
+      "entity_ids": [
+        "alteration_hydro",
+        "pn1",
+        "caldera",
+        "ignimbrite_rock",
+        "f_taibit",
+        "f_boeufs",
+        "cilaos",
+        "pdn",
+        "mafate",
+        "sill",
+        "sy_chapelle",
+        "famin",
+        "faille",
+        "gabbro",
+        "michon",
+        "dyke",
+        "cpx_gabbro",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 125,
+      "entity_ids": [
+        "caldera",
+        "ignimbrite_rock",
+        "f_boeufs",
+        "pdn",
+        "mafate",
+        "salazie",
+        "faille",
+        "gradient_geoth",
+        "famin",
+        "m_geochem",
+        "reunion",
+        "gabbro",
+        "cpx_gabbro",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 126,
+      "entity_ids": [
+        "caldera",
+        "for_slz1",
+        "salazie",
+        "brgm",
+        "gradient_geoth",
+        "famin",
+        "m_geochem",
+        "reunion",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 127,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "for_slz1",
+        "pdn",
+        "salazie",
+        "brgm",
+        "gradient_geoth",
+        "m_geochem",
+        "syenite",
+        "reunion",
+        "lenat"
+      ]
+    },
+    {
+      "chunk_id": 128,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "cilaos",
+        "pdn",
+        "pdf",
+        "m_geochem",
+        "syenite",
+        "reunion",
+        "lenat"
+      ]
+    },
+    {
+      "chunk_id": 129,
+      "entity_ids": [
+        "sys_hydro",
+        "cilaos",
+        "pdn",
+        "pdf",
+        "salazie",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 130,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "for_slz1",
+        "pdn",
+        "salazie",
+        "reunion",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 131,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "for_slz1",
+        "pdn",
+        "salazie"
+      ]
+    },
+    {
+      "chunk_id": 132,
+      "entity_ids": [
+        "alteration_hydro",
+        "caldera",
+        "reservoir_fracture",
+        "sys_hydro",
+        "fracture",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "sill",
+        "src_cilaos",
+        "faille",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 133,
+      "entity_ids": [
+        "trachyte",
+        "alteration_hydro",
+        "caldera",
+        "reservoir_fracture",
+        "sys_hydro",
+        "fracture",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "pointchaud",
+        "src_cilaos",
+        "faille",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 134,
+      "entity_ids": [
+        "trachyte",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "rift_n030",
+        "pointchaud"
+      ]
+    },
+    {
+      "chunk_id": 135,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "proc_eruption",
+        "m_kar"
+      ]
+    },
+    {
+      "chunk_id": 136,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "proc_eruption",
+        "syenite",
+        "m_kar",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 137,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "rift_n030",
+        "sy_chapelle",
+        "syenite",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 138,
+      "entity_ids": [
+        "sys_hydro",
+        "src_chaleur",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "salazie",
+        "dalle",
+        "syenite",
+        "rift_n030",
+        "sy_chapelle",
+        "pn3",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 139,
+      "entity_ids": [
+        "caldera",
+        "src_chaleur",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "salazie",
+        "dalle",
+        "syenite",
+        "sy_chapelle",
+        "pn3",
+        "faille",
+        "gabbro",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 140,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "gabbro",
+        "dyke",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 141,
+      "entity_ids": [
+        "alteration_hydro",
+        "pn1",
+        "sys_hydro",
+        "src_chaleur",
+        "prehnite",
+        "pdn",
+        "syenite",
+        "gabbro",
+        "pumpellyite",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 142,
+      "entity_ids": [
+        "apatite",
+        "alteration_hydro",
+        "pn1",
+        "m_upb",
+        "sys_hydro",
+        "src_chaleur",
+        "prehnite",
+        "pdn",
+        "phlogopite",
+        "zircon",
+        "gabbro",
+        "pumpellyite",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 143,
+      "entity_ids": [
+        "apatite",
+        "caldera",
+        "m_upb",
+        "proc_caldera",
+        "sys_hydro",
+        "oehler",
+        "pdn",
+        "phlogopite",
+        "proc_destab",
+        "zircon",
+        "proc_erosion",
+        "faille",
+        "gabbro",
+        "lenat",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 144,
+      "entity_ids": [
+        "caldera",
+        "proc_caldera",
+        "oehler",
+        "cilaos",
+        "pdn",
+        "nehlig",
+        "mafate",
+        "salazie",
+        "proc_destab",
+        "proc_erosion",
+        "faille",
+        "gabbro",
+        "lenat",
+        "cpx_gabbro",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 145,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "cilaos",
+        "pdn",
+        "nehlig",
+        "mafate",
+        "salazie",
+        "proc_erosion",
+        "gabbro",
+        "lenat",
+        "cpx_gabbro",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 146,
+      "entity_ids": [
+        "alteration_hydro",
+        "oehler",
+        "sys_hydro",
+        "pdn",
+        "mafate",
+        "famin",
+        "reunion",
+        "michon",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 147,
+      "entity_ids": [
+        "alteration_hydro",
+        "caldera",
+        "oehler",
+        "fracture",
+        "pdn",
+        "rift_n030",
+        "proc_erosion",
+        "famin",
+        "pn2",
+        "reunion",
+        "michon",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 148,
+      "entity_ids": [
+        "caldera",
+        "fracture",
+        "cilaos",
+        "pdn",
+        "mafate",
+        "salazie",
+        "rift_n030",
+        "proc_erosion",
+        "pn2",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 149,
+      "entity_ids": [
+        "caldera",
+        "oehler",
+        "fracture",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "sill",
+        "chaput",
+        "proc_erosion",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 150,
+      "entity_ids": [
+        "oehler",
+        "chaput",
+        "pdn",
+        "breccia",
+        "proc_destab",
+        "sill",
+        "proc_erosion",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 151,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "oehler",
+        "chaput",
+        "pdn",
+        "proc_destab",
+        "proc_erosion",
+        "reunion",
+        "m_kar"
+      ]
+    },
+    {
+      "chunk_id": 152,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pdn",
+        "breccia",
+        "proc_destab",
+        "proc_erosion",
+        "m_kar"
+      ]
+    },
+    {
+      "chunk_id": 153,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "breccia",
+        "proc_erosion",
+        "proc_eruption",
+        "gabbro"
+      ]
+    },
+    {
+      "chunk_id": 154,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "zircon",
+        "proc_eruption",
+        "syenite",
+        "reunion",
+        "gabbro"
+      ]
+    },
+    {
+      "chunk_id": 155,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "pdn",
+        "cnrs",
+        "zircon",
+        "sy_chapelle",
+        "syenite",
+        "reunion",
+        "univ_run"
+      ]
+    },
+    {
+      "chunk_id": 156,
+      "entity_ids": [
+        "apatite",
+        "age_27",
+        "pdn",
+        "phlogopite",
+        "cnrs",
+        "pointchaud",
+        "zircon",
+        "sy_chapelle",
+        "famin",
+        "syenite",
+        "reunion",
+        "univ_run"
+      ]
+    },
+    {
+      "chunk_id": 157,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "age_27",
+        "pdn",
+        "phlogopite",
+        "cnrs",
+        "pointchaud",
+        "zircon",
+        "famin",
+        "reunion",
+        "gabbro",
+        "m_kar",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 158,
+      "entity_ids": [
+        "apatite",
+        "age_188",
+        "caldera",
+        "m_upb",
+        "age_27",
+        "pdn",
+        "phlogopite",
+        "zircon",
+        "reunion",
+        "gabbro",
+        "m_kar",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 159,
+      "entity_ids": [
+        "age_188",
+        "caldera",
+        "age_27",
+        "pdn",
+        "pointchaud",
+        "reunion",
+        "m_kar",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 160,
+      "entity_ids": [
+        "reunion",
+        "m_kar",
+        "pointchaud",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 161,
+      "entity_ids": [
+        "pdn",
+        "pdf",
+        "pointchaud",
+        "reunion",
+        "m_kar"
+      ]
+    },
+    {
+      "chunk_id": 162,
+      "entity_ids": [
+        "apatite",
+        "pn1",
+        "m_upb",
+        "pdn",
+        "phlogopite",
+        "m_kar",
+        "m_zdd",
+        "pointchaud",
+        "zircon",
+        "pn2",
+        "reunion",
+        "lm",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 163,
+      "entity_ids": [
+        "apatite",
+        "pn1",
+        "caldera",
+        "m_upb",
+        "pn4",
+        "pdn",
+        "prehnite",
+        "phlogopite",
+        "olivine",
+        "m_kar",
+        "m_zdd",
+        "zircon",
+        "pn2",
+        "pn3",
+        "pumpellyite",
+        "lm",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 164,
+      "entity_ids": [
+        "pn4",
+        "prehnite",
+        "michon",
+        "caldera",
+        "cilaos",
+        "salazie",
+        "pn2",
+        "pn3",
+        "pumpellyite",
+        "dyke",
+        "pn1",
+        "chaput",
+        "pdn",
+        "sill",
+        "olivine",
+        "cpx_gabbro",
+        "lm",
+        "famin",
+        "gabbro",
+        "m_kar",
+        "bachel"
+      ]
+    },
+    {
+      "chunk_id": 165,
+      "entity_ids": [
+        "cilaos",
+        "pdn",
+        "prehnite",
+        "chaput",
+        "salazie",
+        "sill",
+        "m_kar",
+        "pn2",
+        "famin",
+        "pn3",
+        "gabbro",
+        "pumpellyite",
+        "michon",
+        "dyke",
+        "cpx_gabbro",
+        "m_arar",
+        "bachel"
+      ]
+    },
+    {
+      "chunk_id": 166,
+      "entity_ids": [
+        "dyke",
+        "pdn",
+        "pn3",
+        "m_kar",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 167,
+      "entity_ids": [
+        "pn1",
+        "pn4",
+        "pdn",
+        "salazie",
+        "m_kar",
+        "gabbro",
+        "lm",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 168,
+      "entity_ids": [
+        "pn1",
+        "pn4",
+        "pdn",
+        "salazie",
+        "gabbro",
+        "lm",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 169,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "phlogopite",
+        "zircon",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 170,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "phlogopite",
+        "m_sims",
+        "zircon",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 171,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "phlogopite",
+        "m_sims",
+        "m_zdd",
+        "zircon",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 172,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "phlogopite",
+        "m_sims",
+        "m_zdd",
+        "zircon",
+        "gabbro",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 173,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "phlogopite",
+        "m_sims",
+        "m_zdd",
+        "zircon",
+        "gabbro",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 174,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "m_zhe",
+        "phlogopite",
+        "zircon",
+        "gabbro",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 175,
+      "entity_ids": [
+        "apatite",
+        "tephra",
+        "m_zhe",
+        "salazie",
+        "phlogopite",
+        "zircon",
+        "gabbro",
+        "cpx_gabbro",
+        "m_ahe"
+      ]
+    },
+    {
+      "chunk_id": 176,
+      "entity_ids": [
+        "apatite",
+        "tephra",
+        "salazie",
+        "zircon",
+        "gabbro",
+        "cpx_gabbro",
+        "m_ahe"
+      ]
+    },
+    {
+      "chunk_id": 177,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "cilaos",
+        "salazie",
+        "zircon",
+        "age_188",
+        "gabbro",
+        "cpx_gabbro",
+        "m_ahe"
+      ]
+    },
+    {
+      "chunk_id": 178,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "cilaos",
+        "m_zhe",
+        "salazie",
+        "phlogopite",
+        "m_zdd",
+        "m_ahe",
+        "zircon",
+        "age_188",
+        "gabbro",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 179,
+      "entity_ids": [
+        "apatite",
+        "pn1",
+        "m_upb",
+        "pn4",
+        "pdn",
+        "m_zhe",
+        "salazie",
+        "phlogopite",
+        "m_zdd",
+        "m_ahe",
+        "zircon",
+        "gabbro",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 180,
+      "entity_ids": [
+        "apatite",
+        "pn1",
+        "m_upb",
+        "pn4",
+        "pdn",
+        "salazie",
+        "phlogopite",
+        "zircon",
+        "famin",
+        "gabbro",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 181,
+      "entity_ids": [
+        "apatite",
+        "pn1",
+        "m_upb",
+        "prehnite",
+        "m_zhe",
+        "salazie",
+        "phlogopite",
+        "zircon",
+        "famin",
+        "gabbro",
+        "pumpellyite",
+        "lm",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 182,
+      "entity_ids": [
+        "apatite",
+        "pn1",
+        "m_upb",
+        "prehnite",
+        "m_zhe",
+        "phlogopite",
+        "m_ahe",
+        "zircon",
+        "famin",
+        "pn2",
+        "gabbro",
+        "pumpellyite",
+        "lm",
+        "cpx_gabbro",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 183,
+      "entity_ids": [
+        "pn1",
+        "m_zhe",
+        "pdn",
+        "salazie",
+        "zircon",
+        "pn2",
+        "pn3",
+        "gabbro",
+        "cpx_gabbro",
+        "m_ahe"
+      ]
+    },
+    {
+      "chunk_id": 184,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "phlogopite",
+        "m_kar",
+        "zircon",
+        "pn2",
+        "pn3",
+        "dyke",
+        "m_ahe"
+      ]
+    },
+    {
+      "chunk_id": 185,
+      "entity_ids": [
+        "apatite",
+        "caldera",
+        "m_upb",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "salazie",
+        "phlogopite",
+        "m_kar",
+        "m_zdd",
+        "zircon",
+        "pn3",
+        "gabbro",
+        "dyke",
+        "cpx_gabbro",
+        "m_ahe"
+      ]
+    },
+    {
+      "chunk_id": 186,
+      "entity_ids": [
+        "apatite",
+        "tephra",
+        "caldera",
+        "age_188",
+        "nativel",
+        "ignimbrite_rock",
+        "pn4",
+        "pdn",
+        "salazie",
+        "m_zdd",
+        "gillot",
+        "reunion",
+        "gabbro",
+        "m_kar",
+        "cpx_gabbro",
+        "m_ahe",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 187,
+      "entity_ids": [
+        "tephra",
+        "caldera",
+        "age_188",
+        "nativel",
+        "m_zhe",
+        "pdn",
+        "salazie",
+        "ignimbrite",
+        "m_zdd",
+        "zircon",
+        "gillot",
+        "reunion",
+        "m_kar",
+        "ignimbrite_rock"
+      ]
+    },
+    {
+      "chunk_id": 188,
+      "entity_ids": [
+        "tephra",
+        "caldera",
+        "m_zhe",
+        "pdn",
+        "m_zdd",
+        "zircon",
+        "reunion",
+        "m_kar"
+      ]
+    },
+    {
+      "chunk_id": 189,
+      "entity_ids": [
+        "pn1",
+        "pdn",
+        "salazie",
+        "m_kar",
+        "m_zdd",
+        "gabbro",
+        "lm",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 190,
+      "entity_ids": [
+        "pn1",
+        "pdn",
+        "salazie",
+        "m_kar",
+        "pn2",
+        "gabbro",
+        "lm",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 191,
+      "entity_ids": [
+        "pn4",
+        "m_zhe",
+        "m_zdd",
+        "zircon",
+        "pn2",
+        "age_188",
+        "gabbro",
+        "cpx_gabbro",
+        "m_ahe"
+      ]
+    },
+    {
+      "chunk_id": 192,
+      "entity_ids": [
+        "caldera",
+        "pn4",
+        "pdn",
+        "m_zhe",
+        "chaput",
+        "sill",
+        "m_zdd",
+        "zircon",
+        "pn2",
+        "pn3",
+        "age_188",
+        "gabbro",
+        "dyke",
+        "cpx_gabbro",
+        "m_ahe"
+      ]
+    },
+    {
+      "chunk_id": 193,
+      "entity_ids": [
+        "caldera",
+        "chaput",
+        "pdn",
+        "sill",
+        "m_zdd",
+        "zircon",
+        "pn3",
+        "age_188",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 194,
+      "entity_ids": [
+        "age_27",
+        "pdn",
+        "m_zdd",
+        "pn3",
+        "m_kar"
+      ]
+    },
+    {
+      "chunk_id": 195,
+      "entity_ids": [
+        "m_upb",
+        "age_27",
+        "pdn",
+        "pdf",
+        "zircon",
+        "reunion",
+        "m_kar"
+      ]
+    },
+    {
+      "chunk_id": 196,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "age_27",
+        "m_zhe",
+        "pdn",
+        "pdf",
+        "phlogopite",
+        "m_zdd",
+        "m_ahe",
+        "zircon",
+        "reunion",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 197,
+      "entity_ids": [
+        "apatite",
+        "caldera",
+        "m_upb",
+        "age_27",
+        "m_zhe",
+        "pdn",
+        "phlogopite",
+        "m_zdd",
+        "m_ahe",
+        "zircon",
+        "age_188",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 198,
+      "entity_ids": [
+        "apatite",
+        "caldera",
+        "m_upb",
+        "age_27",
+        "pdn",
+        "phlogopite",
+        "zircon",
+        "age_188",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 199,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "pdn",
+        "salazie",
+        "phlogopite",
+        "zircon",
+        "syenite",
+        "age_188",
+        "sy_tb",
+        "m_arar"
+      ]
+    },
+    {
+      "chunk_id": 200,
+      "entity_ids": [
+        "apatite",
+        "caldera",
+        "m_upb",
+        "pn4",
+        "salazie",
+        "syenite",
+        "phlogopite",
+        "zircon",
+        "sy_chapelle",
+        "pn3",
+        "age_188",
+        "sy_tb"
+      ]
+    },
+    {
+      "chunk_id": 201,
+      "entity_ids": [
+        "trachyte",
+        "apatite",
+        "caldera",
+        "cilaos",
+        "pn4",
+        "salazie",
+        "syenite",
+        "sy_chapelle",
+        "m_geochem",
+        "pn3",
+        "sy_tb"
+      ]
+    },
+    {
+      "chunk_id": 202,
+      "entity_ids": [
+        "trachyte",
+        "apatite",
+        "caldera",
+        "proc_caldera",
+        "ignimbrite_rock",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "sill",
+        "sy_chapelle",
+        "m_geochem",
+        "syenite",
+        "age_188",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 203,
+      "entity_ids": [
+        "caldera",
+        "proc_caldera",
+        "ignimbrite_rock",
+        "pdn",
+        "salazie",
+        "sill",
+        "sy_chapelle",
+        "syenite",
+        "age_188",
+        "basalte",
+        "m_cartog",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 204,
+      "entity_ids": [
+        "pdn",
+        "m_cartog",
+        "famin",
+        "syenite"
+      ]
+    },
+    {
+      "chunk_id": 205,
+      "entity_ids": [
+        "caldera",
+        "chaput",
+        "pdn",
+        "breccia",
+        "faille",
+        "br_orangers",
+        "proc_erosion",
+        "famin",
+        "reunion",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 206,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "chaput",
+        "pdn",
+        "breccia",
+        "faille",
+        "br_orangers",
+        "proc_erosion",
+        "reunion",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 207,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pdn",
+        "brgm",
+        "m_geochem",
+        "reunion",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 208,
+      "entity_ids": [
+        "univ_run",
+        "brgm",
+        "m_geochem",
+        "reunion",
+        "m_photog",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 209,
+      "entity_ids": [
+        "m_cartog",
+        "famin",
+        "reunion",
+        "m_photog",
+        "univ_run"
+      ]
+    },
+    {
+      "chunk_id": 210,
+      "entity_ids": [
+        "pdn",
+        "mafate",
+        "famin",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 211,
+      "entity_ids": [
+        "f_taibit",
+        "f_boeufs",
+        "cilaos",
+        "pdn",
+        "mafate",
+        "salazie",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 212,
+      "entity_ids": [
+        "f_taibit",
+        "f_boeufs",
+        "cilaos",
+        "mafate",
+        "salazie",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 213,
+      "entity_ids": [
+        "f_boeufs",
+        "f_taibit",
+        "mafate",
+        "olivine",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 214,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "breccia",
+        "mafate",
+        "br_orangers",
+        "olivine",
+        "pn2",
+        "pn3",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 215,
+      "entity_ids": [
+        "pn1",
+        "nativel",
+        "pn1_flows",
+        "breccia",
+        "br_orangers",
+        "olivine",
+        "pn2",
+        "pn3",
+        "gillot",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 216,
+      "entity_ids": [
+        "pn1",
+        "nativel",
+        "pn1_flows",
+        "olivine",
+        "pn2",
+        "pn3",
+        "gillot",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 217,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "breccia",
+        "mafate",
+        "olivine",
+        "pn2",
+        "pn3",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 218,
+      "entity_ids": [
+        "pn1",
+        "chaput",
+        "pdn",
+        "breccia",
+        "mafate",
+        "lm_flows",
+        "olivine",
+        "famin",
+        "pn0",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 219,
+      "entity_ids": [
+        "pn1",
+        "chaput",
+        "pdn",
+        "breccia",
+        "mafate",
+        "lm_flows",
+        "famin",
+        "pn0",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 220,
+      "entity_ids": [
+        "pn1",
+        "pdn",
+        "breccia",
+        "mafate",
+        "lm_flows",
+        "br_b1",
+        "pn0",
+        "pn2",
+        "basalte",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 221,
+      "entity_ids": [
+        "pn1",
+        "chaput",
+        "pdn",
+        "br_b1",
+        "proc_erosion",
+        "famin",
+        "pn0",
+        "pn2",
+        "basalte",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 222,
+      "entity_ids": [
+        "pn1",
+        "chaput",
+        "breccia",
+        "nehlig",
+        "proc_erosion",
+        "famin",
+        "pn0",
+        "lm",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 223,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "breccia",
+        "nehlig",
+        "pn2",
+        "famin",
+        "pn3",
+        "lm",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 224,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "chaput",
+        "breccia",
+        "br_b1",
+        "pn2",
+        "pn3",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 225,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "chaput",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "pn0",
+        "pn2",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 226,
+      "entity_ids": [
+        "pn1",
+        "chaput",
+        "pdn",
+        "breccia",
+        "pn0",
+        "pn2",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 227,
+      "entity_ids": [
+        "pn1",
+        "breccia",
+        "mafate",
+        "pn2",
+        "pn3",
+        "br_b3c",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 228,
+      "entity_ids": [
+        "pn4",
+        "prehnite",
+        "breccia",
+        "mafate",
+        "pumpellyite",
+        "pn3",
+        "br_b3c",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 229,
+      "entity_ids": [
+        "pn4",
+        "prehnite",
+        "breccia",
+        "lm_flows",
+        "pn3",
+        "pumpellyite",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 230,
+      "entity_ids": [
+        "pn1",
+        "f_boeufs",
+        "breccia",
+        "lm_flows",
+        "pn2",
+        "pn3",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 231,
+      "entity_ids": [
+        "pn1",
+        "f_boeufs",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "br_orangers",
+        "pn2",
+        "pn3",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 232,
+      "entity_ids": [
+        "pn1",
+        "f_boeufs",
+        "chaput",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "br_orangers",
+        "olivine",
+        "nehlig",
+        "pn2_flows",
+        "pn2",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 233,
+      "entity_ids": [
+        "pn1",
+        "f_boeufs",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_orangers",
+        "br_b1",
+        "olivine",
+        "nehlig",
+        "pn2_flows",
+        "pn0",
+        "pn2",
+        "basalte",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 234,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_orangers",
+        "br_b1",
+        "chaput",
+        "nehlig",
+        "pn0",
+        "pn3",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 235,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "pn4",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "br_orangers",
+        "olivine",
+        "nehlig",
+        "pn2_flows",
+        "pn2",
+        "pn3",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 236,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "pn1_flows",
+        "chaput",
+        "pdn",
+        "breccia",
+        "mafate",
+        "proc_destab",
+        "br_orangers",
+        "olivine",
+        "nehlig",
+        "pn2_flows",
+        "pn2",
+        "basalte",
+        "lm",
+        "pn3",
+        "bachel"
+      ]
+    },
+    {
+      "chunk_id": 237,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "chaput",
+        "pdn",
+        "breccia",
+        "mafate",
+        "proc_destab",
+        "br_orangers",
+        "nehlig",
+        "pn2",
+        "lm",
+        "bachel"
+      ]
+    },
+    {
+      "chunk_id": 238,
+      "entity_ids": [
+        "pn1",
+        "breccia",
+        "mafate",
+        "br_orangers",
+        "olivine",
+        "sill",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 239,
+      "entity_ids": [
+        "pn1",
+        "chaput",
+        "pdn",
+        "breccia",
+        "mafate",
+        "proc_destab",
+        "br_orangers",
+        "olivine",
+        "sill",
+        "nehlig",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 240,
+      "entity_ids": [
+        "pn1",
+        "f_taibit",
+        "chaput",
+        "pdn",
+        "breccia",
+        "mafate",
+        "proc_destab",
+        "br_orangers",
+        "olivine",
+        "nehlig",
+        "pn2",
+        "br_b3c",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 241,
+      "entity_ids": [
+        "pn1",
+        "f_taibit",
+        "breccia",
+        "mafate",
+        "olivine",
+        "pn2",
+        "pn3",
+        "br_b3c",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 242,
+      "entity_ids": [
+        "pn1",
+        "pn3_flows",
+        "breccia",
+        "br_orangers",
+        "olivine",
+        "pn2_flows",
+        "pn2",
+        "pn3",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 243,
+      "entity_ids": [
+        "pn3_flows",
+        "breccia",
+        "br_orangers",
+        "olivine",
+        "pn2_flows",
+        "pn2",
+        "pn3",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 244,
+      "entity_ids": [
+        "pn1",
+        "pn3_flows",
+        "pdn",
+        "breccia",
+        "br_orangers",
+        "pn2_flows",
+        "pn2",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 245,
+      "entity_ids": [
+        "pn1",
+        "pn3_flows",
+        "chaput",
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_orangers",
+        "pn2_flows",
+        "pn2",
+        "pn3",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 246,
+      "entity_ids": [
+        "f_taibit",
+        "chaput",
+        "breccia",
+        "mafate",
+        "dalle",
+        "pn2",
+        "pn3",
+        "faille",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 247,
+      "entity_ids": [
+        "f_taibit",
+        "breccia",
+        "mafate",
+        "br_orangers",
+        "dalle",
+        "olivine",
+        "pn2",
+        "pn3",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 248,
+      "entity_ids": [
+        "pn1",
+        "pn3_flows",
+        "pn1_flows",
+        "f_taibit",
+        "breccia",
+        "br_orangers",
+        "dalle",
+        "olivine",
+        "pn2",
+        "pn3",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 249,
+      "entity_ids": [
+        "pn1",
+        "pn3_flows",
+        "pn1_flows",
+        "f_taibit",
+        "breccia",
+        "br_orangers",
+        "dalle",
+        "pn2",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 250,
+      "entity_ids": [
+        "pn1",
+        "dyke",
+        "f_taibit",
+        "mafate",
+        "pn2",
+        "pn3",
+        "faille",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 251,
+      "entity_ids": [
+        "pn1",
+        "dyke",
+        "f_taibit",
+        "breccia",
+        "mafate",
+        "dalle",
+        "pn3",
+        "faille",
+        "br_b3c",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 252,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "f_taibit",
+        "cilaos",
+        "breccia",
+        "mafate",
+        "br_orangers",
+        "dalle",
+        "sill",
+        "pn3",
+        "faille",
+        "br_b3c"
+      ]
+    },
+    {
+      "chunk_id": 253,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "f_taibit",
+        "f_boeufs",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "mafate",
+        "br_orangers",
+        "sill",
+        "faille",
+        "br_b3c",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 254,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "ignimbrite_rock",
+        "f_taibit",
+        "f_boeufs",
+        "pn4",
+        "pdn",
+        "chaput",
+        "mafate",
+        "faille",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 255,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "ignimbrite_rock",
+        "f_taibit",
+        "f_boeufs",
+        "pn4",
+        "pdn",
+        "mafate",
+        "salazie",
+        "pn3",
+        "faille",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 256,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "f_taibit",
+        "f_boeufs",
+        "pn4",
+        "pdn",
+        "mafate",
+        "salazie",
+        "pn3",
+        "faille",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 257,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "pdn",
+        "mafate",
+        "pn2",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 258,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "mafate",
+        "pn2_flows",
+        "proc_erosion",
+        "pn2",
+        "pn3",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 259,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "breccia",
+        "mafate",
+        "proc_destab",
+        "br_orangers",
+        "pn2_flows",
+        "proc_erosion",
+        "pn2",
+        "lm",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 260,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "chaput",
+        "breccia",
+        "mafate",
+        "proc_destab",
+        "br_orangers",
+        "nehlig",
+        "pn2_flows",
+        "pn2",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 261,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "chaput",
+        "pdn",
+        "breccia",
+        "mafate",
+        "proc_destab",
+        "nehlig",
+        "pn2_flows",
+        "proc_erosion",
+        "pn2",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 262,
+      "entity_ids": [
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "pn2_flows",
+        "proc_erosion",
+        "pn2",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 263,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "pn4",
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "br_orangers",
+        "proc_erosion",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 264,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "pn4",
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_orangers",
+        "proc_erosion",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 265,
+      "entity_ids": [
+        "caldera",
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_orangers",
+        "proc_erosion",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 266,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "proc_erosion",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 267,
+      "entity_ids": [
+        "pn1",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "br_orangers",
+        "proc_erosion",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 268,
+      "entity_ids": [
+        "pn1",
+        "pdn",
+        "breccia",
+        "salazie",
+        "br_orangers",
+        "proc_destab",
+        "proc_erosion",
+        "pn2"
+      ]
+    },
+    {
+      "chunk_id": 269,
+      "entity_ids": [
+        "pn1",
+        "f_boeufs",
+        "pdn",
+        "breccia",
+        "salazie",
+        "br_orangers",
+        "proc_destab",
+        "pn2"
+      ]
+    },
+    {
+      "chunk_id": 270,
+      "entity_ids": [
+        "f_boeufs",
+        "pdn",
+        "salazie",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 271,
+      "entity_ids": [
+        "caldera",
+        "mafate",
+        "salazie",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 272,
+      "entity_ids": [
+        "caldera",
+        "ignimbrite_rock",
+        "pn4",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_b1",
+        "pn2",
+        "pn3",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 273,
+      "entity_ids": [
+        "caldera",
+        "ignimbrite_rock",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "pn2",
+        "pn3",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 274,
+      "entity_ids": [
+        "pn1",
+        "pn4_flows",
+        "ignimbrite_rock",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "olivine",
+        "pn2_flows",
+        "pn2",
+        "pn3",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 275,
+      "entity_ids": [
+        "pn1",
+        "pn4_flows",
+        "ignimbrite_rock",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "olivine",
+        "pn2_flows",
+        "pn2",
+        "pn3",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 276,
+      "entity_ids": [
+        "pn1",
+        "ignimbrite_rock",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "olivine",
+        "pn2",
+        "pn3",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 277,
+      "entity_ids": [
+        "pn1",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "olivine",
+        "pn2",
+        "pn3",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 278,
+      "entity_ids": [
+        "pn1",
+        "ignimbrite_rock",
+        "pn4",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 279,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "pn4",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "olivine",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 280,
+      "entity_ids": [
+        "pn1",
+        "pn4_flows",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "olivine",
+        "proc_erosion",
+        "pn3",
+        "basalte",
+        "lm",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 281,
+      "entity_ids": [
+        "pn1",
+        "pn4_flows",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "olivine",
+        "proc_erosion",
+        "pn3",
+        "basalte",
+        "lm",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 282,
+      "entity_ids": [
+        "pn4_flows",
+        "pn1",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "olivine",
+        "michon",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 283,
+      "entity_ids": [
+        "pn4_flows",
+        "pn1",
+        "ignimbrite_rock",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "olivine",
+        "pn2",
+        "pn3",
+        "michon",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 284,
+      "entity_ids": [
+        "pn1",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "pn2",
+        "pn3",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 285,
+      "entity_ids": [
+        "pn1",
+        "ignimbrite_rock",
+        "pn4",
+        "pdn",
+        "salazie",
+        "pn2",
+        "lm",
+        "pn3",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 286,
+      "entity_ids": [
+        "pn1",
+        "ignimbrite_rock",
+        "pn4",
+        "pdn",
+        "mafate",
+        "salazie",
+        "proc_erosion",
+        "pn2",
+        "pn3",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 287,
+      "entity_ids": [
+        "pn1",
+        "pn3_flows",
+        "ignimbrite_rock",
+        "pn4",
+        "breccia",
+        "mafate",
+        "salazie",
+        "olivine",
+        "proc_erosion",
+        "pn3",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 288,
+      "entity_ids": [
+        "pn1",
+        "pn3_flows",
+        "pn1_flows",
+        "breccia",
+        "olivine",
+        "pn3",
+        "michon",
+        "basalte",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 289,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "pn3_flows",
+        "pdn",
+        "breccia",
+        "pn2",
+        "pn3",
+        "michon",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 290,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "pn2_flows",
+        "proc_erosion",
+        "pn2",
+        "michon",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 291,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "pn3_flows",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "pn2_flows",
+        "proc_erosion",
+        "pn2",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 292,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "pn3_flows",
+        "chaput",
+        "pdn",
+        "breccia",
+        "salazie",
+        "pn3",
+        "michon"
+      ]
+    },
+    {
+      "chunk_id": 293,
+      "entity_ids": [
+        "pn1",
+        "pn3_flows",
+        "chaput",
+        "pdn",
+        "breccia",
+        "salazie",
+        "proc_erosion",
+        "pn3",
+        "michon"
+      ]
+    },
+    {
+      "chunk_id": 294,
+      "entity_ids": [
+        "pn1",
+        "nativel",
+        "pn4",
+        "pdn",
+        "breccia",
+        "salazie",
+        "proc_erosion",
+        "pn2",
+        "pn3",
+        "gillot",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 295,
+      "entity_ids": [
+        "pn1",
+        "nativel",
+        "ignimbrite_rock",
+        "for_slz1",
+        "pn4",
+        "salazie",
+        "pn2",
+        "pn3",
+        "gillot",
+        "cpx_gabbro",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 296,
+      "entity_ids": [
+        "trachyte",
+        "pn4_flows",
+        "nativel",
+        "for_slz1",
+        "pn4",
+        "ignimbrite",
+        "sill",
+        "ignimbrite_rock"
+      ]
+    },
+    {
+      "chunk_id": 297,
+      "entity_ids": [
+        "trachyte",
+        "pn4_flows",
+        "nativel",
+        "ignimbrite_rock",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "sill",
+        "famin",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 298,
+      "entity_ids": [
+        "nativel",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "ignimbrite",
+        "sill",
+        "famin",
+        "gillot",
+        "ignimbrite_rock"
+      ]
+    },
+    {
+      "chunk_id": 299,
+      "entity_ids": [
+        "nativel",
+        "ignimbrite_rock",
+        "pn4",
+        "chaput",
+        "breccia",
+        "br_b1",
+        "sill",
+        "olivine",
+        "famin",
+        "gillot",
+        "gabbro",
+        "michon",
+        "basalte",
+        "cpx_gabbro",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 300,
+      "entity_ids": [
+        "pn1",
+        "chaput",
+        "pdn",
+        "breccia",
+        "lm_flows",
+        "salazie",
+        "br_b1",
+        "olivine",
+        "sill",
+        "proc_destab",
+        "michon",
+        "famin",
+        "gabbro",
+        "basalte",
+        "lm",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 301,
+      "entity_ids": [
+        "pn1",
+        "for_slz1",
+        "pdn",
+        "breccia",
+        "lm_flows",
+        "salazie",
+        "br_b1",
+        "sill",
+        "proc_destab",
+        "sy_tb",
+        "sy_chapelle",
+        "syenite",
+        "m_gravim",
+        "gabbro",
+        "lm",
+        "cpx_gabbro",
+        "lenat"
+      ]
+    },
+    {
+      "chunk_id": 302,
+      "entity_ids": [
+        "pn1",
+        "for_slz1",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "sill",
+        "sy_chapelle",
+        "syenite",
+        "m_gravim",
+        "gabbro",
+        "sy_tb",
+        "cpx_gabbro",
+        "lenat"
+      ]
+    },
+    {
+      "chunk_id": 303,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "sill",
+        "sy_tb",
+        "gabbro",
+        "lm",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 304,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "ignimbrite_rock",
+        "for_slz1",
+        "pn4",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "famin",
+        "gabbro",
+        "michon",
+        "lm",
+        "cpx_gabbro",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 305,
+      "entity_ids": [
+        "ignimbrite_rock",
+        "for_slz1",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "olivine",
+        "michon",
+        "famin",
+        "gabbro",
+        "basalte",
+        "sy_tb",
+        "cpx_gabbro",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 306,
+      "entity_ids": [
+        "pn1",
+        "breccia",
+        "salazie",
+        "sill",
+        "olivine",
+        "sy_tb",
+        "famin",
+        "faille",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 307,
+      "entity_ids": [
+        "pn1",
+        "pdn",
+        "breccia",
+        "salazie",
+        "sill",
+        "olivine",
+        "proc_destab",
+        "proc_erosion",
+        "famin",
+        "pn2",
+        "faille",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 308,
+      "entity_ids": [
+        "pn1",
+        "f_boeufs",
+        "pdn",
+        "breccia",
+        "salazie",
+        "proc_destab",
+        "olivine",
+        "proc_erosion",
+        "pn2",
+        "faille",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 309,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "f_taibit",
+        "f_boeufs",
+        "chaput",
+        "breccia",
+        "nehlig",
+        "salazie",
+        "olivine",
+        "rift_n030",
+        "faille",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 310,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "f_taibit",
+        "f_boeufs",
+        "pn4",
+        "pdn",
+        "breccia",
+        "chaput",
+        "nehlig",
+        "rift_n030",
+        "faille",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 311,
+      "entity_ids": [
+        "trachyte",
+        "pn4",
+        "breccia",
+        "faille",
+        "caldera",
+        "mafate",
+        "salazie",
+        "sy_chapelle",
+        "pn1",
+        "pn1_flows",
+        "f_taibit",
+        "pdn",
+        "sill",
+        "age_188",
+        "gillot",
+        "basalte",
+        "ignimbrite",
+        "nativel",
+        "f_boeufs",
+        "syenite",
+        "ignimbrite_rock"
+      ]
+    },
+    {
+      "chunk_id": 312,
+      "entity_ids": [
+        "trachyte",
+        "pn4",
+        "breccia",
+        "faille",
+        "caldera",
+        "mafate",
+        "salazie",
+        "sy_chapelle",
+        "pn1",
+        "pn1_flows",
+        "pdn",
+        "sill",
+        "olivine",
+        "age_188",
+        "gillot",
+        "basalte",
+        "ignimbrite",
+        "nativel",
+        "f_boeufs",
+        "syenite",
+        "ignimbrite_rock"
+      ]
+    },
+    {
+      "chunk_id": 313,
+      "entity_ids": [
+        "pn1",
+        "dyke",
+        "ignimbrite_rock",
+        "pn4",
+        "pdn",
+        "breccia",
+        "salazie",
+        "sill",
+        "olivine",
+        "faille",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 314,
+      "entity_ids": [
+        "pn1",
+        "dyke",
+        "ignimbrite_rock",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "br_b1",
+        "breccia",
+        "olivine",
+        "br_hydro",
+        "faille",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 315,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "chaput",
+        "olivine",
+        "br_hydro",
+        "rift_n030",
+        "faille",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 316,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "mugearite",
+        "pn4",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "chaput",
+        "rift_n030",
+        "br_hydro",
+        "faille",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 317,
+      "entity_ids": [
+        "mugearite",
+        "pn4",
+        "pdn",
+        "breccia",
+        "chaput",
+        "salazie",
+        "olivine",
+        "br_hydro",
+        "famin",
+        "faille",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 318,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "sill",
+        "olivine",
+        "br_hydro",
+        "famin",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 319,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "chaput",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "sill",
+        "br_hydro",
+        "faille",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 320,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "f_boeufs",
+        "chaput",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_b1",
+        "br_hydro",
+        "faille",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 321,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "f_boeufs",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_hydro",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 322,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "f_taibit",
+        "f_boeufs",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_b1",
+        "syenite",
+        "br_hydro",
+        "sy_chapelle",
+        "pn3",
+        "basalte",
+        "lm",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 323,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "f_taibit",
+        "f_boeufs",
+        "pn4",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_b1",
+        "proc_destab",
+        "pn3",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 324,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "f_taibit",
+        "f_boeufs",
+        "pn4",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "sill",
+        "proc_destab",
+        "faille",
+        "basalte",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 325,
+      "entity_ids": [
+        "pn1",
+        "ignimbrite_rock",
+        "pn4",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "sill",
+        "faille",
+        "gabbro",
+        "basalte",
+        "lm",
+        "cpx_gabbro",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 326,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "chaput",
+        "pdn",
+        "breccia",
+        "lm_flows",
+        "salazie",
+        "br_b1",
+        "gabbro",
+        "lm",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 327,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "chaput",
+        "pdn",
+        "breccia",
+        "lm_flows",
+        "br_b1",
+        "proc_erosion",
+        "pn2",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 328,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "oehler",
+        "chaput",
+        "pdn",
+        "breccia",
+        "salazie",
+        "proc_erosion",
+        "pn2"
+      ]
+    },
+    {
+      "chunk_id": 329,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pdn",
+        "salazie",
+        "proc_erosion",
+        "pn2",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 330,
+      "entity_ids": [
+        "caldera",
+        "pn3_flows",
+        "ignimbrite_rock",
+        "pn4",
+        "pdn",
+        "pn2",
+        "pn3",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 331,
+      "entity_ids": [
+        "caldera",
+        "pn3_flows",
+        "ignimbrite_rock",
+        "f_boeufs",
+        "pn4",
+        "salazie",
+        "pn3",
+        "gillot",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 332,
+      "entity_ids": [
+        "pn4_flows",
+        "caldera",
+        "f_boeufs",
+        "pn4",
+        "pdn",
+        "salazie",
+        "pn2",
+        "pn3",
+        "gillot"
+      ]
+    },
+    {
+      "chunk_id": 333,
+      "entity_ids": [
+        "pn4_flows",
+        "caldera",
+        "pn4",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "proc_destab",
+        "nehlig",
+        "pn2",
+        "pn3",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 334,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "for_slz1",
+        "pn4",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "proc_destab",
+        "sill",
+        "nehlig",
+        "famin",
+        "faille",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 335,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "for_slz1",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_b1",
+        "sill",
+        "proc_destab",
+        "proc_erosion",
+        "famin",
+        "lm",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 336,
+      "entity_ids": [
+        "caldera",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "mafate",
+        "salazie",
+        "proc_destab",
+        "proc_erosion",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 337,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "salazie",
+        "proc_destab",
+        "proc_erosion",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 338,
+      "entity_ids": [
+        "cilaos",
+        "pdn",
+        "breccia",
+        "salazie"
+      ]
+    },
+    {
+      "chunk_id": 339,
+      "entity_ids": [
+        "cilaos",
+        "pdn",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 340,
+      "entity_ids": [
+        "cilaos",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 341,
+      "entity_ids": [
+        "olivine",
+        "cilaos",
+        "pdn",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 342,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "olivine",
+        "pn2",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 343,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "olivine",
+        "pn2",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 344,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "breccia",
+        "pn2",
+        "br_b3c",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 345,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "pn2",
+        "br_b3c",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 346,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "pn2",
+        "br_b3c",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 347,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "cilaos",
+        "pdn",
+        "pn2",
+        "br_b3c",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 348,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "pdn",
+        "br_b2c",
+        "br_b1",
+        "breccia",
+        "olivine",
+        "pn2",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 349,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "br_b2c",
+        "br_b1",
+        "breccia",
+        "olivine",
+        "michon",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 350,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "michon",
+        "pn2",
+        "basalte",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 351,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "pn2",
+        "basalte",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 352,
+      "entity_ids": [
+        "pn1",
+        "pn3_flows",
+        "cilaos",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "pn2",
+        "basalte",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 353,
+      "entity_ids": [
+        "pn1",
+        "pn3_flows",
+        "cilaos",
+        "pdn",
+        "br_b2c",
+        "br_b1",
+        "breccia",
+        "proc_destab",
+        "pn2",
+        "basalte",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 354,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "cilaos",
+        "br_b2c",
+        "pdn",
+        "breccia",
+        "proc_destab",
+        "proc_erosion",
+        "michon",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 355,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "cilaos",
+        "br_b2c",
+        "br_b1",
+        "proc_erosion",
+        "pn2",
+        "pn3",
+        "br_b3c",
+        "michon",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 356,
+      "entity_ids": [
+        "pn1",
+        "nativel",
+        "cilaos",
+        "br_b2c",
+        "br_b1",
+        "pn2",
+        "pn3",
+        "gillot",
+        "br_b3c",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 357,
+      "entity_ids": [
+        "nativel",
+        "cilaos",
+        "pn4",
+        "proc_erosion",
+        "pn2",
+        "pn3",
+        "gillot",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 358,
+      "entity_ids": [
+        "pn1",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "olivine",
+        "proc_erosion",
+        "pn2",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 359,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "olivine",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 360,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "nehlig",
+        "olivine",
+        "br_b3c",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 361,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "br_b1",
+        "breccia",
+        "chaput",
+        "olivine",
+        "nehlig",
+        "pn2",
+        "br_b3c",
+        "basalte",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 362,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "br_b1",
+        "breccia",
+        "pn2",
+        "pn3",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 363,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "cilaos",
+        "br_b1",
+        "pn2",
+        "pn3",
+        "br_b3c",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 364,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "br_b1",
+        "proc_destab",
+        "nehlig",
+        "pn2",
+        "pn3",
+        "br_b3c",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 365,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "cilaos",
+        "chaput",
+        "lm",
+        "br_b1",
+        "breccia",
+        "proc_destab",
+        "olivine",
+        "nehlig",
+        "faille",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 366,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "chaput",
+        "br_b2c",
+        "lm",
+        "br_b1",
+        "breccia",
+        "proc_destab",
+        "olivine",
+        "nehlig",
+        "faille",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 367,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "br_b2c",
+        "breccia",
+        "br_b1",
+        "br_b3c",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 368,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "br_b2c",
+        "breccia",
+        "br_b1",
+        "br_b3c",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 369,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "br_b2c",
+        "breccia",
+        "br_b1",
+        "chaput",
+        "nehlig",
+        "br_b3c",
+        "basalte",
+        "lm",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 370,
+      "entity_ids": [
+        "pn1",
+        "chaput",
+        "breccia",
+        "br_b1",
+        "proc_destab",
+        "nehlig",
+        "faille",
+        "br_b3c",
+        "basalte",
+        "lm",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 371,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "lm",
+        "breccia",
+        "proc_destab",
+        "faille",
+        "br_b3c",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 372,
+      "entity_ids": [
+        "cilaos",
+        "prehnite",
+        "lm",
+        "breccia",
+        "pumpellyite",
+        "sill",
+        "proc_destab",
+        "br_b3c",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 373,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "prehnite",
+        "pumpellyite",
+        "sill",
+        "proc_destab",
+        "br_b3c",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 374,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "proc_destab",
+        "nehlig",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 375,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "cilaos",
+        "br_b2c",
+        "breccia",
+        "br_b1",
+        "proc_destab",
+        "chaput",
+        "nehlig",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 376,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "br_b1",
+        "br_b2c",
+        "breccia",
+        "chaput",
+        "pn2",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 377,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "br_b1",
+        "pn2",
+        "br_b3c",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 378,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "breccia",
+        "br_b1",
+        "pn2",
+        "pn3",
+        "br_b3c",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 379,
+      "entity_ids": [
+        "pn1",
+        "f_taibit",
+        "cilaos",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "nehlig",
+        "olivine",
+        "pn2",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 380,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "pn3_flows",
+        "f_taibit",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "nehlig",
+        "olivine",
+        "pn2",
+        "pn3",
+        "faille",
+        "michon",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 381,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "pn3_flows",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "michon",
+        "pn2",
+        "pn3",
+        "faille",
+        "br_b3c",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 382,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "cilaos",
+        "breccia",
+        "lm_flows",
+        "br_b1",
+        "proc_destab",
+        "nehlig",
+        "br_b3c",
+        "michon",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 383,
+      "entity_ids": [
+        "pn1",
+        "dyke",
+        "pn1_flows",
+        "cilaos",
+        "breccia",
+        "lm_flows",
+        "br_b1",
+        "sill",
+        "proc_destab",
+        "nehlig",
+        "sy_chapelle",
+        "syenite",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 384,
+      "entity_ids": [
+        "dyke",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "lm_flows",
+        "br_b1",
+        "syenite",
+        "sill",
+        "proc_destab",
+        "chaput",
+        "sy_chapelle",
+        "pn2",
+        "pn3",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 385,
+      "entity_ids": [
+        "pn1",
+        "f_taibit",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "proc_destab",
+        "chaput",
+        "sy_chapelle",
+        "pn2",
+        "br_b3c",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 386,
+      "entity_ids": [
+        "pn1",
+        "f_taibit",
+        "cilaos",
+        "br_b2c",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "sy_chapelle",
+        "pn2",
+        "br_b3c",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 387,
+      "entity_ids": [
+        "pn1",
+        "nativel",
+        "cilaos",
+        "pn4",
+        "br_b2c",
+        "breccia",
+        "sy_chapelle",
+        "pn2",
+        "pn3",
+        "gillot"
+      ]
+    },
+    {
+      "chunk_id": 388,
+      "entity_ids": [
+        "pn1",
+        "nativel",
+        "f_taibit",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "olivine",
+        "pn3",
+        "gillot",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 389,
+      "entity_ids": [
+        "pn1",
+        "f_taibit",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "olivine",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 390,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "breccia",
+        "br_b1",
+        "br_b3c",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 391,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "breccia",
+        "br_b1",
+        "proc_destab",
+        "br_b3c",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 392,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "f_taibit",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "br_b1",
+        "proc_destab",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 393,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "f_taibit",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "proc_destab",
+        "chaput",
+        "proc_erosion",
+        "pn2",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 394,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "br_b2c",
+        "br_b1",
+        "breccia",
+        "proc_destab",
+        "chaput",
+        "proc_erosion",
+        "pn2",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 395,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "f_taibit",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "br_b1",
+        "br_b2c",
+        "syenite",
+        "proc_erosion",
+        "sy_chapelle",
+        "pn2",
+        "faille",
+        "lm",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 396,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "f_taibit",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "mafate",
+        "br_b1",
+        "syenite",
+        "breccia",
+        "sy_chapelle",
+        "pn3",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 397,
+      "entity_ids": [
+        "pn1",
+        "f_gobert",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "sill",
+        "pn3",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 398,
+      "entity_ids": [
+        "pn1",
+        "f_gobert",
+        "caldera",
+        "ignimbrite_rock",
+        "f_taibit",
+        "pn4",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "sill",
+        "br_hydro",
+        "faille",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 399,
+      "entity_ids": [
+        "pn1",
+        "f_gobert",
+        "caldera",
+        "f_taibit",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "sill",
+        "br_hydro",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 400,
+      "entity_ids": [
+        "dyke",
+        "f_gobert",
+        "caldera",
+        "f_taibit",
+        "breccia",
+        "br_b1",
+        "nehlig",
+        "sill",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 401,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "f_taibit",
+        "cilaos",
+        "breccia",
+        "br_b1",
+        "nehlig",
+        "sy_chapelle",
+        "proc_eruption",
+        "syenite",
+        "faille",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 402,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "f_taibit",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "sy_chapelle",
+        "proc_eruption",
+        "pn3",
+        "faille",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 403,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "f_taibit",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "br_b1",
+        "prehnite",
+        "br_hydro",
+        "f_ferriere",
+        "sy_chapelle",
+        "pn3",
+        "faille",
+        "pumpellyite",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 404,
+      "entity_ids": [
+        "pn1",
+        "f_gobert",
+        "caldera",
+        "pn1_flows",
+        "ignimbrite_rock",
+        "f_taibit",
+        "pn4",
+        "prehnite",
+        "breccia",
+        "nehlig",
+        "sill",
+        "br_hydro",
+        "f_ferriere",
+        "pumpellyite",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 405,
+      "entity_ids": [
+        "pn1",
+        "f_gobert",
+        "caldera",
+        "cilaos",
+        "breccia",
+        "br_b1",
+        "nehlig",
+        "syenite",
+        "sill",
+        "br_hydro",
+        "f_ferriere",
+        "sy_chapelle",
+        "pn3",
+        "faille",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 406,
+      "entity_ids": [
+        "pn1",
+        "f_gobert",
+        "caldera",
+        "cilaos",
+        "pdn",
+        "br_b1",
+        "salazie",
+        "syenite",
+        "sill",
+        "f_ferriere",
+        "sy_chapelle",
+        "pn3",
+        "faille",
+        "br_b3c",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 407,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "br_orangers",
+        "sill",
+        "chaput",
+        "nehlig",
+        "proc_erosion",
+        "sy_chapelle",
+        "br_b3c",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 408,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "br_orangers",
+        "chaput",
+        "nehlig",
+        "proc_erosion",
+        "faille",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 409,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "cilaos",
+        "pdn",
+        "br_b2c",
+        "mafate",
+        "breccia",
+        "br_orangers",
+        "chaput",
+        "nehlig",
+        "pn2",
+        "faille",
+        "michon"
+      ]
+    },
+    {
+      "chunk_id": 410,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "cilaos",
+        "br_b2c",
+        "pdn",
+        "breccia",
+        "pn2",
+        "faille",
+        "michon"
+      ]
+    },
+    {
+      "chunk_id": 411,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "cilaos",
+        "pdn",
+        "nehlig",
+        "proc_erosion",
+        "pn2",
+        "pn3",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 412,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "nehlig",
+        "salazie",
+        "proc_erosion",
+        "pn2",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 413,
+      "entity_ids": [
+        "caldera",
+        "fracture",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "mafate",
+        "salazie"
+      ]
+    },
+    {
+      "chunk_id": 414,
+      "entity_ids": [
+        "caldera",
+        "fracture",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_b1",
+        "proc_erosion",
+        "br_b3c",
+        "michon",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 415,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "proc_erosion",
+        "br_b3c",
+        "michon",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 416,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "chaput"
+      ]
+    },
+    {
+      "chunk_id": 417,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "mafate",
+        "salazie",
+        "chaput",
+        "nehlig"
+      ]
+    },
+    {
+      "chunk_id": 418,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_b1",
+        "sill",
+        "chaput",
+        "nehlig",
+        "sy_chapelle",
+        "syenite",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 419,
+      "entity_ids": [
+        "cilaos",
+        "chaput",
+        "breccia",
+        "mafate",
+        "salazie",
+        "sill",
+        "proc_destab",
+        "sy_chapelle",
+        "pn0",
+        "syenite",
+        "lm",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 420,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_b1",
+        "proc_destab",
+        "chaput",
+        "proc_erosion",
+        "pn0",
+        "lm",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 421,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_b1",
+        "proc_erosion",
+        "pn0",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 422,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_b1",
+        "proc_destab",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 423,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "mafate",
+        "salazie",
+        "br_b1",
+        "breccia",
+        "proc_destab",
+        "chaput",
+        "famin",
+        "pn3",
+        "michon",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 424,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "pn4",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "proc_destab",
+        "chaput",
+        "olivine",
+        "michon",
+        "nehlig",
+        "famin",
+        "pn3",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 425,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "proc_destab",
+        "olivine",
+        "michon",
+        "nehlig",
+        "famin",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 426,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "proc_destab",
+        "chaput",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 427,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "lm_flows",
+        "br_b1",
+        "sill",
+        "proc_destab",
+        "chaput",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 428,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "mafate",
+        "lm_flows",
+        "br_b1",
+        "sill",
+        "proc_destab",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 429,
+      "entity_ids": [
+        "oehler",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "proc_destab",
+        "chaput",
+        "proc_erosion",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 430,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "chaput",
+        "pdn",
+        "lm",
+        "br_b1",
+        "breccia",
+        "proc_destab",
+        "proc_erosion",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 431,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "cilaos",
+        "pdn",
+        "br_b2c",
+        "br_b1",
+        "breccia",
+        "proc_destab",
+        "chaput",
+        "proc_erosion",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 432,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "br_b2c",
+        "pdn",
+        "breccia",
+        "proc_destab",
+        "sill",
+        "proc_erosion",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 433,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "br_b2c",
+        "pdn",
+        "breccia",
+        "proc_destab",
+        "sill",
+        "michon",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 434,
+      "entity_ids": [
+        "pn1",
+        "pn1_flows",
+        "f_taibit",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "proc_destab",
+        "br_orangers",
+        "proc_erosion",
+        "pn2",
+        "michon"
+      ]
+    },
+    {
+      "chunk_id": 435,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "pn1_flows",
+        "f_taibit",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "mafate",
+        "proc_destab",
+        "br_orangers",
+        "nehlig",
+        "proc_erosion",
+        "pn2"
+      ]
+    },
+    {
+      "chunk_id": 436,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "pn1_flows",
+        "f_taibit",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "mafate",
+        "proc_destab",
+        "br_orangers",
+        "nehlig",
+        "proc_erosion",
+        "br_b3c"
+      ]
+    },
+    {
+      "chunk_id": 437,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "proc_destab",
+        "proc_erosion",
+        "pn2",
+        "pn3",
+        "br_b3c"
+      ]
+    },
+    {
+      "chunk_id": 438,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "salazie",
+        "pn2",
+        "pn3",
+        "br_b3c",
+        "michon"
+      ]
+    },
+    {
+      "chunk_id": 439,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "pdn",
+        "breccia",
+        "salazie",
+        "proc_destab",
+        "proc_erosion",
+        "pn2",
+        "michon"
+      ]
+    },
+    {
+      "chunk_id": 440,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "pdn",
+        "breccia",
+        "salazie",
+        "proc_destab",
+        "proc_erosion",
+        "pn2"
+      ]
+    },
+    {
+      "chunk_id": 441,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "chaput",
+        "pdn",
+        "breccia",
+        "mafate",
+        "nehlig",
+        "proc_erosion",
+        "pn2",
+        "pn3",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 442,
+      "entity_ids": [
+        "pn1",
+        "oehler",
+        "chaput",
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "nehlig",
+        "proc_erosion",
+        "pn2",
+        "pn3",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 443,
+      "entity_ids": [
+        "oehler",
+        "pn4",
+        "pdn",
+        "breccia",
+        "mafate",
+        "br_b1",
+        "sill",
+        "chaput",
+        "nehlig",
+        "pn2",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 444,
+      "entity_ids": [
+        "ignimbrite_rock",
+        "f_taibit",
+        "pn4",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "sill",
+        "proc_destab",
+        "nehlig",
+        "proc_erosion",
+        "pn2",
+        "pn3",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 445,
+      "entity_ids": [
+        "caldera",
+        "ignimbrite_rock",
+        "f_taibit",
+        "cilaos",
+        "chaput",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_orangers",
+        "br_b1",
+        "br_hydro",
+        "proc_destab",
+        "proc_erosion",
+        "nehlig",
+        "pn3",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 446,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pn4",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_orangers",
+        "br_b1",
+        "br_hydro",
+        "chaput",
+        "nehlig",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 447,
+      "entity_ids": [
+        "trachyte",
+        "pn1",
+        "pn4",
+        "breccia",
+        "nehlig",
+        "pn2",
+        "famin",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 448,
+      "entity_ids": [
+        "trachyte",
+        "pn1",
+        "oehler",
+        "pn4",
+        "pdn",
+        "breccia",
+        "nehlig",
+        "proc_erosion",
+        "pn2",
+        "famin",
+        "pn3",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 449,
+      "entity_ids": [
+        "oehler",
+        "pn4",
+        "pdn",
+        "breccia",
+        "nehlig",
+        "proc_erosion",
+        "pn3",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 450,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "mafate",
+        "salazie",
+        "breccia",
+        "nehlig",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 451,
+      "entity_ids": [
+        "pn1",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "proc_destab",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 452,
+      "entity_ids": [
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "proc_destab",
+        "proc_erosion"
+      ]
+    },
+    {
+      "chunk_id": 453,
+      "entity_ids": [
+        "pdn",
+        "breccia",
+        "mafate",
+        "proc_destab",
+        "proc_erosion"
+      ]
+    },
+    {
+      "chunk_id": 454,
+      "entity_ids": [
+        "proc_erosion",
+        "pdn",
+        "breccia"
+      ]
+    },
+    {
+      "chunk_id": 455,
+      "entity_ids": [
+        "proc_erosion",
+        "pdn",
+        "breccia"
+      ]
+    },
+    {
+      "chunk_id": 456,
+      "entity_ids": [
+        "pdn",
+        "proc_erosion"
+      ]
+    },
+    {
+      "chunk_id": 457,
+      "entity_ids": [
+        "caldera",
+        "breccia",
+        "proc_destab",
+        "rift_n030",
+        "proc_erosion",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 458,
+      "entity_ids": [
+        "caldera",
+        "breccia",
+        "proc_destab",
+        "rift_n030",
+        "proc_erosion",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 459,
+      "entity_ids": [
+        "proc_erosion",
+        "pdn",
+        "caldera"
+      ]
+    },
+    {
+      "chunk_id": 460,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pdn",
+        "proc_erosion",
+        "faille",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 461,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pdn",
+        "mafate",
+        "lm_flows",
+        "proc_destab",
+        "faille",
+        "lm",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 462,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "mafate",
+        "lm_flows",
+        "proc_destab",
+        "pn2",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 463,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "pdn",
+        "breccia",
+        "salazie",
+        "pn2",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 464,
+      "entity_ids": [
+        "pn1",
+        "caldera",
+        "pn1_flows",
+        "pn4",
+        "pdn",
+        "breccia",
+        "salazie",
+        "pn3",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 465,
+      "entity_ids": [
+        "caldera",
+        "f_taibit",
+        "f_boeufs",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "mafate",
+        "salazie",
+        "breccia",
+        "br_hydro",
+        "f_ferriere",
+        "pn3",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 466,
+      "entity_ids": [
+        "f_gobert",
+        "caldera",
+        "f_taibit",
+        "f_boeufs",
+        "cilaos",
+        "breccia",
+        "mafate",
+        "salazie",
+        "br_hydro",
+        "f_ferriere",
+        "sy_chapelle",
+        "syenite",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 467,
+      "entity_ids": [
+        "f_gobert",
+        "caldera",
+        "ignimbrite_rock",
+        "f_taibit",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "sill",
+        "br_hydro",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "dyke",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 468,
+      "entity_ids": [
+        "caldera",
+        "ignimbrite_rock",
+        "f_taibit",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "sy_chapelle",
+        "syenite",
+        "dyke",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 469,
+      "entity_ids": [
+        "caldera",
+        "proc_caldera",
+        "f_taibit",
+        "cilaos",
+        "pdn",
+        "mafate",
+        "rift_n030",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "dyke"
+      ]
+    },
+    {
+      "chunk_id": 470,
+      "entity_ids": [
+        "dyke",
+        "caldera",
+        "proc_caldera",
+        "f_taibit",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "f_ferriere",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "gabbro",
+        "sy_tb"
+      ]
+    },
+    {
+      "chunk_id": 471,
+      "entity_ids": [
+        "dyke",
+        "caldera",
+        "proc_caldera",
+        "pdn",
+        "breccia",
+        "salazie",
+        "sill",
+        "f_ferriere",
+        "sy_chapelle",
+        "syenite",
+        "gabbro",
+        "sy_tb"
+      ]
+    },
+    {
+      "chunk_id": 472,
+      "entity_ids": [
+        "caldera",
+        "proc_caldera",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "salazie",
+        "syenite",
+        "sill",
+        "sy_chapelle",
+        "pn3",
+        "faille",
+        "sy_tb"
+      ]
+    },
+    {
+      "chunk_id": 473,
+      "entity_ids": [
+        "alteration_hydro",
+        "dyke",
+        "age_188",
+        "caldera",
+        "proc_caldera",
+        "ignimbrite_rock",
+        "fracture",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "salazie",
+        "syenite",
+        "sy_chapelle",
+        "pn3",
+        "faille",
+        "sy_tb",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 474,
+      "entity_ids": [
+        "alteration_hydro",
+        "caldera",
+        "proc_caldera",
+        "ignimbrite_rock",
+        "fracture",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "sill",
+        "gillot",
+        "sy_chapelle",
+        "syenite",
+        "age_188",
+        "dyke",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 475,
+      "entity_ids": [
+        "caldera",
+        "ignimbrite_rock",
+        "pdn",
+        "salazie",
+        "syenite",
+        "rift_n030",
+        "sill",
+        "gillot",
+        "sy_chapelle",
+        "pn3",
+        "age_188",
+        "dyke",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 476,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "rift_n030",
+        "syenite",
+        "age_188",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 477,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "syenite",
+        "proc_erosion",
+        "pn3",
+        "age_188",
+        "lenat",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 478,
+      "entity_ids": [
+        "caldera",
+        "pn4",
+        "pdn",
+        "breccia",
+        "proc_erosion",
+        "pn3",
+        "age_188",
+        "lenat",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 479,
+      "entity_ids": [
+        "caldera",
+        "pdn",
+        "breccia",
+        "proc_erosion",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 480,
+      "entity_ids": [
+        "caldera",
+        "pdn",
+        "rift_n030",
+        "proc_erosion",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 481,
+      "entity_ids": [
+        "caldera",
+        "pdn",
+        "breccia",
+        "rift_n030",
+        "proc_erosion"
+      ]
+    },
+    {
+      "chunk_id": 482,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "mafate",
+        "salazie",
+        "proc_erosion",
+        "faille",
+        "lenat",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 483,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "mafate",
+        "salazie",
+        "proc_erosion",
+        "pn2",
+        "faille",
+        "cpx_gabbro",
+        "pn3",
+        "lenat"
+      ]
+    },
+    {
+      "chunk_id": 484,
+      "entity_ids": [
+        "oehler",
+        "cilaos",
+        "pdn",
+        "mafate",
+        "salazie",
+        "proc_erosion",
+        "pn2",
+        "reunion",
+        "cpx_gabbro",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 485,
+      "entity_ids": [
+        "oehler",
+        "cilaos",
+        "pdn",
+        "chaput",
+        "mafate",
+        "salazie",
+        "sill",
+        "proc_erosion",
+        "famin",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 486,
+      "entity_ids": [
+        "oehler",
+        "chaput",
+        "pdn",
+        "sill",
+        "proc_erosion",
+        "famin"
+      ]
+    },
+    {
+      "chunk_id": 487,
+      "entity_ids": [
+        "caldera",
+        "pdn",
+        "breccia",
+        "proc_destab",
+        "sill",
+        "proc_erosion",
+        "famin"
+      ]
+    },
+    {
+      "chunk_id": 488,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "pdn",
+        "breccia",
+        "proc_destab",
+        "proc_erosion",
+        "famin"
+      ]
+    },
+    {
+      "chunk_id": 489,
+      "entity_ids": [
+        "sys_hydro",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "gradient_geoth"
+      ]
+    },
+    {
+      "chunk_id": 490,
+      "entity_ids": [
+        "cilaos",
+        "gradient_geoth",
+        "salazie",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 491,
+      "entity_ids": [
+        "reunion",
+        "cilaos",
+        "gradient_geoth",
+        "salazie"
+      ]
+    },
+    {
+      "chunk_id": 492,
+      "entity_ids": [
+        "reunion",
+        "cilaos",
+        "gradient_geoth",
+        "salazie"
+      ]
+    },
+    {
+      "chunk_id": 493,
+      "entity_ids": [
+        "rift_n030",
+        "chaput",
+        "age_188",
+        "caldera"
+      ]
+    },
+    {
+      "chunk_id": 494,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "chaput",
+        "salazie",
+        "rift_n030",
+        "age_188"
+      ]
+    },
+    {
+      "chunk_id": 495,
+      "entity_ids": [
+        "age_188",
+        "caldera",
+        "sys_hydro",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "rift_n030",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 496,
+      "entity_ids": [
+        "age_188",
+        "caldera",
+        "sys_hydro",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "rift_n030",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 497,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "salazie",
+        "sy_chapelle",
+        "syenite",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 498,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "chaput",
+        "rift_n030",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "sy_tb"
+      ]
+    },
+    {
+      "chunk_id": 499,
+      "entity_ids": [
+        "apatite",
+        "pn4",
+        "faille",
+        "caldera",
+        "sys_hydro",
+        "cilaos",
+        "salazie",
+        "sy_chapelle",
+        "dyke",
+        "chaput",
+        "pdn",
+        "age_188",
+        "sy_tb",
+        "cpx_gabbro",
+        "ignimbrite",
+        "src_chaleur",
+        "rift_n030",
+        "syenite",
+        "gabbro",
+        "ignimbrite_rock"
+      ]
+    },
+    {
+      "chunk_id": 500,
+      "entity_ids": [
+        "apatite",
+        "dyke",
+        "age_188",
+        "caldera",
+        "age_145",
+        "ignimbrite_rock",
+        "pn4",
+        "pdn",
+        "salazie",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "gabbro",
+        "sy_tb",
+        "cpx_gabbro",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 501,
+      "entity_ids": [
+        "apatite",
+        "dyke",
+        "age_188",
+        "caldera",
+        "age_145",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "sill",
+        "rift_n030",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "sy_tb",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 502,
+      "entity_ids": [
+        "age_188",
+        "caldera",
+        "age_145",
+        "sys_hydro",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "nehlig",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 503,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "nehlig",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "syenite",
+        "faille",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 504,
+      "entity_ids": [
+        "caldera",
+        "age_27",
+        "sys_hydro",
+        "src_chaleur",
+        "age_145",
+        "pdn",
+        "rift_n030",
+        "pn2",
+        "syenite",
+        "faille",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 505,
+      "entity_ids": [
+        "age_27",
+        "sys_hydro",
+        "src_chaleur",
+        "for_slz1",
+        "age_145",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "rift_n030",
+        "pn2",
+        "syenite",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 506,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "for_slz1",
+        "cilaos",
+        "pdn",
+        "pn4",
+        "br_b1",
+        "salazie",
+        "breccia",
+        "rift_n030",
+        "sill",
+        "chaput",
+        "nehlig",
+        "sy_chapelle",
+        "syenite",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 507,
+      "entity_ids": [
+        "trachyte",
+        "pn4",
+        "nehlig",
+        "caldera",
+        "sys_hydro",
+        "cilaos",
+        "salazie",
+        "sy_chapelle",
+        "age_27",
+        "chaput",
+        "pdn",
+        "sill",
+        "proc_eruption",
+        "gillot",
+        "nativel",
+        "src_chaleur",
+        "rift_n030",
+        "famin",
+        "syenite"
+      ]
+    },
+    {
+      "chunk_id": 508,
+      "entity_ids": [
+        "trachyte",
+        "nativel",
+        "age_27",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "sill",
+        "famin",
+        "proc_eruption",
+        "gillot"
+      ]
+    },
+    {
+      "chunk_id": 509,
+      "entity_ids": [
+        "trachyte",
+        "caldera",
+        "age_27",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "sill",
+        "rift_n030",
+        "syenite"
+      ]
+    },
+    {
+      "chunk_id": 510,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "for_slz1",
+        "cilaos",
+        "breccia",
+        "sill",
+        "rift_n030",
+        "syenite"
+      ]
+    },
+    {
+      "chunk_id": 511,
+      "entity_ids": [
+        "caldera",
+        "for_slz1",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "chaput",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "br_hydro",
+        "nehlig",
+        "syenite",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 512,
+      "entity_ids": [
+        "breccia",
+        "br_b1",
+        "nehlig",
+        "br_hydro",
+        "faille",
+        "caldera",
+        "fracture",
+        "cilaos",
+        "salazie",
+        "sy_chapelle",
+        "pn3",
+        "m_cartog",
+        "pn1",
+        "pn1_flows",
+        "chaput",
+        "pdn",
+        "sill",
+        "rift_n030",
+        "syenite",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 513,
+      "entity_ids": [
+        "pn1",
+        "dyke",
+        "caldera",
+        "pn1_flows",
+        "fracture",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "syenite",
+        "rift_n030",
+        "br_hydro",
+        "sill",
+        "sy_chapelle",
+        "pn3",
+        "faille",
+        "basalte",
+        "lm"
+      ]
+    },
+    {
+      "chunk_id": 514,
+      "entity_ids": [
+        "dyke",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "sill",
+        "basalte"
+      ]
+    },
+    {
+      "chunk_id": 515,
+      "entity_ids": [
+        "caldera",
+        "fracture",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "sz_salazie",
+        "rift_n030",
+        "br_hydro",
+        "sill",
+        "faille",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 516,
+      "entity_ids": [
+        "caldera",
+        "fracture",
+        "cilaos",
+        "sz_salazie",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "br_hydro",
+        "faille",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 517,
+      "entity_ids": [
+        "cilaos",
+        "pdn",
+        "breccia",
+        "br_b1",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "br_hydro",
+        "faille",
+        "gabbro",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 518,
+      "entity_ids": [
+        "sys_hydro",
+        "fracture",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "br_hydro",
+        "faille",
+        "cpx_gabbro"
+      ]
+    },
+    {
+      "chunk_id": 519,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "fracture",
+        "pdn",
+        "breccia",
+        "sill",
+        "rift_n030",
+        "sy_chapelle",
+        "syenite",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 520,
+      "entity_ids": [
+        "caldera",
+        "age_27",
+        "sys_hydro",
+        "fracture",
+        "src_chaleur",
+        "pdn",
+        "sill",
+        "rift_n030",
+        "sy_chapelle",
+        "syenite",
+        "faille",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 521,
+      "entity_ids": [
+        "age_188",
+        "caldera",
+        "age_27",
+        "sys_hydro",
+        "fracture",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "syenite",
+        "faille",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 522,
+      "entity_ids": [
+        "age_188",
+        "caldera",
+        "sys_hydro",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "syenite",
+        "faille",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 523,
+      "entity_ids": [
+        "caldera",
+        "reservoir_fracture",
+        "sys_hydro",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "salazie",
+        "sill",
+        "rift_n030"
+      ]
+    },
+    {
+      "chunk_id": 524,
+      "entity_ids": [
+        "caldera",
+        "reservoir_fracture",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "salazie",
+        "sill",
+        "rift_n030",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 525,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "pdn",
+        "breccia",
+        "faille",
+        "salazie",
+        "rift_n030",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 526,
+      "entity_ids": [
+        "caldera",
+        "cilaos",
+        "salazie",
+        "rift_n030",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 527,
+      "entity_ids": [
+        "cilaos",
+        "salazie"
+      ]
+    },
+    {
+      "chunk_id": 528,
+      "entity_ids": [
+        "cilaos",
+        "salazie"
+      ]
+    },
+    {
+      "chunk_id": 529,
+      "entity_ids": [
+        "reunion",
+        "cilaos",
+        "salazie",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 530,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "cilaos",
+        "salazie",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 531,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "cilaos",
+        "pdn",
+        "salazie"
+      ]
+    },
+    {
+      "chunk_id": 532,
+      "entity_ids": [
+        "caldera",
+        "sys_hydro",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "reunion"
+      ]
+    },
+    {
+      "chunk_id": 533,
+      "entity_ids": [
+        "reunion",
+        "pdn",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 534,
+      "entity_ids": [
+        "pdn",
+        "breccia",
+        "pdf",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 535,
+      "entity_ids": [
+        "alteration_hydro",
+        "sys_hydro",
+        "pdn",
+        "breccia",
+        "pdf"
+      ]
+    },
+    {
+      "chunk_id": 536,
+      "entity_ids": [
+        "alteration_hydro",
+        "sys_hydro",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "faille",
+        "sy_tb"
+      ]
+    },
+    {
+      "chunk_id": 537,
+      "entity_ids": [
+        "apatite",
+        "m_upb",
+        "sys_hydro",
+        "src_chaleur",
+        "cilaos",
+        "pdn",
+        "salazie",
+        "zircon",
+        "sy_chapelle",
+        "proc_eruption",
+        "syenite",
+        "faille",
+        "gabbro",
+        "sy_tb",
+        "m_cartog",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 538,
+      "entity_ids": [
+        "apatite",
+        "caldera",
+        "m_upb",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "zircon",
+        "sy_chapelle",
+        "proc_erosion",
+        "proc_eruption",
+        "syenite",
+        "gabbro",
+        "m_cartog",
+        "ignimbrite"
+      ]
+    },
+    {
+      "chunk_id": 539,
+      "entity_ids": [
+        "caldera",
+        "oehler",
+        "chaput",
+        "pdn",
+        "breccia",
+        "sill",
+        "proc_erosion",
+        "cpx_gabbro",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 540,
+      "entity_ids": [
+        "apatite",
+        "m_thermochrono",
+        "caldera",
+        "oehler",
+        "sys_hydro",
+        "src_chaleur",
+        "chaput",
+        "pdn",
+        "breccia",
+        "sill",
+        "proc_erosion",
+        "syenite",
+        "age_188",
+        "gabbro",
+        "cpx_gabbro",
+        "pn3"
+      ]
+    },
+    {
+      "chunk_id": 541,
+      "entity_ids": [
+        "apatite",
+        "m_thermochrono",
+        "caldera",
+        "age_27",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "syenite",
+        "age_188",
+        "gabbro",
+        "m_photog",
+        "cpx_gabbro",
+        "pn3",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 542,
+      "entity_ids": [
+        "age_27",
+        "sys_hydro",
+        "src_chaleur",
+        "pdn",
+        "syenite",
+        "m_photog",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 543,
+      "entity_ids": [
+        "age_188",
+        "caldera",
+        "age_27",
+        "sys_hydro",
+        "fracture",
+        "src_chaleur",
+        "pdn",
+        "breccia",
+        "sill",
+        "rift_n030",
+        "syenite",
+        "faille",
+        "m_cartog"
+      ]
+    },
+    {
+      "chunk_id": 544,
+      "entity_ids": [
+        "age_188",
+        "caldera",
+        "sys_hydro",
+        "fracture",
+        "src_chaleur",
+        "pdn",
+        "breccia",
+        "sill",
+        "rift_n030",
+        "faille"
+      ]
+    },
+    {
+      "chunk_id": 545,
+      "entity_ids": [
+        "pdn",
+        "sys_hydro"
+      ]
+    },
+    {
+      "chunk_id": 546,
+      "entity_ids": [
+        "trachyte",
+        "alteration_hydro",
+        "sys_hydro",
+        "mugearite",
+        "fracture",
+        "src_chaleur",
+        "pdn",
+        "sy_chapelle",
+        "m_geochem",
+        "syenite"
+      ]
+    },
+    {
+      "chunk_id": 547,
+      "entity_ids": [
+        "trachyte",
+        "alteration_hydro",
+        "sys_hydro",
+        "mugearite",
+        "fracture",
+        "src_chaleur",
+        "pdn",
+        "sy_chapelle",
+        "m_geochem",
+        "syenite"
+      ]
+    },
+    {
+      "chunk_id": 548,
+      "entity_ids": [
+        "pdn",
+        "sys_hydro"
+      ]
+    }
+  ]
+}
